@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vayam Global Exim | Indian Grocery, Spice & FMCG Exports from Bengaluru</title>
+  <meta name="description" content="Vayam Global Exim is a Bengaluru-based export business supplying Indian groceries, spices, grains, pulses, packaged foods and selected FMCG products to global importers, distributors and retailers." />
+  <meta name="keywords" content="Indian grocery export, spice export India, Bengaluru exporter, Vayam Global Exim, Indian FMCG exports, rice pulses spices export" />
+
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --bg-soft: #fff1dc;
+      --text: #24180f;
+      --muted: #6d5b4b;
+      --brand: #b85b1f;
+      --brand-dark: #73330f;
+      --green: #255438;
+      --green-dark: #163622;
+      --gold: #d89b3c;
+      --card: #ffffff;
+      --border: #ead8bf;
+      --shadow: 0 18px 42px rgba(36, 24, 15, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.86);
+      font-size: 0.9rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 8px 0;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 250, 240, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 250px;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #f5c06c, var(--brand) 48%, var(--green) 100%);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo-text strong {
+      display: block;
+      color: var(--brand-dark);
+      font-size: 1.18rem;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 21px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: white;
+      box-shadow: 0 10px 24px rgba(184, 91, 31, 0.25);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--brand-dark);
+      border-color: var(--border);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .hero {
+      min-height: 760px;
+      display: grid;
+      align-items: center;
+      padding: 96px 0 70px;
+      background:
+        linear-gradient(90deg, rgba(255,250,240,0.98) 0%, rgba(255,250,240,0.88) 45%, rgba(255,250,240,0.42) 100%),
+        url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=80') center/cover;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #fff1dc;
+      color: var(--brand-dark);
+      border: 1px solid var(--border);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.4rem);
+      line-height: 1.02;
+      max-width: 860px;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 780px;
+    }
+
+    .trust-pill {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel h3 {
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+    }
+
+    .hero-panel ul {
+      margin-left: 18px;
+      color: var(--muted);
+    }
+
+    .mini-card {
+      margin-top: 18px;
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mini-card img {
+      height: 210px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-title {
+      max-width: 790px;
+      margin-bottom: 42px;
+    }
+
+    .section-title.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.12;
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .image-frame {
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .content-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: 0 12px 30px rgba(36, 24, 15, 0.08);
+    }
+
+    .content-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .highlight-list div {
+      display: flex;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 16px;
+      background: #fff8ee;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 10px 26px rgba(36, 24, 15, 0.07);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--brand-dark);
+      margin-bottom: 8px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin-left: 18px;
+      margin-top: 10px;
+    }
+
+    .band {
+      background: var(--green);
+      color: white;
+    }
+
+    .band .section-title p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(36, 24, 15, 0.06);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--brand);
+      color: white;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .markets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .documents {
+      background: var(--bg-soft);
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .doc {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .doc strong {
+      color: var(--green);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .doc p {
+      color: var(--muted);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--brand-dark);
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .contact {
+      background:
+        linear-gradient(90deg, rgba(22,54,34,0.98), rgba(37,84,56,0.9)),
+        url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1800&q=80') center/cover;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 20px;
+    }
+
+    .contact-panel {
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 16px;
+    }
+
+    .contact-link span {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.94rem;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font: inherit;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: rgba(255,255,255,0.64);
+    }
+
+    select option {
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    footer {
+      background: #1c120b;
+      color: rgba(255,255,255,0.72);
+      padding: 28px 0;
+      font-size: 0.92rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 24px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer a {
+      display: block;
+      margin-top: 6px;
+    }
+
+    .copyright {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1040px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-grid, .split, .markets, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features, .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav-actions .btn-secondary {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 0 54px;
+      }
+
+      .trust-row, .cards, .doc-grid, .faq-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features, .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .image-frame img {
+        height: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Bengaluru, Karnataka, India</span>
+      <span>Export enquiries: contact@vayamglobalexim.com | WhatsApp: +91 XXXXX XXXXX</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="Vayam Global Exim Home">
+        <div class="logo-mark">VG</div>
+        <div class="logo-text">
+          <strong>Vayam Global Exim</strong>
+          <span>Indian food exports from Bengaluru</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#quality">Quality</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="mailto:contact@vayamglobalexim.com">Email</a>
+        <a class="btn btn-primary" href="#contact">Enquire Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">India to the world | Grocery, spices & FMCG exports</span>
+          <h1>Reliable Indian food sourcing for global buyers.</h1>
+          <p>
+            Vayam Global Exim is a Bengaluru-based export business built to connect international importers, distributors, retailers, restaurants and wholesalers with trusted Indian grocery, spice, grain, pulse and packaged-food supply networks.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">View Product Range</a>
+            <a class="btn btn-green" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp Enquiry</a>
+            <a class="btn btn-secondary" href="#documents">Export Documents</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-pill">Supplier coordination</div>
+            <div class="trust-pill">Export documentation support</div>
+            <div class="trust-pill">Buyer-specific sourcing</div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <h3>What we aim to supply</h3>
+          <ul>
+            <li>Whole spices, ground spices and blended masalas</li>
+            <li>Rice, millets, pulses, lentils and flours</li>
+            <li>Packaged Indian grocery and selected FMCG products</li>
+            <li>Private-label and bulk sourcing possibilities</li>
+            <li>Custom product consolidation for international buyers</li>
+          </ul>
+          <div class="mini-card">
+            <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=900&q=80" alt="Indian spices arranged in bowls" />
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div class="image-frame">
+          <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1000&q=80" alt="Rice grains close up" />
+        </div>
+        <div class="content-card">
+          <div class="section-title">
+            <h2>About Vayam Global Exim</h2>
+            <p>
+              Vayam Global Exim is being developed as a professional export platform for Indian food and grocery products. The company is based in Bengaluru, a major commercial hub with access to suppliers across Karnataka, South India and wider Indian food supply chains.
+            </p>
+          </div>
+          <p>
+            The business objective is simple: help global buyers source Indian products with clarity, reliability and consistent communication. In the first phase, the focus is on grocery staples, spices, food ingredients and selected packaged goods.
+          </p>
+          <div class="highlight-list">
+            <div><strong>Mission:</strong> To make Indian grocery sourcing easier for international buyers.</div>
+            <div><strong>Vision:</strong> To build a trusted export brand for Indian food products from Bengaluru.</div>
+            <div><strong>Approach:</strong> Source carefully, document clearly, package responsibly and communicate transparently.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-title center">
+          <h2>Product categories</h2>
+          <p>
+            The product catalogue can be expanded based on buyer demand, destination-country import rules, packaging needs and supplier readiness.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80" alt="Indian spices" />
+            <h3>Spices & Masalas</h3>
+            <p>Whole spices, ground spices and blended masalas for retail, wholesale and food-service buyers.</p>
+            <ul>
+              <li>Turmeric, chilli, cumin, coriander</li>
+              <li>Black pepper, cardamom, cloves</li>
+              <li>Sambar, rasam, garam masala and custom blends</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=900&q=80" alt="Pulses and lentils" />
+            <h3>Rice, Pulses & Grains</h3>
+            <p>Indian staple foods for importers, ethnic supermarkets, restaurants and wholesale distributors.</p>
+            <ul>
+              <li>Basmati and non-basmati rice</li>
+              <li>Toor dal, chana dal, urad dal, moong dal</li>
+              <li>Millets, wheat flour and selected grains</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=900&q=80" alt="Grocery shelves" />
+            <h3>Packaged Groceries</h3>
+            <p>Ready-to-ship branded or private-label products depending on buyer requirement and compliance checks.</p>
+            <ul>
+              <li>Snacks, pickles and instant mixes</li>
+              <li>Ready-to-cook products</li>
+              <li>Selected FMCG and daily-use grocery items</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?auto=format&fit=crop&w=900&q=80" alt="Fresh produce" />
+            <h3>Fresh & Agro Products</h3>
+            <p>Possible future category depending on cold-chain, shelf-life, certification and buyer destination.</p>
+            <ul>
+              <li>Onion, garlic and selected vegetables</li>
+              <li>Coconut-based products</li>
+              <li>Seasonal agro products</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=900&q=80" alt="Packaged food" />
+            <h3>Private Label Support</h3>
+            <p>Support for buyers who want customised packaging, label formats and repeated product sourcing.</p>
+            <ul>
+              <li>Buyer brand packaging</li>
+              <li>Custom pack sizes</li>
+              <li>Market-specific labelling checks</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80" alt="Warehouse storage" />
+            <h3>Consolidated Orders</h3>
+            <p>Multiple product categories can be consolidated for buyers who need mixed Indian grocery shipments.</p>
+            <ul>
+              <li>Multi-SKU container planning</li>
+              <li>Wholesale and distributor orders</li>
+              <li>Repeat-supply coordination</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="quality">
+      <div class="container">
+        <div class="section-title center">
+          <h2>Quality, packaging and compliance focus</h2>
+          <p>
+            Export success depends on more than finding products. It requires documentation discipline, quality checks, suitable packaging and destination-market awareness.
+          </p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <strong>Supplier verification</strong>
+            <p>Shortlist suppliers based on product type, capacity, packaging readiness and export suitability.</p>
+          </div>
+          <div class="feature">
+            <strong>Product documentation</strong>
+            <p>Coordinate product specification, invoices, packing lists, certificates and buyer-required details.</p>
+          </div>
+          <div class="feature">
+            <strong>Packaging checks</strong>
+            <p>Support retail, wholesale, bulk and private-label packaging requirements where feasible.</p>
+          </div>
+          <div class="feature">
+            <strong>Clear communication</strong>
+            <p>Keep buyers updated on sourcing, quotation, readiness, shipment and documentation status.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-title center">
+          <h2>Export workflow</h2>
+          <p>
+            This is the proposed working model for handling international buyer enquiries in a structured way.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="step">
+            <h3>Enquiry</h3>
+            <p>Buyer shares product list, quantity, destination, packaging and target price expectation.</p>
+          </div>
+          <div class="step">
+            <h3>Sourcing</h3>
+            <p>We check supplier availability, minimum order quantity, product specification and lead time.</p>
+          </div>
+          <div class="step">
+            <h3>Quotation</h3>
+            <p>Pricing, packaging, payment terms and shipment options are discussed transparently.</p>
+          </div>
+          <div class="step">
+            <h3>Documentation</h3>
+            <p>Invoice, packing list, certificates and buyer-specific documentation are coordinated.</p>
+          </div>
+          <div class="step">
+            <h3>Shipment</h3>
+            <p>Goods are packed, dispatched and tracked with regular buyer communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="markets">
+      <div class="container markets">
+        <div class="section-title">
+          <h2>Potential target markets</h2>
+          <p>
+            The first target countries should be selected after checking buyer contacts, import regulations, freight cost, shelf-life, demand and payment safety. These regions can be treated as starting points for business validation.
+          </p>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">Middle East</span>
+          <span class="tag">Europe</span>
+          <span class="tag">United Kingdom</span>
+          <span class="tag">North America</span>
+          <span class="tag">Southeast Asia</span>
+          <span class="tag">Africa</span>
+          <span class="tag">Indian ethnic supermarkets</span>
+          <span class="tag">Restaurants & food service</span>
+          <span class="tag">Wholesale distributors</span>
+          <span class="tag">Retail chains</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="documents" id="documents">
+      <div class="container">
+        <div class="section-title center">
+          <h2>Export documents and readiness</h2>
+          <p>
+            This section can later be updated with confirmed company registration, IEC, GST, bank details, certificates and downloadable company profile documents.
+          </p>
+        </div>
+        <div class="doc-grid">
+          <div class="doc">
+            <strong>Company profile</strong>
+            <p>Downloadable PDF to be added after company details, logo, product categories and contact information are finalised.</p>
+          </div>
+          <div class="doc">
+            <strong>Product catalogue</strong>
+            <p>Catalogue with SKU list, pack sizes, MOQ, shelf-life, HS codes and available packaging options.</p>
+          </div>
+          <div class="doc">
+            <strong>Compliance documents</strong>
+            <p>GST, IEC, FSSAI, certificate of origin, phytosanitary certificate or other documents can be listed as applicable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-title center">
+          <h2>Buyer questions</h2>
+          <p>These answers are draft website text. They should be reviewed after the actual business process and legal registrations are finalised.</p>
+        </div>
+        <div class="faq-grid">
+          <details>
+            <summary>Do you support mixed grocery shipments?</summary>
+            <p>Yes, the intended model includes consolidated shipments with multiple Indian grocery categories, depending on minimum order quantities and export feasibility.</p>
+          </details>
+          <details>
+            <summary>Can products be packed under private label?</summary>
+            <p>Private-label support may be possible depending on supplier capability, order volume, packaging requirements and destination-country labelling rules.</p>
+          </details>
+          <details>
+            <summary>Which countries do you export to?</summary>
+            <p>The target markets will be finalised based on buyer demand, import regulations, logistics cost and product suitability.</p>
+          </details>
+          <details>
+            <summary>What information is needed for a quotation?</summary>
+            <p>Please share product list, quantity, destination port/country, preferred packaging, target price range and any certificate or labelling requirement.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <h2>Start an export enquiry</h2>
+          <p>
+            Use these contact links for now. Replace the placeholder email, phone, WhatsApp, LinkedIn and address after the company details are finalised.
+          </p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:contact@vayamglobalexim.com">
+              <strong>Email</strong><span>contact@vayamglobalexim.com</span>
+            </a>
+            <a class="contact-link" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">
+              <strong>WhatsApp</strong><span>+91 XXXXX XXXXX</span>
+            </a>
+            <a class="contact-link" href="tel:+91XXXXXXXXXX">
+              <strong>Phone</strong><span>+91 XXXXX XXXXX</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/company/vayam-global-exim" target="_blank" rel="noopener">
+              <strong>LinkedIn</strong><span>To be added</span>
+            </a>
+            <div class="contact-link">
+              <strong>Address</strong><span>Bengaluru, Karnataka, India. Full registered address to be added.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Quick enquiry form</h3>
+          <p>This static form opens the user’s email app. Later, it can be connected to Formspree, Google Forms or a backend.</p>
+          <form action="mailto:contact@vayamglobalexim.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name / company" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="text" name="country" placeholder="Destination country" />
+            <select name="product-category">
+              <option value="">Select product category</option>
+              <option>Spices and masalas</option>
+              <option>Rice, pulses and grains</option>
+              <option>Packaged groceries</option>
+              <option>Private label</option>
+              <option>Mixed shipment</option>
+            </select>
+            <textarea name="message" placeholder="Tell us product names, quantity, packaging and destination port"></textarea>
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Vayam Global Exim</strong>
+        <p>Indian grocery, spice, grain, pulse and packaged-food exports from Bengaluru, India.</p>
+      </div>
+      <div>
+        <strong>Quick links</strong>
+        <a href="#products">Products</a>
+        <a href="#quality">Quality</a>
+        <a href="#documents">Documents</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <strong>Contact placeholders</strong>
+        <a href="mailto:contact@vayamglobalexim.com">contact@vayamglobalexim.com</a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp: +91 XXXXX XXXXX</a>
+        <a href="#contact">Bengaluru, Karnataka, India</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© 2026 Vayam Global Exim. All rights reserved.</span>
+      <span>Website draft for startup validation. Replace placeholders before public business use.</span>
+    </div>
+  </footer>
+</body>
+</html>
