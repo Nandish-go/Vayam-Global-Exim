@@ -40,6 +40,7 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+      overflow-x: hidden;
     }
 
     a {
@@ -106,6 +107,7 @@
       font-weight: 900;
       letter-spacing: 1px;
       box-shadow: 0 10px 24px rgba(115, 51, 15, 0.25);
+      flex: 0 0 auto;
     }
 
     .logo-text strong {
@@ -137,6 +139,10 @@
       display: flex;
       gap: 10px;
       align-items: center;
+    }
+
+    .mobile-menu {
+      display: none;
     }
 
     .btn {
@@ -274,14 +280,14 @@
       object-fit: cover;
     }
 
-  section {
-  padding: 38px 0;
-  scroll-margin-top: 95px;
+    section {
+      padding: 38px 0;
+      scroll-margin-top: 95px;
     }
 
     .section-title {
       max-width: 790px;
-      margin-bottom: 38px;
+      margin-bottom: 26px;
     }
 
     .section-title.center {
@@ -733,52 +739,322 @@
       flex-wrap: wrap;
     }
 
+    /* Tablet improvements */
     @media (max-width: 1040px) {
+      .container {
+        width: min(940px, 92%);
+      }
+
       nav ul {
         display: none;
       }
 
-      .hero-grid, .split, .markets, .contact-grid {
-        grid-template-columns: 1fr;
+      .mobile-menu {
+        display: block;
+        position: relative;
       }
 
-      .features, .process-grid, .team-grid, .stats {
-        grid-template-columns: repeat(2, 1fr);
+      .mobile-menu summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: white;
+        color: var(--brand-dark);
+        font-weight: 900;
       }
-    }
 
-    @media (max-width: 760px) {
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-actions .btn-secondary {
+      .mobile-menu summary::-webkit-details-marker {
         display: none;
+      }
+
+      .mobile-menu-links {
+        position: absolute;
+        right: 0;
+        top: 48px;
+        width: min(300px, 86vw);
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: white;
+        box-shadow: var(--shadow);
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .mobile-menu-links a {
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: var(--bg-light);
+      }
+
+      .hero-grid,
+      .split,
+      .markets,
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero {
         min-height: auto;
-        padding: 58px 0 48px;
+        padding: 56px 0 48px;
       }
 
-      .trust-row, .cards, .doc-grid, .faq-grid, .footer-grid, .team-grid, .stats, .catalogue-note {
-        grid-template-columns: 1fr;
+      .hero-panel {
+        max-width: 720px;
       }
 
-      .features, .process-grid {
-        grid-template-columns: 1fr;
+      .cards,
+      .features,
+      .team-grid,
+      .stats,
+      .doc-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .image-frame img {
-        height: 330px;
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile improvements */
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, 560px);
       }
 
-      h1 {
-        letter-spacing: -0.5px;
+      .topbar {
+        font-size: 0.78rem;
       }
 
       .topbar-inner {
+        justify-content: center;
+        text-align: center;
+        gap: 4px;
+        padding: 7px 0;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+      }
+
+      .nav {
+        padding: 10px 0;
+        gap: 10px;
+      }
+
+      .logo {
+        min-width: 0;
+        gap: 9px;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+      }
+
+      .logo-text strong {
+        font-size: 0.94rem;
+      }
+
+      .logo-text span {
+        max-width: 145px;
+        font-size: 0.68rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .mobile-menu summary {
+        padding: 9px 12px;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding: 40px 0 34px;
+        background:
+          linear-gradient(180deg, rgba(255,250,240,0.98) 0%, rgba(255,250,240,0.9) 65%, rgba(255,250,240,0.78) 100%),
+          url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=80') center/cover;
+      }
+
+      .hero-grid {
+        gap: 26px;
+      }
+
+      .eyebrow {
+        font-size: 0.78rem;
+        padding: 7px 11px;
+        line-height: 1.3;
+      }
+
+      h1 {
+        font-size: clamp(2.18rem, 12vw, 3.15rem);
+        line-height: 1.02;
+        letter-spacing: -0.7px;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        line-height: 1.62;
+        margin-bottom: 22px;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions .btn,
+      .catalogue-note .btn {
+        width: 100%;
+      }
+
+      .trust-row,
+      .cards,
+      .features,
+      .process-grid,
+      .team-grid,
+      .stats,
+      .doc-grid,
+      .faq-grid,
+      .catalogue-note,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-pill {
+        padding: 12px 14px;
+      }
+
+      .hero-panel {
+        border-radius: 24px;
+        padding: 20px;
+      }
+
+      .mini-card img {
+        height: 150px;
+      }
+
+      section {
+        padding: 34px 0;
+        scroll-margin-top: 95px;
+      }
+
+      .section-title {
+        margin-bottom: 22px;
+      }
+
+      h2 {
+        font-size: clamp(1.95rem, 10vw, 2.55rem);
+        letter-spacing: -0.5px;
+      }
+
+      .section-title p {
+        font-size: 0.98rem;
+      }
+
+      .image-frame img {
+        height: 250px;
+      }
+
+      .content-card,
+      .card,
+      .team-card,
+      .doc,
+      .contact-panel,
+      .step,
+      .feature,
+      details {
+        border-radius: 20px;
+        padding: 20px;
+      }
+
+      .card img {
+        height: 160px;
+        border-radius: 16px;
+      }
+
+      .highlight-list div {
+        display: block;
+      }
+
+      .stat {
+        padding: 16px;
+      }
+
+      .markets {
+        gap: 16px;
+      }
+
+      .tag-cloud {
+        gap: 9px;
+      }
+
+      .tag {
+        padding: 8px 11px;
+        font-size: 0.88rem;
+      }
+
+      .contact-link {
+        display: grid;
+        gap: 4px;
+        align-items: start;
+      }
+
+      .contact-link span {
+        text-align: left;
+      }
+
+      input,
+      textarea,
+      select {
+        font-size: 16px;
+      }
+    }
+
+    /* Small-phone polish */
+    @media (max-width: 420px) {
+      .container {
+        width: min(100% - 22px, 390px);
+      }
+
+      .logo-text strong {
+        font-size: 0.86rem;
+      }
+
+      .logo-text span {
+        max-width: 118px;
+      }
+
+      .mobile-menu summary {
+        padding: 8px 10px;
         font-size: 0.82rem;
+      }
+
+      h1 {
+        font-size: 2.22rem;
+      }
+
+      .hero-panel ul,
+      .card ul {
+        margin-left: 16px;
+      }
+
+      .btn {
+        padding: 11px 14px;
+        font-size: 0.94rem;
       }
     }
   </style>
@@ -813,6 +1089,20 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <div class="mobile-menu-links">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#quality">Quality</a>
+          <a href="#process">Process</a>
+          <a href="#markets">Markets</a>
+          <a href="#team">Team</a>
+          <a href="#documents">Documents</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </details>
 
       <div class="nav-actions">
         <a class="btn btn-secondary" href="mailto:contact@vayamglobalexim.com">Email</a>
