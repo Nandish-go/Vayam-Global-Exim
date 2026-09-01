@@ -2,182 +2,255 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Vayam Global Exim | Indian Food Exports</title>
-
-  <meta
-    name="description"
-    content="Indian spices, staples and grocery products sourced for international buyers."
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vayam Global Exim | Indian Spices & Food Sourcing</title>
+  <meta name="description" content="Specification-led sourcing of Indian spices, staples and packaged foods for international wholesale, distribution and private-label buyers.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
-    rel="stylesheet"
-  >
-
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=85">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/concept.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
+  <header class="site-header" data-header>
     <div class="container navigation">
-
       <a class="brand" href="#home" aria-label="Vayam Global Exim home">
-        <span class="brand-mark">V</span>
-
-        <span class="brand-copy">
-          <strong>Vayam Global Exim</strong>
-          <small>Indian food sourcing and exports</small>
-        </span>
+        <span class="brand-mark" aria-hidden="true"><span>V</span></span>
+        <span class="brand-copy"><strong>Vayam</strong><small>Global Exim</small></span>
       </a>
-
       <nav class="desktop-navigation" aria-label="Main navigation">
         <a href="#products">Products</a>
         <a href="#quality">Quality</a>
         <a href="#process">Export process</a>
         <a href="#about">About</a>
       </nav>
-
-      <div class="header-actions">
-        <a class="text-link" href="#contact">Contact</a>
-        <a class="button button-dark" href="#contact">
-          Request a quotation
-        </a>
-      </div>
-
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
+      <a class="header-rfq" href="#contact"><span>Request a quote</span><span aria-hidden="true">↗</span></a>
+      <button class="menu-button" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false">
+        <span></span><span></span>
       </button>
-
     </div>
-
-    <div class="mobile-navigation" hidden>
-      <a href="#products">Products</a>
-      <a href="#quality">Quality</a>
-      <a href="#process">Export process</a>
-      <a href="#about">About</a>
-      <a href="#contact">Request a quotation</a>
-    </div>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+      <a href="#products"><span>01</span> Products</a>
+      <a href="#quality"><span>02</span> Quality</a>
+      <a href="#process"><span>03</span> Export process</a>
+      <a href="#about"><span>04</span> About</a>
+      <a class="mobile-rfq" href="#contact">Request a quotation <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
-  <main id="home">
-
-    <section class="hero">
-
-      <div class="hero-image" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=85" srcset="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1400&q=85 1400w, https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=2200&q=85 2200w" sizes="100vw" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
       <div class="container hero-layout">
-
-        <div class="hero-copy">
-
-          <p class="eyebrow">
-            Bengaluru, India · Global buyer support
-          </p>
-
-          <h1>
-            Indian food products,
-            <em>sourced with clarity.</em>
-          </h1>
-
-          <p class="hero-description">
-            Vayam Global Exim connects international buyers with
-            carefully selected Indian spices, staples and grocery
-            products through structured sourcing, clear communication
-            and export-focused coordination.
-          </p>
-
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span> Bengaluru, India · International B2B sourcing</p>
+          <h1>Sourced in India. <em>Built around <span>your <br class="mobile-line-break">requirements.</span></em></h1>
+          <p class="hero-description">Vayam coordinates whole spices and a broader range of Indian food products for international importers, distributors and private-label buyers—with specification, packing and export requirements aligned from the outset.</p>
           <div class="hero-actions">
-            <a class="button button-accent" href="#contact">
-              Request a quotation
-            </a>
-
-            <a class="button button-light" href="#products">
-              Explore products
-            </a>
+            <a class="button button-accent" href="#contact">Start an enquiry <span aria-hidden="true">↗</span></a>
+            <a class="text-arrow" href="#products">Explore sourcing categories <span aria-hidden="true">↓</span></a>
           </div>
-
         </div>
-
-        <aside class="hero-note">
-          <span class="hero-note-label">Initial sourcing focus</span>
-
-          <ul>
-            <li>Whole and ground spices</li>
-            <li>Rice, pulses and grains</li>
-            <li>Packaged Indian groceries</li>
-            <li>Bulk and buyer-specific sourcing</li>
-          </ul>
-
-          <a href="#products">
-            View product categories
-            <span aria-hidden="true">↗</span>
-          </a>
+        <aside class="hero-index" aria-label="Vayam sourcing overview" data-reveal>
+          <p>Core sourcing focus</p>
+          <div class="hero-index-item"><span>01</span><strong>Whole spices</strong><small>Cardamom, pepper, cumin and more</small></div>
+          <div class="hero-index-item"><span>02</span><strong>Indian food portfolio</strong><small>Powders, staples and packaged foods</small></div>
+          <div class="hero-index-item"><span>03</span><strong>Buyer programmes</strong><small>Specification, packing and export coordination</small></div>
         </aside>
-
       </div>
-
+      <p class="hero-caption">Editorial stock photography · Indian whole spices</p>
     </section>
 
-    <section class="credibility-strip" aria-label="Company highlights">
-      <div class="container credibility-grid">
-
-        <div>
-          <span>01</span>
-          <p>Based in Bengaluru</p>
-        </div>
-
-        <div>
-          <span>02</span>
-          <p>India-wide sourcing</p>
-        </div>
-
-        <div>
-          <span>03</span>
-          <p>Buyer-specific coordination</p>
-        </div>
-
-        <div>
-          <span>04</span>
-          <p>Export documentation support</p>
-        </div>
-
+    <section class="business-snapshot" aria-label="Business snapshot">
+      <div class="container snapshot-grid">
+        <p class="snapshot-intro">A sourcing partner shaped for international food trade.</p>
+        <div><span>Base</span><strong>Bengaluru, India</strong></div>
+        <div><span>Reach</span><strong>India-wide sourcing</strong></div>
+        <div><span>Approach</span><strong>Buyer-specific coordination</strong></div>
+        <div><span>Scope</span><strong>Bulk, wholesale & private label</strong></div>
       </div>
     </section>
 
-    <section class="preview-section" id="products">
-      <div class="container preview-layout">
+    <section class="products section" id="products">
+      <div class="container">
+        <div class="section-heading products-heading" data-reveal>
+          <div><p class="section-kicker">01 · Product portfolio</p><h2>Indian food sourcing, with spices at its heart.</h2></div>
+          <p>Begin with a product brief, not a fixed catalogue. Categories indicate sourcing focus; availability, origin, specification and packing are confirmed against each enquiry.</p>
+        </div>
 
-        <p class="section-kicker">Product portfolio</p>
-
-        <h2>
-          A focused sourcing platform for Indian food and grocery products.
-        </h2>
-
-        <p>
-          Product-category design will be developed after the homepage
-          direction is approved.
-        </p>
-
+        <div class="product-browser" data-product-browser data-reveal>
+          <figure class="product-visual">
+            <img data-product-image src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=85" alt="An assortment of Indian whole spices" loading="lazy" width="1200" height="1500">
+            <figcaption><span data-product-label>Whole spices · Principal family</span><small>Photography shown for category context</small></figcaption>
+          </figure>
+          <div class="product-categories" role="list">
+            <button class="product-category is-active" type="button" aria-pressed="true" data-image="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=85" data-alt="An assortment of Indian whole spices" data-label="Whole spices · Principal family">
+              <span class="category-number">01</span><span class="category-copy"><strong>Whole spices</strong><small>Green cardamom · Black pepper · Cumin seeds · Coriander seeds · Whole dry chilli · Cloves · Cinnamon / cassia · Fennel · Fenugreek · Mustard seeds · Further sourcing enquiries</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="product-category" type="button" aria-pressed="false" data-image="https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=1200&q=85" data-alt="Ground spices in bowls" data-label="Ground spices and powders">
+              <span class="category-number">02</span><span class="category-copy"><strong>Ground spices & powders</strong><small>Turmeric · Chilli · Coriander · Cumin · Pepper</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="product-category" type="button" aria-pressed="false" data-image="https://images.unsplash.com/photo-1599909533730-f313eb421b81?auto=format&fit=crop&w=1200&q=85" data-alt="Aromatic spice blend ingredients" data-label="Spice blends and masalas">
+              <span class="category-number">03</span><span class="category-copy"><strong>Spice blends & masalas</strong><small>Supplier and formulation sourcing for buyer programmes</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="product-category" type="button" aria-pressed="false" data-image="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1200&q=85" data-alt="Rice grains in a traditional sack" data-label="Rice, pulses, millets and grains">
+              <span class="category-number">04</span><span class="category-copy"><strong>Rice, pulses, millets & grains</strong><small>Indian staples for food-service, wholesale and distribution</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="product-category" type="button" aria-pressed="false" data-image="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=85" data-alt="Organised grocery shelves with packaged foods" data-label="Packaged Indian foods">
+              <span class="category-number">05</span><span class="category-copy"><strong>Packaged Indian foods</strong><small>Retail and food-service lines for wholesale enquiries</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="product-category" type="button" aria-pressed="false" data-image="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85" data-alt="Prepared cartons in a logistics environment" data-label="Private label and consolidated sourcing">
+              <span class="category-number">06</span><span class="category-copy"><strong>Private label & consolidated sourcing</strong><small>Buyer-specific formats, packaging coordination and supplier development</small></span><span class="category-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="cardamom-spotlight">
+      <div class="container cardamom-layout">
+        <figure class="cardamom-image" data-reveal>
+          <img src="https://images.unsplash.com/photo-1541533693007-7ea47d894b0c?auto=format&fit=crop&w=1200&q=85" alt="Green cardamom pods shown in close detail" loading="lazy" width="1200" height="1450">
+          <figcaption>Flagship focus · Green cardamom</figcaption>
+        </figure>
+        <div class="cardamom-copy" data-reveal>
+          <p class="section-kicker">Initial flagship · Green cardamom</p>
+          <h2>Green cardamom, sourced through the buyer’s specification.</h2>
+          <p class="large-copy">Green cardamom is Vayam’s initial flagship sourcing focus—and a practical example of how every spice enquiry can be structured around grade, origin, quantity, packing, testing and destination.</p>
+          <dl class="specification-list">
+            <div><dt>Grade & physical profile</dt><dd>Buyer-requested size band, colour and appearance</dd></div>
+            <div><dt>Origin & crop context</dt><dd>Source and harvest information confirmed for the enquiry</dd></div>
+            <div><dt>Quantity & packing</dt><dd>Required volume, format, labelling and target timeline</dd></div>
+            <div><dt>Testing & documents</dt><dd>Moisture, laboratory parameters and destination records where applicable</dd></div>
+          </dl>
+          <p class="qualification-note">Final specifications and availability are confirmed for each enquiry; no fixed grade or parameter is implied here.</p>
+          <p class="product-system-note">The same framework can support future detailed pages for black pepper, cumin, coriander, chilli and other whole spices without changing the sourcing system.</p>
+          <a class="line-link" href="#contact">Discuss a cardamom requirement <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quality section-dark" id="quality">
+      <div class="container">
+        <div class="quality-intro" data-reveal>
+          <div><p class="section-kicker section-kicker-light">02 · Sourcing & quality</p><h2>Quality begins before the order.</h2></div>
+          <p>Vayam’s role is to translate a buyer requirement into a structured sourcing brief, coordinate the right supplier conversations, and keep product, packing and documentation aligned through dispatch.</p>
+        </div>
+        <div class="quality-flow" data-reveal>
+          <article><span>01</span><h3>Define</h3><p>Product, grade, application, volume, packing, destination and target parameters are clarified.</p></article>
+          <article><span>02</span><h3>Source</h3><p>Potential suppliers and product options are assessed against the brief, not a generic catalogue.</p></article>
+          <article><span>03</span><h3>Verify</h3><p>Samples, available supplier records, inspection or laboratory testing are coordinated where applicable.</p></article>
+          <article><span>04</span><h3>Align</h3><p>Packing checks, commercial details and pre-dispatch documents are matched to the confirmed order.</p></article>
+        </div>
+        <div class="quality-detail" data-reveal>
+          <p>Buyer-visible decision points</p>
+          <div class="quality-checkpoints">
+            <article><span>Before quotation</span><strong>Requirement match</strong><p>Product form, target parameters, volume, packing and destination are converted into one working brief.</p></article>
+            <article><span>Before confirmation</span><strong>Reference alignment</strong><p>Samples, feasible packing, supplier records and any buyer-requested checks are clarified where applicable.</p></article>
+            <article><span>Before dispatch</span><strong>Order readiness</strong><p>Agreed inspection or testing, pack and label checks, and the relevant document set are coordinated.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="packaging section">
+      <div class="container packaging-layout">
+        <div class="packaging-copy" data-reveal>
+          <p class="section-kicker">03 · Formats & packaging</p>
+          <h2>From bulk ingredient supply to shelf-ready coordination.</h2>
+          <p>The right format depends on the product, volume, supplier capability and destination. Vayam can explore suitable options and confirm feasibility against your brief.</p>
+          <div class="format-list">
+            <div><span>01</span><strong>Bulk bags & sacks</strong></div><div><span>02</span><strong>Inner packs & cartons</strong></div><div><span>03</span><strong>Food-service formats</strong></div><div><span>04</span><strong>Retail pouches & jars</strong></div><div><span>05</span><strong>Private-label coordination</strong></div>
+          </div>
+          <p class="qualification-note">Formats shown are possibilities subject to product and supplier confirmation.</p>
+        </div>
+        <figure class="packaging-image" data-reveal>
+          <img src="https://images.unsplash.com/photo-1579871295656-28249508ee6a?auto=format&fit=crop&w=1400&q=85" alt="Stacked burlap sacks representing bulk agricultural packing" loading="lazy" width="1400" height="1600">
+          <figcaption>Contextual stock photography · Bulk agricultural sack format</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="process-heading" data-reveal><p class="section-kicker">04 · Export process</p><h2>One clear path from requirement to dispatch.</h2><p>Each stage is adjusted to the product and commercial arrangement.</p></div>
+        <ol class="process-list" data-reveal>
+          <li><span>01</span><div><strong>Buyer brief</strong><small>Product, specification, quantity, destination</small></div></li>
+          <li><span>02</span><div><strong>Sourcing</strong><small>Product and supplier options</small></div></li>
+          <li><span>03</span><div><strong>Sample & alignment</strong><small>Specification and available documentation</small></div></li>
+          <li><span>04</span><div><strong>Commercial confirmation</strong><small>Quotation, packing and terms</small></div></li>
+          <li><span>05</span><div><strong>Procurement & checks</strong><small>Order coordination and agreed verification</small></div></li>
+          <li><span>06</span><div><strong>Export coordination</strong><small>Documents, customs, logistics and dispatch</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="documentation section">
+      <div class="container documentation-layout">
+        <div class="documentation-title" data-reveal><p class="section-kicker">05 · Compliance & documentation</p><h2>The right document for the product, supplier and destination.</h2></div>
+        <div class="documentation-copy" data-reveal>
+          <p>Export readiness is not a badge wall. Requirements vary by commodity and market, so documentation is identified and coordinated for the actual transaction.</p>
+          <div class="document-groups">
+            <article><span>A</span><div><h3>Company & exporter records</h3><p>Applicable business, food and exporter registrations, confirmed before being represented.</p></div></article>
+            <article><span>B</span><div><h3>Shipment documentation</h3><p>Commercial, origin, customs and transport documents relevant to the consignment.</p></div></article>
+            <article><span>C</span><div><h3>Product & destination records</h3><p>Testing, inspection, phytosanitary, health or other records where the product and market require them.</p></div></article>
+            <article><span>D</span><div><h3>Supplier-level certifications</h3><p>Facility or process certifications are treated as supplier-specific and verified for relevance.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-image" aria-hidden="true"><img src="https://images.unsplash.com/photo-1599496675693-5e4741b3d6e8?auto=format&fit=crop&w=1600&q=85" alt="" loading="lazy" width="1600" height="1200"></div>
+      <div class="about-panel">
+        <div data-reveal>
+          <p class="section-kicker section-kicker-light">06 · About Vayam</p>
+          <h2>Close to source. Clear across borders.</h2>
+          <p class="large-copy">Based in Bengaluru, Vayam Global Exim coordinates Indian spice and food sourcing for international buyers seeking a clear, requirement-led trading process.</p>
+          <p>Our approach centres on careful briefs, accountable communication and practical coordination across suppliers, product requirements, packing and export documentation.</p>
+          <div class="market-direction"><span>Market direction</span><p>International enquiries are supported with the Middle East and UAE as a relevant early-market focus. Product and destination requirements are assessed for each enquiry.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rfq" id="contact">
+      <div class="container rfq-layout">
+        <div class="rfq-intro" data-reveal>
+          <p class="section-kicker">Start a sourcing conversation</p><h2>Tell us what you need.</h2>
+          <p>The more context you share, the more useful the first response can be. A formal specification sheet can also be shared during follow-up.</p>
+          <div class="rfq-prompt"><span>Useful details</span><p>Product · Grade · Quantity · Packing · Destination · Timeline</p></div>
+        </div>
+        <form class="rfq-form" data-rfq-form data-reveal>
+          <div class="field field-wide"><label for="product">Product or category <span>*</span></label><input id="product" name="product" type="text" placeholder="e.g. Black pepper, green cardamom or whole spices" required></div>
+          <div class="field"><label for="quantity">Required quantity</label><input id="quantity" name="quantity" type="text" placeholder="e.g. 1 × 20 ft container"></div>
+          <div class="field"><label for="destination">Destination country / port</label><input id="destination" name="destination" type="text" placeholder="e.g. Jebel Ali, UAE"></div>
+          <div class="field"><label for="packaging">Preferred packaging</label><input id="packaging" name="packaging" type="text" placeholder="Bulk, food-service or retail"></div>
+          <div class="field"><label for="timeline">Target timeline</label><input id="timeline" name="timeline" type="text" placeholder="Expected order / delivery window"></div>
+          <div class="field field-wide"><label for="specification">Specification / additional requirement</label><textarea id="specification" name="specification" rows="4" placeholder="Grade, size, quality parameters, label or documentation needs"></textarea></div>
+          <div class="field"><label for="buyer-name">Your name <span>*</span></label><input id="buyer-name" name="buyer-name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+          <div class="field field-wide"><label for="email">Business email <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required></div>
+          <div class="form-footer field-wide"><p>This concept form is not connected to a submission service yet.</p><button class="button button-dark" type="submit">Prepare enquiry <span aria-hidden="true">↗</span></button></div>
+          <p class="form-status field-wide" data-form-status role="status" tabindex="-1"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home" aria-label="Vayam Global Exim home"><span class="brand-mark" aria-hidden="true"><span>V</span></span><span class="brand-copy"><strong>Vayam</strong><small>Global Exim</small></span></a>
+      <p>Indian spices and food products, sourced for international B2B buyers.</p>
+      <nav aria-label="Footer navigation"><a href="#products">Products</a><a href="#quality">Quality</a><a href="#process">Export process</a><a href="#about">About</a><a href="#contact">Request a quote</a></nav>
+    </div>
+    <div class="container footer-bottom"><p>© <span data-current-year></span> Vayam Global Exim. Bengaluru, India.</p><p>Concept website · Business details subject to final verification</p></div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
