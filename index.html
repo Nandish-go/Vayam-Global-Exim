@@ -2,1497 +2,2024 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Main SEO Tags for Google Search -->
-  <title>Vayam Global Exim | Indian Grocery, Spice & FMCG Exports from Bengaluru</title>
-  <meta name="description" content="Vayam Global Exim is a Bengaluru-based export business supplying Indian groceries, spices, grains, pulses, packaged foods and selected FMCG products to global importers, distributors and retailers." />
-  <meta name="keywords" content="Indian grocery export, spice export India, Bengaluru exporter, Vayam Global Exim, Indian FMCG exports, rice pulses spices export" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Vayam Global Exim | Indian Food, Spices & Grocery Sourcing from Bengaluru</title>
+  <meta name="description" content="Vayam Global Exim is a Bengaluru-based B2B sourcing and export coordination business for Indian spices, rice, pulses, grains, packaged foods and buyer-specific sourcing requirements." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#12392b" />
+  <link rel="canonical" href="https://vayam-global.com/" />
+  <link rel="icon" type="image/png" href="assets/images/vayam-logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/vayam-logo.png" />
 
-  <!-- Social Media Preview Tags (For WhatsApp, LinkedIn, Facebook, etc.) -->
-  <meta property="og:title" content="Vayam Global Exim | Indian Grocery & FMCG Exports" />
-  <meta property="og:description" content="Connecting international importers with trusted Indian grocery, spice, and FMCG networks." />
-  <meta property="og:url" content="https://vayam-global.com" />
   <meta property="og:type" content="website" />
-  
-  <!-- Optional: If you ever upload a logo image to GitHub, you can link it here so it shows up in WhatsApp previews -->
-  <!-- <meta property="og:image" content="https://vayam-global.com/your-logo.png" /> -->
+  <meta property="og:site_name" content="Vayam Global Exim" />
+  <meta property="og:url" content="https://vayam-global.com/" />
+  <meta property="og:title" content="Vayam Global Exim | Indian Food Sourcing & Export Coordination" />
+  <meta property="og:description" content="Indian spices, rice, pulses, grains and packaged foods sourced around buyer requirements from Bengaluru, India." />
+  <meta property="og:image" content="https://vayam-global.com/assets/images/vayam-logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Vayam Global Exim",
+    "url":"https://vayam-global.com/",
+    "logo":"https://vayam-global.com/assets/images/vayam-logo.png",
+    "email":"info@vayam-global.com",
+    "telephone":"+918660720580",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"#206, DS-MAX Splendid, Ullal Main Road, Bharath Nagar 2nd Phase, BEL Layout, Near KLE Law College",
+      "addressLocality":"Bengaluru",
+      "addressRegion":"Karnataka",
+      "postalCode":"560091",
+      "addressCountry":"IN"
+    }
+  }
+  </script>
 
   <style>
-
-    :root {
-      --bg: #fffaf0;
-      --bg-soft: #fff1dc;
-      --bg-light: #fff7e8;
-      --text: #24180f;
-      --muted: #6d5b4b;
-      --brand: #b85b1f;
-      --brand-dark: #73330f;
-      --green: #255438;
-      --green-dark: #143821;
-      --gold: #d89b3c;
-      --card: #ffffff;
-      --border: #ead8bf;
-      --shadow: 0 18px 42px rgba(36, 24, 15, 0.12);
-      --radius: 24px;
+    :root{
+      --forest:#12392b;
+      --forest-2:#174a38;
+      --dark:#08271d;
+      --ivory:#fffaf0;
+      --cream:#f7f0e3;
+      --paper:#fffdf8;
+      --copper:#c86629;
+      --copper-dark:#994517;
+      --ink:#182019;
+      --muted:#667068;
+      --line:rgba(24,32,24,.14);
+      --line-dark:rgba(255,255,255,.16);
+      --green:#16794b;
+      --max:1240px;
+      --shadow:0 16px 42px rgba(18,57,43,.11);
+      --shadow-strong:0 20px 46px rgba(18,57,43,.17);
+      --ease:cubic-bezier(.22,1,.36,1);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+    body{
+      min-width:320px;
+      overflow-x:hidden;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--ivory);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
     }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    button{color:inherit}
+    .container{width:min(var(--max),calc(100% - 56px));max-width:100%;margin:auto}
+    section{scroll-margin-top:96px}
+    .icon{width:16px;height:16px;flex:0 0 auto;display:block}
+    .header > *, .hero-grid > *, .about-grid > *, .products-head > *, .product-grid > *, .contact-grid > *, .footer-grid > *{min-width:0}
 
-    html {
-      scroll-behavior: smooth;
+    /* ---------- top information strip ---------- */
+    .topbar{
+      background:var(--dark);
+      color:rgba(255,255,255,.9);
+      font-size:.79rem;
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      overflow-x: hidden;
+    .topbar .container{
+      min-height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+    .topbar-left,
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
+    .top-item{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      white-space:nowrap;
     }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
+    .top-item strong{
+      color:#f3d5ad;
+      font-weight:800;
+      letter-spacing:.02em;
     }
+    .top-item a{transition:color .2s ease}
+    .top-item a:hover{color:#f3d5ad}
 
-    .topbar {
-      background: var(--green-dark);
-      color: rgba(255,255,255,0.88);
-      font-size: 0.9rem;
+    /* ---------- header ---------- */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,250,240,.97);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
     }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 8px 0;
-      flex-wrap: wrap;
+    .header{
+      min-height:78px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:30px;
     }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 250, 240, 0.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+      max-width:100%;
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-      gap: 20px;
+    .brand > span{min-width:0}
+    .brand img{
+      width:64px;
+      height:56px;
+      object-fit:contain;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 250px;
+    .brand strong{
+      display:block;
+      color:var(--forest);
+      font-size:1.03rem;
+      line-height:1.1;
     }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #f5c06c, var(--brand) 48%, var(--green) 100%);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 900;
-      letter-spacing: 1px;
-      box-shadow: 0 10px 24px rgba(115, 51, 15, 0.25);
-      flex: 0 0 auto;
+    .brand small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:.69rem;
+      font-weight:700;
+      line-height:1.15;
     }
-
-    .logo-text strong {
-      display: block;
-      color: var(--brand-dark);
-      font-size: 1.12rem;
-      line-height: 1.1;
+    .nav{justify-self:center}
+    .nav ul{list-style:none;display:flex;align-items:center;gap:27px}
+    .nav a{
+      position:relative;
+      font-size:.88rem;
+      font-weight:750;
+      color:#1f2922;
+      padding:8px 0;
     }
-
-    .logo-text span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 700;
-      line-height: 1.2;
+    .nav a::after{
+      content:"";
+      position:absolute;
+      left:0;right:100%;bottom:2px;
+      height:2px;
+      background:var(--copper);
+      transition:right .25s var(--ease);
     }
+    .nav a:hover::after{right:0}
 
-    nav ul {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 20px;
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 0.93rem;
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:46px;
+      padding:0 18px;
+      border:1px solid transparent;
+      border-radius:8px;
+      font-weight:800;
+      cursor:pointer;
+      transition:transform .22s var(--ease),background .22s ease,border-color .22s ease,box-shadow .22s ease;
+      white-space:nowrap;
     }
-
-    .nav-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:var(--copper);color:white}
+    .primary:hover{background:var(--copper-dark);box-shadow:0 10px 24px rgba(200,102,41,.2)}
+    .outline{border-color:var(--line);background:rgba(255,255,255,.22);color:var(--forest)}
+    .outline:hover{border-color:rgba(18,57,43,.32);background:white}
+    .green{background:var(--forest);color:white}
+    .green:hover{background:var(--forest-2)}
+    .mobile-menu{display:none}
+    .sr-only{
+      position:absolute!important;
+      width:1px!important;
+      height:1px!important;
+      padding:0!important;
+      margin:-1px!important;
+      overflow:hidden!important;
+      clip:rect(0,0,0,0)!important;
+      white-space:nowrap!important;
+      border:0!important;
     }
-
-    .mobile-menu {
-      display: none;
+    .hamburger{
+      width:20px;
+      display:grid;
+      gap:4px;
     }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: 0.2s ease;
-      white-space: nowrap;
+    .hamburger i{
+      display:block;
+      width:100%;
+      height:2px;
+      background:var(--forest);
+      border-radius:999px;
+      transition:transform .2s ease,opacity .2s ease;
     }
+    .mobile-menu[open] .hamburger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .mobile-menu[open] .hamburger i:nth-child(2){opacity:0}
+    .mobile-menu[open] .hamburger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .mobile-menu-actions{display:none}
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--brand);
-      color: white;
-      box-shadow: 0 10px 24px rgba(184, 91, 31, 0.25);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--brand-dark);
-      border-color: var(--border);
-    }
-
-    .btn-green {
-      background: var(--green);
-      color: white;
-    }
-
-    .hero {
-      min-height: 640px;
-      display: grid;
-      align-items: center;
-      padding: 72px 0 56px;
+    /* ---------- hero ---------- */
+    .hero{
+      position:relative;
+      overflow:hidden;
       background:
-        linear-gradient(90deg, rgba(255,250,240,0.98) 0%, rgba(255,250,240,0.88) 45%, rgba(255,250,240,0.38) 100%),
-        url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=80') center/cover;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #fff1dc;
-      color: var(--brand-dark);
-      border: 1px solid var(--border);
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 5.2vw, 4.45rem);
-      line-height: 1.04;
-      max-width: 820px;
-      margin-bottom: 20px;
-      letter-spacing: -1.5px;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin-bottom: 26px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
-    }
-
-    .trust-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      max-width: 780px;
-    }
-
-    .trust-pill {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid var(--border);
-      padding: 13px 15px;
-      border-radius: 18px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .hero-panel {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-panel h3 {
-      color: var(--green);
-      margin-bottom: 12px;
-      font-size: 1.3rem;
-    }
-
-    .hero-panel ul {
-      margin-left: 18px;
-      color: var(--muted);
-    }
-
-    .mini-card {
-      margin-top: 18px;
-      border-radius: 22px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .mini-card img {
-      height: 190px;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    section {
-      padding: 38px 0;
-      scroll-margin-top: 95px;
-    }
-
-    .section-title {
-      max-width: 790px;
-      margin-bottom: 26px;
-    }
-
-    .section-title.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.12;
-      margin-bottom: 14px;
-      letter-spacing: -1px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 1.04rem;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .image-frame {
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .image-frame img {
-      width: 100%;
-      height: 455px;
-      object-fit: cover;
-    }
-
-    .content-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 32px;
-      box-shadow: 0 12px 30px rgba(36, 24, 15, 0.08);
-    }
-
-    .content-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .highlight-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .highlight-list div {
-      display: flex;
-      gap: 12px;
-      padding: 14px;
-      border-radius: 16px;
-      background: #fff8ee;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .stat {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(36, 24, 15, 0.06);
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--brand-dark);
-      font-size: 1.5rem;
-      line-height: 1.1;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: 0 10px 26px rgba(36, 24, 15, 0.07);
-      transition: 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      border-radius: 18px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      color: var(--brand-dark);
-      margin-bottom: 8px;
-    }
-
-    .card p, .card li {
-      color: var(--muted);
-    }
-
-    .card ul {
-      margin-left: 18px;
-      margin-top: 10px;
-    }
-
-    .catalogue-note {
-      margin-top: 26px;
-      background: var(--bg-light);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .catalogue-note p {
-      color: var(--muted);
-    }
-
-    .band {
-      background: var(--green);
-      color: white;
-    }
-
-    .band .section-title p {
-      color: rgba(255,255,255,0.8);
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 22px;
-      padding: 22px;
-    }
-
-    .feature strong {
-      display: block;
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-    }
-
-    .feature p {
-      color: rgba(255,255,255,0.82);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      counter-reset: step;
-    }
-
-    .step {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 10px 24px rgba(36, 24, 15, 0.06);
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      width: 36px;
-      height: 36px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: var(--brand);
-      color: white;
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .markets {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      align-items: start;
-    }
-
-    .tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .tag {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: white;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-weight: 800;
-    }
-
-    .team {
-      background: var(--bg-light);
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .team-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: 0 10px 24px rgba(36, 24, 15, 0.06);
-    }
-
-    .avatar {
-      width: 74px;
-      height: 74px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 900;
-      font-size: 1.3rem;
-      background: linear-gradient(135deg, var(--brand), var(--green));
-    }
-
-    .team-card h3 {
-      color: var(--brand-dark);
-      margin-bottom: 6px;
-    }
-
-    .team-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .documents {
-      background: var(--bg-soft);
-    }
-
-    .doc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .doc {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px;
-    }
-
-    .doc strong {
-      color: var(--green);
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .doc p {
-      color: var(--muted);
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    details {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px 20px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 800;
-      color: var(--brand-dark);
-    }
-
-    details p {
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .contact {
-      background:
-        linear-gradient(90deg, rgba(22,54,34,0.98), rgba(37,84,56,0.9)),
-        url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1800&q=80') center/cover;
-      color: white;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 34px;
-      align-items: stretch;
-    }
-
-    .contact p {
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 20px;
-    }
-
-    .contact-panel {
-      background: rgba(255,255,255,0.11);
-      border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 28px;
-      padding: 28px;
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .contact-link {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      padding: 14px 16px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 16px;
-    }
-
-    .contact-link span {
-      color: rgba(255,255,255,0.82);
-      font-size: 0.94rem;
-      text-align: right;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.12);
-      color: white;
-      font: inherit;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: rgba(255,255,255,0.66);
-    }
-
-    select option {
-      color: var(--text);
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    footer {
-      background: #1c120b;
-      color: rgba(255,255,255,0.72);
-      padding: 28px 0;
-      font-size: 0.92rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr 0.9fr 0.9fr;
-      gap: 24px;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    footer a {
-      display: block;
-      margin-top: 6px;
-    }
-
-    .copyright {
-      margin-top: 22px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* Tablet improvements */
-    @media (max-width: 1040px) {
-      .container {
-        width: min(940px, 92%);
+        radial-gradient(circle at 12% 14%,rgba(200,102,41,.10),transparent 29%),
+        linear-gradient(120deg,var(--dark) 0%,#0a3124 62%,#103d2e 100%);
+      color:white;
+    }
+    .hero-grid{
+      min-height:600px;
+      display:grid;
+      grid-template-columns:minmax(0,.88fr) minmax(460px,1.02fr);
+      gap:clamp(30px,3.8vw,58px);
+      align-items:center;
+      padding:44px 0 48px;
+    }
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+      color:rgba(255,255,255,.68);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:32px;
+      height:2px;
+      background:var(--copper);
+    }
+    h1,.section-heading{
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:400;
+      letter-spacing:-.038em;
+    }
+    h1{
+      max-width:720px;
+      font-size:clamp(3rem,5.15vw,5.15rem);
+      line-height:.99;
+    }
+    h1 em,
+    .section-heading em{
+      display:block;
+      color:#efd6ae;
+      font-weight:400;
+    }
+    .hero p{
+      max-width:690px;
+      margin-top:24px;
+      color:rgba(255,255,255,.74);
+      font-size:1rem;
+      line-height:1.68;
+    }
+    .hero-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px 17px;
+      margin-top:18px;
+      color:rgba(255,255,255,.78);
+      font-size:.8rem;
+      font-weight:800;
+    }
+    .hero-tags span:not(:last-child)::after{
+      content:"•";
+      margin-left:17px;
+      color:var(--copper);
+    }
+    .hero-actions{
+      display:flex;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+    .hero .outline{
+      border-color:rgba(255,255,255,.32);
+      color:white;
+      background:rgba(255,255,255,.04);
+    }
+    .hero .outline:hover{background:rgba(255,255,255,.10)}
+
+    .visual{
+      position:relative;
+      padding-bottom:42px;
+    }
+    .visual .photo{
+      height:500px;
+      width:100%;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.15);
+      background:#0d3427;
+    }
+    .visual .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .6s var(--ease);
+    }
+    .visual:hover .photo img{transform:scale(1.025)}
+    .brief{
+      position:absolute;
+      right:-58px;
+      bottom:-24px;
+      z-index:2;
+      width:min(350px,66%);
+      padding:17px 19px;
+      background:var(--cream);
+      color:var(--dark);
+      border:1px solid rgba(8,39,29,.12);
+      box-shadow:0 18px 36px rgba(8,39,29,.16);
+    }
+    .brief span{
+      display:block;
+      margin-bottom:6px;
+      color:var(--copper-dark);
+      font-size:.65rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .brief strong{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.24rem;
+      font-weight:400;
+      line-height:1.34;
+    }
+
+    /* ---------- snapshot ---------- */
+    .snapshot{
+      background:var(--dark);
+      color:white;
+      border-top:1px solid var(--line-dark);
+    }
+    .snapshot-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-left:1px solid var(--line-dark);
+    }
+    .snapshot-grid div{
+      min-height:78px;
+      padding:14px 20px;
+      border-right:1px solid var(--line-dark);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      transition:background .22s ease;
+    }
+    .snapshot-grid div:hover{background:rgba(255,255,255,.045)}
+    .snapshot span,.kicker{
+      color:var(--copper);
+      font-size:.65rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .snapshot strong{
+      margin-top:4px;
+      font-size:.86rem;
+    }
+
+    /* ---------- shared sections ---------- */
+    .section{padding:70px 0}
+    .section-heading{
+      font-size:clamp(2.45rem,4.25vw,4.25rem);
+      line-height:1.02;
+    }
+    .section-heading em{color:var(--copper)}
+    .intro{
+      max-width:720px;
+      margin-top:16px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.97rem;
+    }
+
+    /* ---------- about ---------- */
+    .about{background:var(--cream)}
+    .about-grid{
+      display:grid;
+      grid-template-columns:.82fr 1.18fr;
+      gap:64px;
+      align-items:start;
+    }
+    .about-copy{
+      position:sticky;
+      top:118px;
+    }
+    .about-list{border-top:1px solid var(--line)}
+    .about-row{
+      display:grid;
+      grid-template-columns:46px 180px 1fr;
+      gap:16px;
+      padding:21px 0;
+      border-bottom:1px solid var(--line);
+      transition:background .22s ease,padding .22s ease;
+    }
+    .about-row:hover{
+      background:rgba(255,255,255,.42);
+      padding-left:12px;
+      padding-right:12px;
+    }
+    .about-row .n{
+      color:var(--copper-dark);
+      font-size:.7rem;
+      font-weight:900;
+    }
+    .about-row strong{
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.25rem;
+      font-weight:400;
+      line-height:1.35;
+    }
+    .about-row p{
+      color:var(--muted);
+      font-size:.91rem;
+    }
+
+    /* ---------- products ---------- */
+    .products-head{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:34px;
+      align-items:end;
+      margin-bottom:34px;
+    }
+    .products-head .intro{margin:0}
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:16px;
+    }
+    .card{
+      grid-column:span 2;
+      background:white;
+      border:1px solid var(--line);
+      overflow:hidden;
+      transition:transform .26s var(--ease),box-shadow .26s ease,border-color .26s ease;
+    }
+    .card:nth-child(4),.card:nth-child(5){grid-column:span 3}
+    .card:hover{
+      transform:translateY(-7px);
+      box-shadow:var(--shadow-strong);
+      border-color:rgba(200,102,41,.32);
+    }
+    .card-image{
+      height:205px;
+      overflow:hidden;
+      background:#eee5d8;
+    }
+    .card-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .45s var(--ease);
+    }
+    .card:hover .card-image img{transform:scale(1.045)}
+    .card-body{padding:21px}
+    .label{
+      color:var(--copper-dark);
+      font-size:.63rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .card h3{
+      margin-top:7px;
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.48rem;
+      font-weight:400;
+      line-height:1.22;
+    }
+    .card p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.89rem;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:15px;
+    }
+    .chips span{
+      padding:5px 8px;
+      background:var(--cream);
+      border:1px solid var(--line);
+      color:var(--forest);
+      font-size:.69rem;
+      font-weight:700;
+      transition:background .2s ease,border-color .2s ease,transform .2s ease;
+    }
+    .chips span:hover{
+      background:#f2e2cc;
+      border-color:rgba(200,102,41,.32);
+      transform:translateY(-1px);
+    }
+    .product-link{
+      display:inline-block;
+      margin-top:16px;
+      color:var(--copper-dark);
+      font-weight:800;
+      font-size:.82rem;
+    }
+    .note{
+      margin-top:23px;
+      padding:16px 19px;
+      border-left:3px solid var(--copper);
+      background:var(--cream);
+      color:var(--muted);
+      font-size:.86rem;
+    }
+
+    /* ---------- quality ---------- */
+    .quality{background:var(--forest);color:white}
+    .quality .kicker{color:#dda66d}
+    .quality .section-heading{color:white}
+    .quality .intro{color:rgba(255,255,255,.69)}
+    .quality-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border-top:1px solid var(--line-dark);
+      border-left:1px solid var(--line-dark);
+      margin-top:32px;
+    }
+    .quality-grid > div{
+      min-height:200px;
+      padding:23px;
+      border-right:1px solid var(--line-dark);
+      border-bottom:1px solid var(--line-dark);
+      transition:transform .22s var(--ease),background .22s ease,box-shadow .22s ease;
+    }
+    .quality-grid > div:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,.07);
+      box-shadow:0 14px 30px rgba(0,0,0,.12);
+    }
+    .quality-grid span{
+      color:#dda66d;
+      font-size:.67rem;
+      font-weight:900;
+    }
+    .quality-grid h3{
+      margin-top:19px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.46rem;
+      font-weight:400;
+    }
+    .quality-grid p{
+      margin-top:10px;
+      color:rgba(255,255,255,.7);
+      font-size:.87rem;
+    }
+
+    /* ---------- process ---------- */
+    .process-head{
+      display:grid;
+      grid-template-columns:.95fr .65fr;
+      gap:48px;
+      align-items:end;
+      margin-bottom:30px;
+    }
+    .process-head .intro{margin:0}
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      border-top:1px solid var(--line);
+      border-left:1px solid var(--line);
+    }
+    .step{
+      position:relative;
+      min-height:205px;
+      padding:23px 20px;
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      transition:transform .23s var(--ease),background .23s ease,box-shadow .23s ease;
+    }
+    .step:hover{
+      transform:translateY(-5px);
+      background:white;
+      box-shadow:var(--shadow);
+      z-index:3;
+    }
+    .step:not(:last-child)::after{
+      content:"→";
+      position:absolute;
+      right:-11px;
+      top:50%;
+      z-index:4;
+      width:22px;
+      height:22px;
+      display:grid;
+      place-items:center;
+      background:var(--ivory);
+      color:var(--copper-dark);
+    }
+    .step .n{
+      color:var(--copper-dark);
+      font-size:.68rem;
+      font-weight:900;
+    }
+    .step h3{
+      margin-top:26px;
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.48rem;
+      font-weight:400;
+    }
+    .step p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.87rem;
+    }
+
+    /* ---------- documents ---------- */
+    .documents{background:var(--cream)}
+    .regs{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:30px;
+    }
+    .reg{
+      padding:22px;
+      background:white;
+      border:1px solid var(--line);
+      transition:transform .23s var(--ease),box-shadow .23s ease,border-color .23s ease;
+    }
+    .reg:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
+      border-color:rgba(200,102,41,.32);
+    }
+    .reg span{
+      color:var(--copper-dark);
+      font-size:.65rem;
+      font-weight:900;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .reg strong{
+      display:block;
+      margin-top:12px;
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.35rem;
+      font-weight:400;
+      overflow-wrap:anywhere;
+    }
+    .reg p{
+      color:var(--muted);
+      font-size:.82rem;
+    }
+    .address{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);
+      gap:0;
+      align-items:stretch;
+      min-height:230px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--paper);
+      box-shadow:0 10px 28px rgba(18,57,43,.055);
+      transition:box-shadow .24s ease,border-color .24s ease,transform .24s var(--ease);
+    }
+    .address:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 38px rgba(18,57,43,.095);
+      border-color:rgba(200,102,41,.24);
+    }
+    .address-copy{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-width:0;
+      padding:30px 34px;
+    }
+    .address-eyebrow{
+      color:var(--copper-dark);
+      font-size:.64rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .address-copy h3{
+      margin-top:8px;
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.5rem;
+      font-weight:400;
+      line-height:1.2;
+    }
+    .address-copy p{
+      max-width:680px;
+      margin-top:11px;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.65;
+    }
+    .map-link{
+      width:max-content;
+      max-width:100%;
+      margin-top:17px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      color:var(--forest);
+      font-size:.82rem;
+      font-weight:850;
+      text-decoration:none;
+      border-bottom:1px solid rgba(18,57,43,.28);
+      transition:color .2s ease,border-color .2s ease,transform .2s var(--ease);
+    }
+    .map-link:hover{
+      color:var(--copper-dark);
+      border-color:var(--copper-dark);
+      transform:translateX(2px);
+    }
+    .address-map{
+      min-height:230px;
+      border-left:1px solid var(--line);
+      background:#e8e2d6;
+      overflow:hidden;
+    }
+    .address-map iframe{
+      width:100%;
+      height:100%;
+      min-height:230px;
+      border:0;
+      display:block;
+      filter:saturate(.88) contrast(.98);
+      transition:filter .25s ease,transform .35s var(--ease);
+    }
+    .address:hover .address-map iframe{
+      filter:saturate(1) contrast(1);
+      transform:scale(1.01);
+    }
+    .doc-note{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:28px;
+    }
+    .faq details{
+      border:1px solid var(--line);
+      background:white;
+      transition:transform .22s var(--ease),box-shadow .22s ease,border-color .22s ease;
+    }
+    .faq details:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 28px rgba(18,57,43,.09);
+      border-color:rgba(200,102,41,.28);
+    }
+    .faq summary{
+      padding:18px 50px 18px 19px;
+      cursor:pointer;
+      list-style:none;
+      color:var(--forest);
+      font-weight:800;
+      position:relative;
+      line-height:1.35;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::before,
+    .faq summary::after{
+      content:"";
+      position:absolute;
+      right:20px;
+      top:50%;
+      width:14px;
+      height:2px;
+      border-radius:999px;
+      background:var(--copper);
+      transform-origin:center;
+      transition:transform .28s var(--ease),opacity .22s ease;
+    }
+    .faq summary::before{
+      transform:translateY(-50%) rotate(0deg);
+    }
+    .faq summary::after{
+      transform:translateY(-50%) rotate(90deg);
+    }
+    .faq details[open] summary::before{
+      transform:translateY(-50%) rotate(180deg);
+    }
+    .faq details[open] summary::after{
+      transform:translateY(-50%) rotate(180deg);
+      opacity:0;
+    }
+    .faq details[open]{
+      border-color:rgba(200,102,41,.38);
+      box-shadow:0 12px 28px rgba(18,57,43,.08);
+    }
+    .faq details p{
+      padding:0 19px 18px;
+      color:var(--muted);
+      font-size:.87rem;
+      line-height:1.6;
+      transform:translateY(-4px);
+      opacity:.76;
+      transition:transform .24s var(--ease),opacity .24s ease;
+    }
+    .faq details[open] p{
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    /* ---------- contact ---------- */
+    .contact{background:#dfcbaa}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:46px;
+      align-items:start;
+    }
+    .contact-list{
+      margin-top:30px;
+      border-top:1px solid rgba(24,32,24,.2);
+    }
+    .contact-item{
+      display:grid;
+      grid-template-columns:115px 1fr;
+      gap:16px;
+      padding:14px 0;
+      border-bottom:1px solid rgba(24,32,24,.2);
+    }
+    .contact-item strong{
+      color:var(--forest);
+      font-size:.8rem;
+    }
+    .contact-item a,.contact-item span{
+      color:#50584f;
+      font-size:.86rem;
+    }
+    .rfq{
+      padding:31px;
+      background:var(--ivory);
+      border:1px solid rgba(24,32,24,.14);
+      box-shadow:0 12px 30px rgba(18,57,43,.06);
+    }
+    .form-title{
+      display:flex;
+      gap:13px;
+      align-items:center;
+      padding-bottom:17px;
+      margin-bottom:20px;
+      border-bottom:1px solid var(--line);
+    }
+    .form-title span{
+      color:var(--copper-dark);
+      font-size:.68rem;
+      font-weight:900;
+    }
+    .form-title h3{
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--forest);
+      font-size:1.32rem;
+      font-weight:400;
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px 26px;
+    }
+    .field{display:grid;gap:6px}
+    .field.full{grid-column:1/-1}
+    .field label{
+      color:var(--dark);
+      font-size:.72rem;
+      font-weight:800;
+    }
+    .req{color:var(--copper)}
+    input,textarea{
+      width:100%;
+      border:0;
+      border-bottom:1px solid rgba(24,32,24,.22);
+      background:transparent;
+      color:var(--ink);
+      padding:9px 0 11px;
+      outline:0;
+      transition:border-color .2s ease;
+    }
+    input:focus,textarea:focus{border-color:var(--copper)}
+    textarea{min-height:88px;resize:vertical}
+    .rfq-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+    .rfq-note{
+      margin-top:13px;
+      color:var(--muted);
+      font-size:.75rem;
+    }
+
+    /* ---------- footer ---------- */
+    footer{
+      background:var(--dark);
+      color:rgba(255,255,255,.67);
+      padding:40px 0 23px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr .8fr 1fr;
+      gap:42px;
+    }
+    .footer-brand{display:flex;gap:15px}
+    .footer-brand img{
+      width:72px;
+      height:64px;
+      object-fit:contain;
+      background:white;
+      padding:4px;
+    }
+    .footer-brand strong,.footer-col strong{color:white}
+    .footer-brand p{
+      margin-top:7px;
+      font-size:.8rem;
+      max-width:360px;
+    }
+    .footer-col a,.footer-col p{
+      display:block;
+      margin-top:6px;
+      font-size:.79rem;
+    }
+    .copyright{
+      margin-top:30px;
+      padding-top:18px;
+      border-top:1px solid var(--line-dark);
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      font-size:.72rem;
+    }
+
+    /* ---------- WhatsApp floating action ---------- */
+    .wa{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:95;
+      width:58px;
+      height:58px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      border:3px solid rgba(255,255,255,.95);
+      box-shadow:0 12px 30px rgba(0,0,0,.20);
+      transition:transform .22s var(--ease),box-shadow .22s ease;
+    }
+    .wa:hover{
+      transform:translateY(-4px) scale(1.03);
+      box-shadow:0 16px 34px rgba(0,0,0,.24);
+    }
+    .wa svg{width:30px;height:30px;display:block}
+
+    /* ---------- tablet ---------- */
+    @media(max-width:1080px){
+      .container{width:min(960px,calc(100% - 40px))}
+      .nav{display:none}
+      .header{grid-template-columns:1fr auto auto}
+      .mobile-menu{display:block;position:relative}
+      .mobile-menu summary{
+        list-style:none;
+        min-width:48px;
+        min-height:44px;
+        display:grid;
+        place-items:center;
+        cursor:pointer;
+        border:1px solid var(--line);
+        border-radius:8px;
+        font-weight:800;
+        background:white;
+      }
+      .mobile-menu summary::-webkit-details-marker{display:none}
+      .mobile-menu .panel{
+        position:absolute;
+        top:52px;
+        right:0;
+        width:min(320px,86vw);
+        padding:8px;
+        background:var(--ivory);
+        border:1px solid var(--line);
+        box-shadow:var(--shadow);
+        border-radius:10px;
+      }
+      .mobile-menu .panel a{
+        display:block;
+        padding:12px 11px;
+        border-bottom:1px solid var(--line);
+        color:var(--forest);
+        font-weight:700;
+      }
+      .mobile-menu .panel a:last-child{border-bottom:0}
+
+      .hero-grid{grid-template-columns:1fr .84fr;gap:36px}
+      .visual .photo{height:420px}
+      .brief{right:-14px;bottom:-18px;width:min(360px,76%)}
+      .products-head,.process-head{grid-template-columns:1fr;gap:14px}
+      .quality-grid{grid-template-columns:1fr 1fr}
+      .process-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* ---------- mobile ---------- */
+    @media(max-width:760px){
+      html,body{width:100%;max-width:100%;overflow-x:hidden}
+      body{min-width:0}
+      .container{
+        width:100%;
+        max-width:600px;
+        padding-left:14px;
+        padding-right:14px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      section{scroll-margin-top:80px}
+
+      .topbar{font-size:.65rem}
+      .topbar .container{
+        min-height:0;
+        padding-top:5px;
+        padding-bottom:5px;
+        display:block;
+      }
+      .topbar-left{display:none}
+      .topbar-right{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        justify-content:stretch;
+        align-items:center;
+        gap:3px 8px;
+      }
+      .topbar-right .top-item{
+        min-width:0;
+        justify-content:center;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .topbar-right .top-item:nth-child(3){
+        grid-column:1/-1;
+        justify-self:center;
+        opacity:.86;
+        font-size:.61rem;
+      }
+      .top-item .icon{width:13px;height:13px}
+
+      .header{
+        min-height:64px;
+        grid-template-columns:minmax(0,1fr) auto;
+        gap:8px;
+      }
+      .brand{
+        min-width:0;
+        max-width:100%;
+        gap:8px;
+        overflow:hidden;
+      }
+      .brand > span{
+        min-width:0;
+        overflow:hidden;
+      }
+      .brand img{width:48px;height:43px;flex:0 0 auto}
+      .brand strong{
+        font-size:.84rem;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .brand small{
+        display:block;
+        font-size:.57rem;
+        max-width:155px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      .actions{display:none}
+      .mobile-menu{
+        display:block;
+        justify-self:end;
+        position:relative;
+      }
+      .mobile-menu summary{
+        list-style:none;
+        width:44px;
+        height:44px;
+        min-width:44px;
+        min-height:44px;
+        display:grid;
+        place-items:center;
+        cursor:pointer;
+        border:1px solid var(--line);
+        border-radius:8px;
+        background:var(--paper);
+      }
+      .mobile-menu summary::-webkit-details-marker{display:none}
+      .mobile-menu .panel{
+        position:absolute;
+        top:52px;
+        right:0;
+        width:min(330px,calc(100vw - 24px));
+        padding:10px;
+        background:var(--paper);
+        border:1px solid var(--line);
+        box-shadow:0 20px 44px rgba(8,39,29,.18);
+        border-radius:12px;
+      }
+      .mobile-menu .panel nav{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:3px;
+      }
+      .mobile-menu .panel nav a{
+        display:block;
+        padding:12px 11px;
+        border:0;
+        border-radius:7px;
+        color:var(--forest);
+        font-size:.84rem;
+        font-weight:800;
+      }
+      .mobile-menu .panel nav a:hover{background:var(--cream)}
+      .mobile-menu-actions{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+        margin-top:9px;
+        padding-top:9px;
+        border-top:1px solid var(--line);
+      }
+      .mobile-menu-actions a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:42px;
+        padding:8px 10px;
+        border:1px solid var(--line);
+        border-radius:7px;
+        font-size:.8rem;
+        font-weight:850;
+      }
+      .mobile-menu-actions .mobile-wa-link{
+        color:white;
+        border-color:var(--green);
+        background:var(--green);
       }
 
-      nav ul {
-        display: none;
+      .hero-grid{
+        width:100%;
+        max-width:100%;
+        grid-template-columns:minmax(0,1fr);
+        gap:22px;
+        padding:26px 0 34px;
+        min-height:0;
       }
-
-      .mobile-menu {
-        display: block;
-        position: relative;
+      .hero-grid > *{width:100%;max-width:100%;min-width:0}
+      .eyebrow{
+        margin-bottom:13px;
+        font-size:.63rem;
+        letter-spacing:.09em;
+        line-height:1.45;
       }
-
-      .mobile-menu summary {
-        list-style: none;
-        cursor: pointer;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: white;
-        color: var(--brand-dark);
-        font-weight: 900;
+      .eyebrow::before{width:25px}
+      h1{
+        width:100%;
+        max-width:100%;
+        font-size:clamp(2.2rem,9.2vw,2.9rem);
+        line-height:1.01;
+        letter-spacing:-.03em;
+        overflow-wrap:normal;
+        word-break:normal;
       }
-
-      .mobile-menu summary::-webkit-details-marker {
-        display: none;
+      h1 em{margin-top:4px}
+      .hero p{
+        width:100%;
+        max-width:100%;
+        margin-top:17px;
+        font-size:.91rem;
+        line-height:1.58;
       }
-
-      .mobile-menu-links {
-        position: absolute;
-        right: 0;
-        top: 48px;
-        width: min(300px, 86vw);
-        display: grid;
-        gap: 8px;
-        padding: 14px;
-        border-radius: 20px;
-        border: 1px solid var(--border);
-        background: white;
-        box-shadow: var(--shadow);
-        color: var(--muted);
-        font-weight: 800;
+      .hero-tags{
+        width:100%;
+        margin-top:13px;
+        gap:5px 12px;
+        font-size:.72rem;
+        line-height:1.65;
       }
-
-      .mobile-menu-links a {
-        padding: 10px 12px;
-        border-radius: 12px;
-        background: var(--bg-light);
+      .hero-tags span:not(:last-child)::after{margin-left:12px}
+      .hero-actions{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:8px;
+        margin-top:20px;
       }
+      .hero-actions .btn{width:100%}
 
-      .hero-grid,
-      .split,
-      .markets,
-      .contact-grid {
-        grid-template-columns: 1fr;
+      .visual{
+        width:100%;
+        max-width:100%;
+        padding-bottom:0;
       }
-
-      .hero {
-        min-height: auto;
-        padding: 56px 0 48px;
+      .visual .photo{
+        width:100%;
+        height:280px;
       }
-
-      .hero-panel {
-        max-width: 720px;
+      .brief{
+        position:static;
+        width:100%;
+        max-width:100%;
+        width:92%;
+        margin:-18px 0 0 auto;
+        padding:15px 16px;
+        box-shadow:0 12px 26px rgba(8,39,29,.13);
       }
+      .brief strong{font-size:1.02rem}
 
-      .cards,
-      .features,
-      .team-grid,
-      .stats,
-      .doc-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .snapshot-grid{grid-template-columns:1fr 1fr}
+      .snapshot-grid div{min-height:66px;padding:11px 12px}
+
+      .section{padding:42px 0}
+      .section-heading{
+        max-width:100%;
+        font-size:clamp(2rem,9.5vw,2.75rem);
+        letter-spacing:-.03em;
       }
+      .intro{max-width:100%;font-size:.9rem}
 
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .about-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+      .about-copy{position:static}
+      .about-list{width:100%}
+      .about-row{
+        width:100%;
+        grid-template-columns:32px minmax(0,1fr);
+        gap:9px;
+        padding:16px 0;
       }
-    }
+      .about-row strong{font-size:1.12rem}
+      .about-row p{grid-column:2;font-size:.86rem}
+      .about-row:hover{padding-left:7px;padding-right:7px}
 
-    /* Mobile improvements */
-    @media (max-width: 760px) {
-      .container {
-        width: min(100% - 28px, 560px);
+      .products-head{
+        grid-template-columns:minmax(0,1fr);
+        gap:13px;
+        margin-bottom:25px;
       }
-
-      .topbar {
-        font-size: 0.78rem;
+      .product-grid{grid-template-columns:minmax(0,1fr);width:100%}
+      .card,.card:nth-child(4),.card:nth-child(5){
+        grid-column:1;
+        width:100%;
+        min-width:0;
       }
+      .card-image{height:188px}
+      .card-body{padding:17px}
+      .card h3{font-size:1.3rem}
+      .chips{gap:5px}
 
-      .topbar-inner {
-        justify-content: center;
-        text-align: center;
-        gap: 4px;
-        padding: 7px 0;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-      }
-
-      .nav {
-        padding: 10px 0;
-        gap: 10px;
-      }
-
-      .logo {
-        min-width: 0;
-        gap: 9px;
-      }
-
-      .logo-mark {
-        width: 38px;
-        height: 38px;
-        font-size: 0.9rem;
-      }
-
-      .logo-text strong {
-        font-size: 0.94rem;
-      }
-
-      .logo-text span {
-        max-width: 145px;
-        font-size: 0.68rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .nav-actions {
-        display: none;
-      }
-
-      .mobile-menu summary {
-        padding: 9px 12px;
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        padding: 40px 0 34px;
-        background:
-          linear-gradient(180deg, rgba(255,250,240,0.98) 0%, rgba(255,250,240,0.9) 65%, rgba(255,250,240,0.78) 100%),
-          url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=80') center/cover;
-      }
-
-      .hero-grid {
-        gap: 26px;
-      }
-
-      .eyebrow {
-        font-size: 0.78rem;
-        padding: 7px 11px;
-        line-height: 1.3;
-      }
-
-      h1 {
-        font-size: clamp(2.18rem, 12vw, 3.15rem);
-        line-height: 1.02;
-        letter-spacing: -0.7px;
-        margin-bottom: 16px;
-      }
-
-      .hero p {
-        font-size: 1rem;
-        line-height: 1.62;
-        margin-bottom: 22px;
-      }
-
-      .hero-actions {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
-      .hero-actions .btn,
-      .catalogue-note .btn {
-        width: 100%;
-      }
-
-      .trust-row,
-      .cards,
-      .features,
-      .process-grid,
-      .team-grid,
-      .stats,
-      .doc-grid,
+      .quality-grid,
+      .regs,
       .faq-grid,
-      .catalogue-note,
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .contact-grid,
+      .footer-grid{
+        width:100%;
+        grid-template-columns:minmax(0,1fr);
+      }
+      .quality-grid > div{min-height:0}
+      .process-head{grid-template-columns:minmax(0,1fr);gap:13px}
+      .process-grid{
+        width:calc(100% + 14px);
+        display:grid;
+        grid-auto-flow:column;
+        grid-auto-columns:minmax(248px,82%);
+        grid-template-columns:none;
+        gap:10px;
+        overflow-x:auto;
+        padding:2px 14px 12px 0;
+        margin-right:-14px;
+        scroll-snap-type:x mandatory;
+        overscroll-behavior-inline:contain;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:thin;
+      }
+      .step{
+        min-height:205px;
+        scroll-snap-align:start;
+      }
+      .step:not(:last-child)::after{
+        content:"→";
+        top:50%;
+        right:-8px;
+        left:auto;
+        bottom:auto;
       }
 
-      .trust-pill {
-        padding: 12px 14px;
+      .address{
+        grid-template-columns:minmax(0,1fr);
+        min-height:0;
       }
+      .address-copy{padding:22px 18px}
+      .address-copy h3{font-size:1.32rem}
+      .address-copy p{font-size:.86rem}
+      .address-map{
+        min-height:240px;
+        border-left:0;
+        border-top:1px solid var(--line);
+      }
+      .address-map iframe{min-height:240px}
 
-      .hero-panel {
-        border-radius: 24px;
-        padding: 20px;
+      .contact-grid{gap:28px}
+      .contact-item{grid-template-columns:105px minmax(0,1fr)}
+      .rfq{
+        width:100%;
+        min-width:0;
+        padding:22px 17px;
       }
+      .form-grid{grid-template-columns:minmax(0,1fr)}
+      .field,.field.full{grid-column:auto;min-width:0}
+      input,textarea{min-width:0;max-width:100%}
+      .rfq-actions{display:grid}
+      .rfq-actions .btn{width:100%}
 
-      .mini-card img {
-        height: 150px;
+      .copyright{display:grid;grid-template-columns:minmax(0,1fr)}
+      .wa{
+        right:14px;
+        bottom:14px;
+        width:56px;
+        height:56px;
       }
-
-      section {
-        padding: 34px 0;
-        scroll-margin-top: 95px;
-      }
-
-      .section-title {
-        margin-bottom: 22px;
-      }
-
-      h2 {
-        font-size: clamp(1.95rem, 10vw, 2.55rem);
-        letter-spacing: -0.5px;
-      }
-
-      .section-title p {
-        font-size: 0.98rem;
-      }
-
-      .image-frame img {
-        height: 250px;
-      }
-
-      .content-card,
-      .card,
-      .team-card,
-      .doc,
-      .contact-panel,
-      .step,
-      .feature,
-      details {
-        border-radius: 20px;
-        padding: 20px;
-      }
-
-      .card img {
-        height: 160px;
-        border-radius: 16px;
-      }
-
-      .highlight-list div {
-        display: block;
-      }
-
-      .stat {
-        padding: 16px;
-      }
-
-      .markets {
-        gap: 16px;
-      }
-
-      .tag-cloud {
-        gap: 9px;
-      }
-
-      .tag {
-        padding: 8px 11px;
-        font-size: 0.88rem;
-      }
-
-      .contact-link {
-        display: grid;
-        gap: 4px;
-        align-items: start;
-      }
-
-      .contact-link span {
-        text-align: left;
-      }
-
-      input,
-      textarea,
-      select {
-        font-size: 16px;
-      }
+      .wa svg{width:29px;height:29px}
     }
 
-    /* Small-phone polish */
-    @media (max-width: 420px) {
-      .container {
-        width: min(100% - 22px, 390px);
+    @media(max-width:420px){
+      .container{
+        width:100%;
+        max-width:100%;
+        padding-left:11px;
+        padding-right:11px;
+      }
+      .topbar-right{
+        grid-template-columns:1fr 1fr;
+        gap:3px 6px;
+      }
+      .topbar-right .top-item:nth-child(3){grid-column:1/-1}
+      .brand img{width:42px;height:38px}
+      .brand small{display:none}
+      .mobile-menu summary{width:42px;height:42px;min-width:42px;min-height:42px}
+      .mobile-menu .panel{width:calc(100vw - 20px);right:-2px}
+      .mobile-menu .panel nav{
+        grid-template-columns:1fr 1fr;
+        gap:4px;
+      }
+      .mobile-menu .panel nav a{
+        min-height:43px;
+        display:flex;
+        align-items:center;
+      }
+      .mobile-menu-actions{grid-template-columns:1fr 1fr}
+      h1{font-size:2.25rem}
+      .visual .photo{height:258px}
+      .brief{
+        width:91%;
+        margin:-12px 0 0 auto;
+        padding:14px 15px;
+      }
+      .brief strong{
+        font-size:1.02rem;
+        line-height:1.35;
+      }
+      .snapshot-grid{
+        grid-template-columns:1fr 1fr;
+        border-left:0;
+        gap:1px;
+        background:var(--line-dark);
+      }
+      .snapshot-grid div{
+        min-height:58px;
+        padding:10px 12px;
+        border:0;
+        background:var(--dark);
+      }
+      .snapshot span{font-size:.56rem}
+      .snapshot strong{font-size:.76rem;line-height:1.25}
+      .contact-item{grid-template-columns:1fr;gap:3px}
+      .faq-grid{gap:8px;margin-top:22px}
+      .faq summary{padding:16px 44px 16px 15px;font-size:.9rem}
+      .faq summary::before,
+      .faq summary::after{right:16px}
+      .faq details p{padding:0 15px 16px;font-size:.84rem}
+      .rfq{padding:22px 17px}
+      .form-grid{gap:17px 14px}
+      .rfq-actions{gap:9px}
+    }
+
+    @media (hover:none){
+      .card:hover,
+      .quality-grid > div:hover,
+      .step:hover,
+      .reg:hover,
+      .faq details:hover,
+      .about-row:hover{
+        transform:none;
+        box-shadow:none;
+      }
+      .card:hover .card-image img,
+      .visual:hover .photo img{transform:none}
+
+      .card:active,
+      .quality-grid > div:active,
+      .step:active,
+      .reg:active,
+      .faq details:active,
+      .about-row:active,
+      .snapshot-grid > div:active{
+        transform:translateY(-3px) scale(.992);
+        box-shadow:0 12px 26px rgba(18,57,43,.11);
       }
 
-      .logo-text strong {
-        font-size: 0.86rem;
+      .card:active{
+        border-color:rgba(200,102,41,.34);
       }
 
-      .logo-text span {
-        max-width: 118px;
+      .card:active .card-image img{
+        transform:scale(1.025);
       }
 
-      .mobile-menu summary {
-        padding: 8px 10px;
-        font-size: 0.82rem;
+      .touch-active{
+        transform:translateY(-4px) scale(.992)!important;
+        box-shadow:0 13px 28px rgba(18,57,43,.12)!important;
       }
-
-      h1 {
-        font-size: 2.22rem;
+      .card.touch-active{
+        border-color:rgba(200,102,41,.34)!important;
       }
-
-      .hero-panel ul,
-      .card ul {
-        margin-left: 16px;
-      }
-
-      .btn {
-        padding: 11px 14px;
-        font-size: 0.94rem;
+      .card.touch-active .card-image img{
+        transform:scale(1.025)!important;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Bengaluru, Karnataka, India</span>
-      <span>Export enquiries: contact@vayamglobalexim.com | WhatsApp: +91 XXXXX XXXXX</span>
+    <div class="container">
+      <div class="topbar-left">
+        <span class="top-item">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+          Bengaluru, Karnataka, India
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="top-item">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <a href="mailto:info@vayam-global.com">info@vayam-global.com</a>
+        </span>
+        <span class="top-item">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+          <a href="tel:+918660720580">+91 86607 20580</a>
+        </span>
+        <span class="top-item">
+          <strong>GSTIN</strong>
+          <span>29ABCFV3594K1ZH</span>
+        </span>
+      </div>
     </div>
   </div>
 
-  <header>
-    <div class="container nav">
-      <a class="logo" href="#home" aria-label="Vayam Global Exim Home">
-        <div class="logo-mark">VG</div>
-        <div class="logo-text">
+  <header class="site-header">
+    <div class="container header">
+      <a href="#home" class="brand" aria-label="Vayam Global Exim home">
+        <img src="assets/images/vayam-logo.png" alt="Vayam Global Exim logo">
+        <span>
           <strong>Vayam Global Exim</strong>
-          <span>Indian food exports from Bengaluru</span>
-        </div>
+          <small>Indian food sourcing & export coordination</small>
+        </span>
       </a>
 
-      <nav aria-label="Main navigation">
+      <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#quality">Quality</a></li>
           <li><a href="#process">Process</a></li>
-          <li><a href="#markets">Markets</a></li>
-          <li><a href="#team">Team</a></li>
           <li><a href="#documents">Documents</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <details class="mobile-menu">
-        <summary>Menu</summary>
-        <div class="mobile-menu-links">
-          <a href="#about">About</a>
-          <a href="#products">Products</a>
-          <a href="#quality">Quality</a>
-          <a href="#process">Process</a>
-          <a href="#markets">Markets</a>
-          <a href="#team">Team</a>
-          <a href="#documents">Documents</a>
-          <a href="#contact">Contact</a>
+        <summary aria-label="Open navigation">
+          <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="sr-only">Menu</span>
+        </summary>
+        <div class="panel">
+          <nav aria-label="Mobile navigation">
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#quality">Quality</a>
+            <a href="#process">Process</a>
+            <a href="#documents">Documents</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="mobile-menu-actions">
+            <a href="mailto:info@vayam-global.com">Email us</a>
+            <a class="mobile-wa-link" href="https://wa.me/918660720580?text=Hello%20Vayam%20Global%20Exim%2C%20I%20would%20like%20to%20discuss%20a%20sourcing%20enquiry." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
         </div>
       </details>
 
-      <div class="nav-actions">
-        <a class="btn btn-secondary" href="mailto:contact@vayamglobalexim.com">Email</a>
-        <a class="btn btn-primary" href="#contact">Enquire Now</a>
+      <div class="actions">
+        <a class="btn outline" href="mailto:info@vayam-global.com">Email</a>
+        <a class="btn primary" href="#contact">Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main id="home">
-    <section class="hero">
+  <main>
+    <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">India to the world | Grocery, spices & FMCG exports</span>
-          <h1>Reliable Indian food sourcing for global buyers.</h1>
+          <div class="eyebrow">Bengaluru, India · International B2B sourcing</div>
+
+          <h1>
+            Reliable Indian food sourcing
+            <em>for global buyers.</em>
+          </h1>
+
           <p>
-            Vayam Global Exim is a Bengaluru-based export business built to connect international importers, distributors, retailers, restaurants and wholesalers with trusted Indian grocery, spice, grain, pulse and packaged-food supply networks.
+            Vayam Global Exim coordinates sourcing of Indian spices, rice, pulses, grains and packaged foods
+            for importers, distributors, wholesalers, food-service buyers and buyer-specific programmes.
           </p>
+
+          <div class="hero-tags">
+            <span>Whole spices</span>
+            <span>Rice & staples</span>
+            <span>Packaged foods</span>
+            <span>Private label</span>
+          </div>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">View Product Range</a>
-            <a class="btn btn-green" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp Enquiry</a>
-            <a class="btn btn-secondary" href="#documents">Export Documents</a>
-          </div>
-
-          <div class="trust-row">
-            <div class="trust-pill">Supplier coordination</div>
-            <div class="trust-pill">Export documentation support</div>
-            <div class="trust-pill">Buyer-specific sourcing</div>
+            <a class="btn primary" href="#products">Explore products</a>
+            <a class="btn outline" href="https://wa.me/918660720580?text=Hello%20Vayam%20Global%20Exim%2C%20I%20would%20like%20to%20discuss%20a%20sourcing%20enquiry." target="_blank" rel="noopener">WhatsApp enquiry</a>
           </div>
         </div>
 
-        <aside class="hero-panel">
-          <h3>What we aim to supply</h3>
-          <ul>
-            <li>Whole spices, ground spices and blended masalas</li>
-            <li>Rice, millets, pulses, lentils and flours</li>
-            <li>Packaged Indian grocery and selected FMCG products</li>
-            <li>Private-label and bulk sourcing possibilities</li>
-            <li>Custom product consolidation for international buyers</li>
-          </ul>
-          <div class="mini-card">
-            <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=900&q=80" alt="Indian spices arranged in bowls" />
+        <div class="visual">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1400&q=88" alt="Selection of Indian spices and ingredients">
           </div>
-        </aside>
+          <div class="brief">
+            <span>Our approach</span>
+            <strong>You tell us what you need. We source carefully, stay close to the details and keep you informed along the way.</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container split">
-        <div class="image-frame">
-          <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1000&q=80" alt="Rice grains close up" />
-        </div>
-        <div class="content-card">
-          <div class="section-title">
-            <h2>About Vayam Global Exim</h2>
-            <p>
-              Vayam Global Exim is being developed as a professional export platform for Indian food and grocery products. The company is based in Bengaluru, a major commercial hub with access to suppliers across Karnataka, South India and wider Indian food supply chains.
-            </p>
-          </div>
-          <p>
-            The business objective is simple: help global buyers source Indian products with clarity, reliability and consistent communication. In the first phase, the focus is on grocery staples, spices, food ingredients and selected packaged goods.
+    <div class="snapshot">
+      <div class="container snapshot-grid">
+        <div><span>Base</span><strong>Bengaluru, India</strong></div>
+        <div><span>Core</span><strong>Indian food & spices</strong></div>
+        <div><span>Buyer</span><strong>Import · Distribution · Wholesale</strong></div>
+        <div><span>Approach</span><strong>Requirement-led sourcing</strong></div>
+      </div>
+    </div>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="kicker">01 · About Vayam</span>
+          <h2 class="section-heading">Built around the<em>buyer brief.</em></h2>
+          <p class="intro">
+            Vayam Global Exim is a Bengaluru-based B2B sourcing and export coordination business focused on Indian food products.
           </p>
-          <div class="highlight-list">
-            <div><strong>Mission:</strong> To make Indian grocery sourcing easier for international buyers.</div>
-            <div><strong>Vision:</strong> To build a trusted export brand for Indian food products from Bengaluru.</div>
-            <div><strong>Approach:</strong> Source carefully, document clearly, package responsibly and communicate transparently.</div>
+          <p class="intro">
+            We begin with the buyer's requirement, then align feasible sourcing options, product expectations, packing and applicable documentation before a commercial offer is confirmed.
+          </p>
+        </div>
+
+        <div class="about-list">
+          <div class="about-row">
+            <span class="n">01</span>
+            <strong>Define the brief</strong>
+            <p>Product, form, quantity, destination, packing expectations and relevant commercial requirements establish the starting point.</p>
+          </div>
+          <div class="about-row">
+            <span class="n">02</span>
+            <strong>Coordinate sourcing</strong>
+            <p>Relevant sourcing possibilities are assessed against the requirement instead of presenting every category as continuously available.</p>
+          </div>
+          <div class="about-row">
+            <span class="n">03</span>
+            <strong>Prepare the transaction</strong>
+            <p>Product references, packaging, applicable documentation and dispatch requirements are coordinated for the specific enquiry.</p>
+          </div>
+          <div class="about-row">
+            <span class="n">04</span>
+            <strong>Stay aligned</strong>
+            <p>Buyers receive one point of coordination across enquiry, sourcing, confirmation and export-preparation stages.</p>
           </div>
         </div>
       </div>
-
-      <div class="container stats">
-        <div class="stat"><strong>3+</strong><span>core product groups</span></div>
-        <div class="stat"><strong>4</strong><span>founding partners</span></div>
-        <div class="stat"><strong>India</strong><span>source market</span></div>
-        <div class="stat"><strong>Global</strong><span>buyer focus</span></div>
-      </div>
     </section>
 
-    <section id="products">
+    <section class="section" id="products">
       <div class="container">
-        <div class="section-title center">
-          <h2>Product categories</h2>
-          <p>
-            The product catalogue can be expanded based on buyer demand, destination-country import rules, packaging needs and supplier readiness.
-          </p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80" alt="Indian spices" />
-            <h3>Spices & Masalas</h3>
-            <p>Whole spices, ground spices and blended masalas for retail, wholesale and food-service buyers.</p>
-            <ul>
-              <li>Turmeric, chilli, cumin, coriander</li>
-              <li>Black pepper, cardamom, cloves</li>
-              <li>Sambar, rasam, garam masala and custom blends</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80" alt="Rice and grains" />
-            <h3>Rice, Pulses & Grains</h3>
-            <p>Indian staple foods for importers, ethnic supermarkets, restaurants and wholesale distributors.</p>
-            <ul>
-              <li>Basmati and non-basmati rice</li>
-              <li>Toor dal, chana dal, urad dal, moong dal</li>
-              <li>Millets, wheat flour and selected grains</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=900&q=80" alt="Grocery shelves" />
-            <h3>Packaged Groceries</h3>
-            <p>Ready-to-ship branded or private-label products depending on buyer requirement and compliance checks.</p>
-            <ul>
-              <li>Snacks, pickles and instant mixes</li>
-              <li>Ready-to-cook products</li>
-              <li>Selected FMCG and daily-use grocery items</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=900&q=80" alt="Onions and vegetables" />
-            <h3>Fresh & Agro Products</h3>
-            <p>Possible future category depending on cold-chain, shelf-life, certification and buyer destination.</p>
-            <ul>
-              <li>Onion, garlic and selected vegetables</li>
-              <li>Coconut-based products</li>
-              <li>Seasonal agro products</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=900&q=80" alt="Packaged food aisle" />
-            <h3>Private Label Support</h3>
-            <p>Support for buyers who want customised packaging, label formats and repeated product sourcing.</p>
-            <ul>
-              <li>Buyer brand packaging</li>
-              <li>Custom pack sizes</li>
-              <li>Market-specific labelling checks</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80" alt="Warehouse storage" />
-            <h3>Consolidated Orders</h3>
-            <p>Multiple product categories can be consolidated for buyers who need mixed Indian grocery shipments.</p>
-            <ul>
-              <li>Multi-SKU container planning</li>
-              <li>Wholesale and distributor orders</li>
-              <li>Repeat-supply coordination</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="catalogue-note">
+        <div class="products-head">
           <div>
-            <h3>Next catalogue step</h3>
-            <p>Create a simple product list with product name, pack size, MOQ, shelf life, HS code, certification requirement and target market. This can later become a downloadable PDF catalogue.</p>
+            <span class="kicker">02 · Product portfolio</span>
+            <h2 class="section-heading">Core sourcing<em>categories.</em></h2>
           </div>
-          <a class="btn btn-primary" href="#documents">Prepare Catalogue</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="quality">
-      <div class="container">
-        <div class="section-title center">
-          <h2>Quality, packaging and compliance focus</h2>
-          <p>
-            Export success depends on more than finding products. It requires documentation discipline, quality checks, suitable packaging and destination-market awareness.
+          <p class="intro">
+            These are current sourcing directions. Availability, product specification, origin, supplier, packing and commercial terms are confirmed for each enquiry.
           </p>
         </div>
-        <div class="features">
-          <div class="feature">
-            <strong>Supplier verification</strong>
-            <p>Shortlist suppliers based on product type, capacity, packaging readiness and export suitability.</p>
+
+        <div class="product-grid">
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=85" alt="Assorted Indian whole spices">
+            </div>
+            <div class="card-body">
+              <span class="label">Spices</span>
+              <h3>Whole spices, powders & masalas</h3>
+              <p>Whole spices, ground spices and spice-blend requirements assessed against product, packing and destination needs.</p>
+              <div class="chips">
+                <span>Green cardamom</span><span>Black pepper</span><span>Cumin</span><span>Coriander</span><span>Chilli</span><span>Masalas</span>
+              </div>
+              <a class="product-link" href="#contact" data-product="Whole spices, powders and masalas">Start a spice enquiry →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1000&q=85" alt="Rice grains">
+            </div>
+            <div class="card-body">
+              <span class="label">Staples</span>
+              <h3>Rice, pulses & grains</h3>
+              <p>Staple-food enquiries can be aligned around variety, processing direction, quantity, packaging and destination requirements.</p>
+              <div class="chips">
+                <span>Basmati</span><span>Sona Masoori</span><span>Pulses</span><span>Lentils</span><span>Millets</span><span>Flours</span>
+              </div>
+              <a class="product-link" href="#contact" data-product="Rice, pulses and grains">Start a staples enquiry →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1000&q=85" alt="Packaged grocery products">
+            </div>
+            <div class="card-body">
+              <span class="label">Packaged food</span>
+              <h3>Indian grocery & selected FMCG</h3>
+              <p>Selected packaged-food and grocery enquiries can be assessed against supplier readiness, shelf-life, packing and destination requirements.</p>
+              <div class="chips">
+                <span>Snacks</span><span>Pickles</span><span>Instant mixes</span><span>Ready-to-cook</span><span>Grocery</span>
+              </div>
+              <a class="product-link" href="#contact" data-product="Packaged Indian foods">Start a packaged-food enquiry →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85" alt="Commercial distribution boxes">
+            </div>
+            <div class="card-body">
+              <span class="label">Buyer programme</span>
+              <h3>Private label & buyer-specific packs</h3>
+              <p>Buyer-specific pack formats, labelling direction, product consolidation and repeat sourcing can be coordinated where commercially feasible.</p>
+              <div class="chips">
+                <span>Buyer branding</span><span>Pack formats</span><span>Labelling</span><span>Repeat supply</span>
+              </div>
+              <a class="product-link" href="#contact" data-product="Private label and buyer-specific packs">Discuss a buyer programme →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=85" alt="Commercial warehouse and logistics environment">
+            </div>
+            <div class="card-body">
+              <span class="label">Consolidation</span>
+              <h3>Mixed-product sourcing</h3>
+              <p>Multi-product requirements can be evaluated for commercial feasibility, minimum quantities, packing compatibility and shipment planning.</p>
+              <div class="chips">
+                <span>Multi-SKU</span><span>Wholesale</span><span>Distribution</span><span>Mixed sourcing</span>
+              </div>
+              <a class="product-link" href="#contact" data-product="Mixed-product and consolidated sourcing">Discuss a product list →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="note">
+          Product names and categories indicate sourcing directions, not guaranteed stock or continuous availability. Final feasibility is confirmed against the specific enquiry.
+        </div>
+      </div>
+    </section>
+
+    <section class="section quality" id="quality">
+      <div class="container">
+        <span class="kicker">03 · Quality & documentation</span>
+        <h2 class="section-heading">The right checks. The right documents. The right shipment.</h2>
+        <p class="intro">
+          Export readiness depends on the commodity, supplier, buyer requirements and destination. We keep those transaction-specific requirements connected throughout the sourcing process.
+        </p>
+
+        <div class="quality-grid">
+          <div>
+            <span>01</span>
+            <h3>Supplier assessment</h3>
+            <p>Relevant suppliers are assessed against product, quantity, packing readiness and the specific buyer requirement.</p>
           </div>
-          <div class="feature">
-            <strong>Product documentation</strong>
-            <p>Coordinate product specification, invoices, packing lists, certificates and buyer-required details.</p>
+          <div>
+            <span>02</span>
+            <h3>Product alignment</h3>
+            <p>Specification, reference samples, testing or supporting product records can be coordinated where applicable.</p>
           </div>
-          <div class="feature">
-            <strong>Packaging checks</strong>
-            <p>Support retail, wholesale, bulk and private-label packaging requirements where feasible.</p>
+          <div>
+            <span>03</span>
+            <h3>Documentation</h3>
+            <p>Commercial, origin, customs, transport and product-specific documentation is aligned with the agreed transaction.</p>
           </div>
-          <div class="feature">
-            <strong>Clear communication</strong>
-            <p>Keep buyers updated on sourcing, quotation, readiness, shipment and documentation status.</p>
+          <div>
+            <span>04</span>
+            <h3>Packing readiness</h3>
+            <p>Pack format, labelling direction, handling requirements and dispatch preparation are confirmed for the order.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="process">
+    <section class="section" id="process">
       <div class="container">
-        <div class="section-title center">
-          <h2>Export workflow</h2>
-          <p>
-            This is the proposed working model for handling international buyer enquiries in a structured way.
+        <div class="process-head">
+          <div>
+            <span class="kicker">04 · How Vayam works</span>
+            <h2 class="section-heading">From requirement<em>to export.</em></h2>
+          </div>
+          <p class="intro">
+            A practical sequence keeps product requirements, sourcing decisions, commercial confirmation and export preparation connected.
           </p>
         </div>
 
         <div class="process-grid">
           <div class="step">
-            <h3>Enquiry</h3>
-            <p>Buyer shares product list, quantity, destination, packaging and target price expectation.</p>
+            <span class="n">01</span>
+            <h3>Requirement</h3>
+            <p>Define product, quantity, specification, destination, intended use and packing.</p>
           </div>
           <div class="step">
-            <h3>Sourcing</h3>
-            <p>We check supplier availability, minimum order quantity, product specification and lead time.</p>
+            <span class="n">02</span>
+            <h3>Source</h3>
+            <p>Assess feasible product and supplier directions against the buyer brief.</p>
           </div>
           <div class="step">
-            <h3>Quotation</h3>
-            <p>Pricing, packaging, payment terms and shipment options are discussed transparently.</p>
+            <span class="n">03</span>
+            <h3>Verify</h3>
+            <p>Align samples, references, testing or supporting records where relevant.</p>
           </div>
           <div class="step">
-            <h3>Documentation</h3>
-            <p>Invoice, packing list, certificates and buyer-specific documentation are coordinated.</p>
+            <span class="n">04</span>
+            <h3>Confirm</h3>
+            <p>Fix agreed commercial terms, pack direction, quantity and order requirements.</p>
           </div>
           <div class="step">
-            <h3>Shipment</h3>
-            <p>Goods are packed, dispatched and tracked with regular buyer communication.</p>
+            <span class="n">05</span>
+            <h3>Export</h3>
+            <p>Coordinate applicable documents, logistics and dispatch communication.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="markets">
-      <div class="container markets">
-        <div class="section-title">
-          <h2>Potential target markets</h2>
-          <p>
-            The first target countries should be selected after checking buyer contacts, import regulations, freight cost, shelf-life, demand and payment safety. These regions can be treated as starting points for business validation.
-          </p>
-        </div>
-        <div class="tag-cloud">
-          <span class="tag">Middle East</span>
-          <span class="tag">Europe</span>
-          <span class="tag">United Kingdom</span>
-          <span class="tag">North America</span>
-          <span class="tag">Southeast Asia</span>
-          <span class="tag">Africa</span>
-          <span class="tag">Indian ethnic supermarkets</span>
-          <span class="tag">Restaurants & food service</span>
-          <span class="tag">Wholesale distributors</span>
-          <span class="tag">Retail chains</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="team" id="team">
+    <section class="section documents" id="documents">
       <div class="container">
-        <div class="section-title center">
-          <h2>Founding team</h2>
-          <p>
-            Add the real names, roles and photos after you and your friends finalise responsibilities. This section helps buyers see that there is a responsible team behind the business.
-          </p>
-        </div>
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="avatar">F1</div>
-            <h3>Founder Name</h3>
-            <p>Sourcing & supplier coordination</p>
+        <span class="kicker">05 · Business identity</span>
+        <h2 class="section-heading">Verified business<em>registrations.</em></h2>
+        <p class="intro">
+          The following company registrations are confirmed. Product-, supplier-, destination- or shipment-specific documents are handled separately where applicable.
+        </p>
+
+        <div class="regs">
+          <div class="reg">
+            <span>Goods & Services Tax</span>
+            <strong>29ABCFV3594K1ZH</strong>
+            <p>GSTIN</p>
           </div>
-          <div class="team-card">
-            <div class="avatar">F2</div>
-            <h3>Founder Name</h3>
-            <p>Export operations & documentation</p>
+          <div class="reg">
+            <span>Foreign trade</span>
+            <strong>ABCFV3594K</strong>
+            <p>Importer Exporter Code (IEC)</p>
           </div>
-          <div class="team-card">
-            <div class="avatar">F3</div>
-            <h3>Founder Name</h3>
-            <p>Buyer communication & sales</p>
-          </div>
-          <div class="team-card">
-            <div class="avatar">F4</div>
-            <h3>Founder Name</h3>
-            <p>Finance, compliance & partnerships</p>
+          <div class="reg">
+            <span>MSME registration</span>
+            <strong>UDYAM-KR-03-0733564</strong>
+            <p>Udyam registration</p>
           </div>
         </div>
+
+        <div class="address">
+          <div class="address-copy">
+            <span class="address-eyebrow">Registered office</span>
+            <h3>Bengaluru, Karnataka</h3>
+            <p>#206, DS-MAX Splendid, Ullal Main Road, Bharath Nagar 2nd Phase, BEL Layout, Near KLE Law College, Bengaluru – 560091, Karnataka, India</p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%23206%2C+DS-MAX+Splendid%2C+Ullal+Main+Road%2C+Bharath+Nagar+2nd+Phase%2C+BEL+Layout%2C+Near+KLE+Law+College%2C+Bengaluru+560091%2C+Karnataka%2C+India" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+          </div>
+          <div class="address-map" aria-label="Map preview of the registered Bengaluru office">
+            <iframe
+              title="Vayam Global Exim registered office map"
+              src="https://www.google.com/maps?q=DS-MAX%20Splendid%2C%20Ullal%20Main%20Road%2C%20Bharath%20Nagar%202nd%20Phase%2C%20BEL%20Layout%2C%20Bengaluru%20560091%2C%20Karnataka%2C%20India&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <p class="doc-note">
+          Certificates, testing records, phytosanitary documents, health documentation or destination-specific records are confirmed according to the commodity and transaction.
+        </p>
       </div>
     </section>
 
-    <section class="documents" id="documents">
+    <section class="section faq" id="faq">
       <div class="container">
-        <div class="section-title center">
-          <h2>Export documents and readiness</h2>
-          <p>
-            This section can later be updated with confirmed company registration, IEC, GST, bank details, certificates and downloadable company profile documents.
-          </p>
-        </div>
-        <div class="doc-grid">
-          <div class="doc">
-            <strong>Company profile</strong>
-            <p>Downloadable PDF to be added after company details, logo, product categories and contact information are finalised.</p>
-          </div>
-          <div class="doc">
-            <strong>Product catalogue</strong>
-            <p>Catalogue with SKU list, pack sizes, MOQ, shelf-life, HS codes and available packaging options.</p>
-          </div>
-          <div class="doc">
-            <strong>Compliance documents</strong>
-            <p>GST, IEC, FSSAI, certificate of origin, phytosanitary certificate or other documents can be listed as applicable.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <span class="kicker">06 · Buyer questions</span>
+        <h2 class="section-heading">Frequently asked <em>questions.</em></h2>
+        <p class="intro">
+          Useful answers to the questions buyers most often have about sourcing, availability, samples, packaging, documentation, destinations and quotations.
+        </p>
 
-    <section id="faq">
-      <div class="container">
-        <div class="section-title center">
-          <h2>Buyer questions</h2>
-          <p>These answers are draft website text. They should be reviewed after the actual business process and legal registrations are finalised.</p>
-        </div>
         <div class="faq-grid">
           <details>
-            <summary>Do you support mixed grocery shipments?</summary>
-            <p>Yes, the intended model includes consolidated shipments with multiple Indian grocery categories, depending on minimum order quantities and export feasibility.</p>
+            <summary>Can you source products that are not listed on the website?</summary>
+            <p>Yes. The website shows current sourcing directions rather than a fixed inventory. Share the product, specification if known, quantity and destination so feasibility can be assessed.</p>
           </details>
+
           <details>
-            <summary>Can products be packed under private label?</summary>
-            <p>Private-label support may be possible depending on supplier capability, order volume, packaging requirements and destination-country labelling rules.</p>
+            <summary>Are all listed products continuously available?</summary>
+            <p>No. Availability, origin, grade, supplier and commercial terms are confirmed for each enquiry. The website should be read as a sourcing portfolio, not as live stock.</p>
           </details>
+
           <details>
-            <summary>Which countries do you export to?</summary>
-            <p>The target markets will be finalised based on buyer demand, import regulations, logistics cost and product suitability.</p>
+            <summary>What information should I send for a quotation?</summary>
+            <p>Useful starting points are product name, specification or reference if available, approximate quantity, destination country or port, preferred packaging and target delivery timing.</p>
           </details>
+
           <details>
-            <summary>What information is needed for a quotation?</summary>
-            <p>Please share product list, quantity, destination port/country, preferred packaging, target price range and any certificate or labelling requirement.</p>
+            <summary>Do you support private-label or buyer-specific packaging?</summary>
+            <p>Private-label and buyer-specific formats may be possible depending on the product, supplier capability, order quantity, packaging requirement and destination-market labelling rules.</p>
+          </details>
+
+          <details>
+            <summary>Can you handle mixed-product or consolidated enquiries?</summary>
+            <p>Yes, mixed-product requirements can be evaluated against supplier minimum quantities, packing compatibility, commercial feasibility and shipment planning.</p>
+          </details>
+
+          <details>
+            <summary>Can samples, testing or product references be arranged?</summary>
+            <p>Where relevant and commercially practical, samples, references, testing or supporting product records can be coordinated as part of the enquiry process.</p>
+          </details>
+
+          <details>
+            <summary>Which documents are provided for an export shipment?</summary>
+            <p>The document set depends on the commodity, supplier, destination and agreed transaction. Commercial, origin, customs, transport and product-specific documents are aligned accordingly.</p>
+          </details>
+
+          <details>
+            <summary>Which countries can you supply?</summary>
+            <p>International enquiries are evaluated individually. Destination feasibility depends on the product, applicable import requirements, packing, logistics and commercial conditions.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="section contact" id="contact">
       <div class="container contact-grid">
-        <div class="contact-panel">
-          <h2>Start an export enquiry</h2>
-          <p>
-            Use these contact links for now. Replace the placeholder email, phone, WhatsApp, LinkedIn and address after the company details are finalised.
+        <div>
+          <span class="kicker">07 · Request a quote</span>
+          <h2 class="section-heading">Start with a clear<em>sourcing brief.</em></h2>
+          <p class="intro">
+            Share what you already know. Product, packaging, documentation and delivery details can be refined during follow-up.
           </p>
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:contact@vayamglobalexim.com">
-              <strong>Email</strong><span>contact@vayamglobalexim.com</span>
-            </a>
-            <a class="contact-link" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">
-              <strong>WhatsApp</strong><span>+91 XXXXX XXXXX</span>
-            </a>
-            <a class="contact-link" href="tel:+91XXXXXXXXXX">
-              <strong>Phone</strong><span>+91 XXXXX XXXXX</span>
-            </a>
-            <a class="contact-link" href="https://www.linkedin.com/company/vayam-global-exim" target="_blank" rel="noopener">
-              <strong>LinkedIn</strong><span>To be added</span>
-            </a>
-            <div class="contact-link">
-              <strong>Address</strong><span>Bengaluru, Karnataka, India. Full registered address to be added.</span>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:info@vayam-global.com">info@vayam-global.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/918660720580" target="_blank" rel="noopener">+91 86607 20580</a>
+            </div>
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:+918660720580">+91 86607 20580</a>
+            </div>
+            <div class="contact-item">
+              <strong>Location</strong>
+              <span>Bengaluru, Karnataka, India</span>
             </div>
           </div>
         </div>
 
-        <div class="contact-panel">
-          <h3>Quick enquiry form</h3>
-          <p>This static form opens the user’s email app. Later, it can be connected to Formspree, Google Forms or a backend.</p>
-          <form action="mailto:contact@vayamglobalexim.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your name / company" required />
-            <input type="email" name="email" placeholder="Email address" required />
-            <input type="text" name="country" placeholder="Destination country" />
-            <select name="product-category">
-              <option value="">Select product category</option>
-              <option>Spices and masalas</option>
-              <option>Rice, pulses and grains</option>
-              <option>Packaged groceries</option>
-              <option>Private label</option>
-              <option>Mixed shipment</option>
-            </select>
-            <textarea name="message" placeholder="Tell us product names, quantity, packaging and destination port"></textarea>
-            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+        <div class="rfq">
+          <form id="enquiry-form">
+            <div class="form-title">
+              <span>01</span>
+              <h3>Requirement</h3>
+            </div>
+
+            <div class="form-grid">
+              <div class="field full">
+                <label for="product">Product or category <span class="req">*</span></label>
+                <input id="product" required placeholder="e.g. Green cardamom, Basmati rice, packaged foods">
+              </div>
+
+              <div class="field">
+                <label for="specification">Specification / grade</label>
+                <input id="specification" placeholder="Known parameters or reference">
+              </div>
+
+              <div class="field">
+                <label for="quantity">Quantity</label>
+                <input id="quantity" placeholder="e.g. 500 kg, 5 MT">
+              </div>
+
+              <div class="field">
+                <label for="destination">Destination</label>
+                <input id="destination" placeholder="Country / destination port">
+              </div>
+
+              <div class="field">
+                <label for="packaging">Packaging</label>
+                <input id="packaging" placeholder="Bulk, retail, private label...">
+              </div>
+
+              <div class="field full">
+                <label for="message">Additional requirements</label>
+                <textarea id="message" placeholder="Testing, documents, application, delivery timing or other useful context"></textarea>
+              </div>
+            </div>
+
+            <div class="form-title" style="margin-top:28px">
+              <span>02</span>
+              <h3>Contact</h3>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Your name <span class="req">*</span></label>
+                <input id="name" required autocomplete="name" placeholder="Your name">
+              </div>
+
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" autocomplete="organization" placeholder="Company name">
+              </div>
+
+              <div class="field full">
+                <label for="email">Business email <span class="req">*</span></label>
+                <input id="email" type="email" required autocomplete="email" placeholder="name@company.com">
+              </div>
+            </div>
+
+            <div class="rfq-actions">
+              <button class="btn green" type="submit">Send enquiry on WhatsApp</button>
+              <button class="btn outline" type="button" id="email-enquiry">Send by email</button>
+            </div>
+
+            <p class="rfq-note">
+              Product, name and business email are the only required fields. No payment information is collected through this website.
+            </p>
           </form>
         </div>
       </div>
@@ -1501,34 +2028,130 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>
-        <strong>Vayam Global Exim</strong>
-        <p>Indian grocery, spice, grain, pulse and packaged-food exports from Bengaluru, India.</p>
+      <div class="footer-brand">
+        <img src="assets/images/vayam-logo.png" alt="Vayam Global Exim logo">
+        <div>
+          <strong>Vayam Global Exim</strong>
+          <p>Indian food sourcing and export coordination from Bengaluru, Karnataka, India.</p>
+        </div>
       </div>
-      <div>
-        <strong>Quick links</strong>
-        <a href="#products">Products</a>
-        <a href="#quality">Quality</a>
-        <a href="#documents">Documents</a>
-        <a href="#contact">Contact</a>
+
+      <div class="footer-col">
+        <strong>Verified registrations</strong>
+        <p>GSTIN: 29ABCFV3594K1ZH</p>
+        <p>IEC: ABCFV3594K</p>
+        <p>Udyam: UDYAM-KR-03-0733564</p>
       </div>
-      <div>
-        <strong>Business placeholders</strong>
-        <a href="#documents">IEC: To be added</a>
-        <a href="#documents">GST: To be added</a>
-        <a href="#documents">FSSAI: To be added if applicable</a>
-      </div>
-      <div>
-        <strong>Contact placeholders</strong>
-        <a href="mailto:contact@vayamglobalexim.com">contact@vayamglobalexim.com</a>
-        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp: +91 XXXXX XXXXX</a>
-        <a href="#contact">Bengaluru, Karnataka, India</a>
+
+      <div class="footer-col">
+        <strong>Contact</strong>
+        <a href="mailto:info@vayam-global.com">info@vayam-global.com</a>
+        <a href="tel:+918660720580">+91 86607 20580</a>
+        <a href="https://wa.me/918660720580" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
+
     <div class="container copyright">
       <span>© 2026 Vayam Global Exim. All rights reserved.</span>
-      <span>Website draft for startup validation. Replace placeholders before public business use.</span>
+      <span>Product availability, specifications and transaction-specific documentation are confirmed per enquiry.</span>
     </div>
   </footer>
+
+  <a
+    class="wa"
+    aria-label="Open WhatsApp enquiry"
+    href="https://wa.me/918660720580?text=Hello%20Vayam%20Global%20Exim%2C%20I%20would%20like%20to%20discuss%20a%20sourcing%20enquiry."
+    target="_blank"
+    rel="noopener"
+  >
+    <svg viewBox="0 0 16 16" aria-hidden="true">
+      <path fill="currentColor" d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.366 0 7.925-3.558 7.929-7.93a7.898 7.898 0 0 0-2.326-5.607ZM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.25a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592Zm3.615-4.934c-.198-.099-1.171-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.198-.513.646-.627.775-.116.133-.232.149-.43.05-.198-.1-.836-.308-1.592-.984-.59-.525-.986-1.173-1.102-1.371-.116-.198-.013-.305.087-.404.089-.088.198-.232.297-.348.1-.116.133-.198.198-.33.066-.133.033-.249-.016-.348-.05-.1-.445-1.074-.61-1.47-.16-.389-.323-.336-.445-.342-.116-.007-.248-.007-.38-.007a.729.729 0 0 0-.529.248c-.182.198-.693.678-.693 1.654 0 .977.71 1.92.81 2.053.098.132 1.397 2.132 3.383 2.992.472.205.84.327 1.127.418.474.151.905.13 1.246.079.38-.057 1.171-.48 1.337-.943.165-.463.165-.86.116-.943-.05-.082-.182-.132-.38-.232Z"/>
+    </svg>
+  </a>
+
+  <script>
+    const product = document.getElementById('product');
+
+    document.querySelectorAll('[data-product]').forEach(link => {
+      link.addEventListener('click', () => {
+        product.value = link.dataset.product || '';
+      });
+    });
+
+    const form = document.getElementById('enquiry-form');
+
+    function messageText(){
+      const get = id => document.getElementById(id).value.trim();
+      return `Hello Vayam Global Exim,
+
+I would like to discuss a sourcing enquiry.
+
+Product / category: ${get('product')}
+Specification / grade: ${get('specification') || 'Not specified'}
+Quantity: ${get('quantity') || 'Not specified'}
+Destination: ${get('destination') || 'Not specified'}
+Packaging: ${get('packaging') || 'Not specified'}
+Additional requirements: ${get('message') || 'None provided'}
+
+Contact name: ${get('name')}
+Company: ${get('company') || 'Not specified'}
+Business email: ${get('email')}`;
+    }
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if(!form.reportValidity()) return;
+      window.open(
+        'https://wa.me/918660720580?text=' + encodeURIComponent(messageText()),
+        '_blank',
+        'noopener'
+      );
+    });
+
+    document.getElementById('email-enquiry').addEventListener('click', () => {
+      if(!form.reportValidity()) return;
+      location.href =
+        'mailto:info@vayam-global.com?subject=' +
+        encodeURIComponent('Sourcing enquiry - ' + product.value.trim()) +
+        '&body=' +
+        encodeURIComponent(messageText());
+    });
+
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.removeAttribute('open');
+      });
+    });
+
+    document.addEventListener('keydown', event => {
+      if(event.key === 'Escape' && mobileMenu.hasAttribute('open')){
+        mobileMenu.removeAttribute('open');
+        mobileMenu.querySelector('summary').focus();
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if(
+        mobileMenu.hasAttribute('open') &&
+        !mobileMenu.contains(event.target)
+      ){
+        mobileMenu.removeAttribute('open');
+      }
+    });
+
+    const touchTargets = document.querySelectorAll(
+      '.card, .quality-grid > div, .step, .reg, .about-row, .snapshot-grid > div'
+    );
+
+    touchTargets.forEach(target => {
+      target.addEventListener('pointerdown', event => {
+        if(event.pointerType !== 'touch') return;
+        target.classList.add('touch-active');
+        window.setTimeout(() => target.classList.remove('touch-active'), 260);
+      });
+    });
+  </script>
 </body>
 </html>
