@@ -2080,27 +2080,51 @@
 
     const form = document.getElementById('enquiry-form');
 
+    function createEnquiryReference(){
+      const now = new Date();
+      const pad = value => String(value).padStart(2,'0');
+      const date = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}`;
+      const time = `${pad(now.getHours())}${pad(now.getMinutes())}`;
+      const suffix = Math.floor(100 + Math.random() * 900);
+      return `VGE-WEB-${date}-${time}-${suffix}`;
+    }
+
+    const enquiryReference = createEnquiryReference();
+
     function messageText(){
       const get = id => document.getElementById(id).value.trim();
-      return `Hello Vayam Global Exim,
 
-I would like to discuss a sourcing enquiry.
+      return `*VAYAM GLOBAL EXIM*
+*New Website Sourcing Enquiry*
 
-Product / category: ${get('product')}
-Specification / grade: ${get('specification') || 'Not specified'}
-Quantity: ${get('quantity') || 'Not specified'}
-Destination: ${get('destination') || 'Not specified'}
-Packaging: ${get('packaging') || 'Not specified'}
-Additional requirements: ${get('message') || 'None provided'}
+Hello Vayam Global Exim team,
 
-Contact name: ${get('name')}
-Company: ${get('company') || 'Not specified'}
-Business email: ${get('email')}`;
+My name is ${get('name')}${get('company') ? ` from ${get('company')}` : ''}. I would like to discuss a sourcing enquiry for *${get('product')}*. Please find my requirements below.
+
+*Reference:* ${enquiryReference}
+
+*REQUIREMENT*
+*Product / category:* ${get('product')}
+*Specification / grade:* ${get('specification') || 'Not specified'}
+*Quantity:* ${get('quantity') || 'Not specified'}
+*Destination:* ${get('destination') || 'Not specified'}
+*Packaging:* ${get('packaging') || 'Not specified'}
+*Additional requirements:* ${get('message') || 'None provided'}
+
+*BUYER DETAILS*
+*Name:* ${get('name')}
+*Company:* ${get('company') || 'Not specified'}
+*Business email:* ${get('email')}
+
+Thank you. I look forward to discussing this requirement with you.
+
+*Source:* vayam-global.com`;
     }
 
     form.addEventListener('submit', event => {
       event.preventDefault();
       if(!form.reportValidity()) return;
+
       window.open(
         'https://wa.me/918660720580?text=' + encodeURIComponent(messageText()),
         '_blank',
@@ -2110,9 +2134,10 @@ Business email: ${get('email')}`;
 
     document.getElementById('email-enquiry').addEventListener('click', () => {
       if(!form.reportValidity()) return;
+
       location.href =
         'mailto:info@vayam-global.com?subject=' +
-        encodeURIComponent('Sourcing enquiry - ' + product.value.trim()) +
+        encodeURIComponent(`[${enquiryReference}] Sourcing enquiry - ${product.value.trim()}`) +
         '&body=' +
         encodeURIComponent(messageText());
     });
