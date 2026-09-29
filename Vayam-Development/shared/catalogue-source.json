@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "green-cardamom",
+    "category": "whole",
+    "name": "Green cardamom",
+    "brief": "Define the required pod profile, packing and destination so suitable sourcing options can be explored.",
+    "facts": [
+      [
+        "Sourcing form",
+        "Whole green pods; seeds or powder would be separate briefs."
+      ],
+      [
+        "Buyer direction",
+        "Pod size or grade direction, colour, appearance, cleanliness and moisture expectations."
+      ],
+      [
+        "Order context",
+        "Indicative quantity, intended use, destination and timing."
+      ],
+      [
+        "Pack brief",
+        "Inner protection, outer format, pack size and destination labelling."
+      ],
+      [
+        "Verification",
+        "Sample, inspection, testing and supplier records as relevant to the agreed enquiry."
+      ],
+      [
+        "Commercial note",
+        "Origin, grade, crop context and availability are confirmed only against the specific programme."
+      ]
+    ],
+    "alt": "Whole green cardamom pods in a stone bowl",
+    "image": "images/green-cardamom-photo-v2.jpg",
+    "credit": {
+      "title": "File:Green Cardamom Pods.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Green_Cardamom_Pods.jpg/1280px-Green_Cardamom_Pods.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_Cardamom_Pods.jpg",
+      "author": "Misterneedlemouse",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "description": "Whole, dried green cardamom pods from Tamil Nadu, India in a bowl.",
+      "date": "2024-08-28 17:17:10",
+      "path": "images/green-cardamom-photo-v2.jpg",
+      "provider": "Wikimedia Commons"
+    },
+    "imageNote": "Real ingredient photograph; sample and specification confirmed on enquiry",
+    "cardSummary": "Whole green pods, seeds and ground options on enquiry."
+  },
+  {
+    "id": "black-pepper",
+    "category": "whole",
+    "name": "Black pepper",
+    "brief": "A pepper enquiry connects the required berry profile and end use with quantity, packing, destination and buyer-requested verification.",
+    "facts": [
+      [
+        "Sourcing form",
+        "Whole peppercorns; cracked and ground forms are scoped separately."
+      ],
+      [
+        "Physical brief",
+        "Berry size or density direction, colour, cleanliness and moisture."
+      ],
+      [
+        "Application",
+        "Table seasoning, sauces, marinades, blends or further processing."
+      ],
+      [
+        "Controls",
+        "Analytical and microbiological requirements where relevant to the market."
+      ],
+      [
+        "Pack brief",
+        "Quantity, barrier needs, pack size and destination labelling."
+      ]
+    ],
+    "alt": "Whole black peppercorns in a wooden spoon and bowl",
+    "image": "images/black-pepper-real-v3.jpg",
+    "credit": {
+      "path": "images/black-pepper-real-v3.jpg",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-black-peppers-on-a-spoon-10487732/",
+      "author": "Victoria Bowers",
+      "provider": "Pexels",
+      "date": "2021-07-31",
+      "camera": "Canon EOS 5D Mark IV"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Whole peppercorns for retail, food service and processing."
+  },
+  {
+    "id": "cumin-seeds",
+    "category": "whole",
+    "name": "Cumin seeds",
+    "brief": "Cumin sourcing begins with the buyer’s intended use and physical expectations, then tests feasibility against source, pack and destination needs.",
+    "facts": [
+      [
+        "Product identity",
+        "Whole cumin seed, commonly traded in India as jeera."
+      ],
+      [
+        "Physical brief",
+        "Seed size and colour direction, purity, cleanliness and moisture."
+      ],
+      [
+        "Application",
+        "Curries, dals, blends, pickling or savoury manufacturing."
+      ],
+      [
+        "Verification",
+        "Analytical, residue or microbiological brief where applicable."
+      ],
+      [
+        "Pack brief",
+        "Order volume, inner protection and outer format are confirmed per enquiry."
+      ]
+    ],
+    "alt": "Whole cumin seeds displayed in a wooden spoon",
+    "image": "images/cumin-seeds.webp",
+    "credit": {
+      "path": "assets/images/cumin-seeds.webp",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-herbs-on-a-spoon-10487762/",
+      "author": "Victoria Bowers",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Whole cumin for cooking, blending and repacking."
+  },
+  {
+    "id": "coriander-seeds",
+    "category": "whole",
+    "name": "Coriander seeds",
+    "brief": "The coriander brief translates end use into a physical product direction, order quantity, pack and relevant confirmation steps.",
+    "facts": [
+      [
+        "Sourcing form",
+        "Whole dried seed; split and ground formats remain distinct briefs."
+      ],
+      [
+        "Physical brief",
+        "Seed size, colour, purity, cleanliness and moisture direction."
+      ],
+      [
+        "Application",
+        "Masalas, curries, pickling, bakery or further processing."
+      ],
+      [
+        "Market inputs",
+        "Destination requirements and requested product evidence."
+      ],
+      [
+        "Pack brief",
+        "Quantity, protective liner and handling format."
+      ]
+    ],
+    "alt": "Natural dried coriander seeds in a stone bowl",
+    "image": "images/coriander-seeds-photo-v2.jpg",
+    "credit": {
+      "title": "File:Whole Coriander.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Whole_Coriander.jpg/1280px-Whole_Coriander.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Whole_Coriander.jpg",
+      "author": "Misterneedlemouse",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "description": "Whole, dried coriander/cilantro seeds from Gujurat, India in a bowl.",
+      "date": "2024-08-28 17:18:57",
+      "path": "images/coriander-seeds-photo-v2.jpg",
+      "provider": "Wikimedia Commons"
+    },
+    "imageNote": "Real ingredient photograph; sample and specification confirmed on enquiry",
+    "cardSummary": "Whole coriander for spice blends and everyday cooking."
+  },
+  {
+    "id": "whole-dry-chilli",
+    "category": "whole",
+    "name": "Whole dry chilli",
+    "brief": "A whole-chilli enquiry separates heat, colour, aroma and physical form so options can be assessed against the buyer’s actual application.",
+    "facts": [
+      [
+        "Type direction",
+        "Required chilli type or a clear heat-, colour- or aroma-led brief."
+      ],
+      [
+        "Physical brief",
+        "Pod and stem condition, cleanliness, moisture and breakage tolerance."
+      ],
+      [
+        "Application",
+        "Sauces, pickles, seasoning, flakes or powder processing."
+      ],
+      [
+        "Testing",
+        "Heat, colour or other analytical needs where specified by the buyer."
+      ],
+      [
+        "Pack brief",
+        "Volume, compression tolerance, liner and outer format."
+      ]
+    ],
+    "alt": "Close field of whole dried red chillies",
+    "image": "images/whole-dry-chilli.webp",
+    "credit": {
+      "path": "assets/images/whole-dry-chilli.webp",
+      "source": "https://unsplash.com/photos/red-chili-lot-on-ground-Ia40W5jhINA",
+      "author": "commodity reference",
+      "provider": "Unsplash"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Dried chillies, with variety and heat level to suit your brief."
+  },
+  {
+    "id": "cloves",
+    "category": "whole",
+    "name": "Cloves",
+    "brief": "Clove sourcing is framed through bud condition, aromatic profile, order context and evidence relevant to the destination.",
+    "facts": [
+      [
+        "Sourcing form",
+        "Whole dried flower buds; ground clove is a separate programme."
+      ],
+      [
+        "Physical brief",
+        "Bud integrity, head and stem condition, colour and cleanliness."
+      ],
+      [
+        "Application",
+        "Blends, beverages, bakery, marinades or pickling."
+      ],
+      [
+        "Controls",
+        "Moisture and any buyer-requested analytical or microbiological checks."
+      ],
+      [
+        "Pack brief",
+        "Order volume, protective pack and destination labelling."
+      ]
+    ],
+    "alt": "Whole dried cloves photographed on a white surface",
+    "image": "images/cloves-photo-v2.jpg",
+    "credit": {
+      "title": "File:Cloves.JPG",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Cloves.JPG/1280px-Cloves.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Cloves.JPG",
+      "author": "Jorge Barrios",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Cloves.JPG",
+      "description": "Cloves.",
+      "date": "2007-09-16",
+      "path": "images/cloves-photo-v2.jpg",
+      "provider": "Wikimedia Commons"
+    },
+    "imageNote": "Real ingredient photograph; sample and specification confirmed on enquiry",
+    "cardSummary": "Whole dried cloves for cooking and spice blends."
+  },
+  {
+    "id": "cinnamon-cassia",
+    "category": "whole",
+    "name": "Cinnamon / cassia",
+    "brief": "Cinnamon and cassia are not treated as interchangeable labels: the buyer brief identifies the botanical or commercial type and required bark form.",
+    "facts": [
+      [
+        "Identity",
+        "Requested botanical or commercial type must be made explicit."
+      ],
+      [
+        "Sourcing form",
+        "Quill, stick, cut or ground form."
+      ],
+      [
+        "Physical brief",
+        "Appearance, dimensions, cleanliness and breakage tolerance."
+      ],
+      [
+        "Application",
+        "Bakery, beverages, desserts, savoury blends or food service."
+      ],
+      [
+        "Pack brief",
+        "Bark form, volume and handling needs influence the practical format."
+      ]
+    ],
+    "alt": "Cinnamon sticks and bark on a wooden surface",
+    "image": "images/cinnamon-cassia-real-v2.jpg",
+    "credit": {
+      "path": "images/cinnamon-cassia-real-v2.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-cinnamon-sticks-5060299/",
+      "author": "ROMAN ODINTSOV",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Rolled bark and cut forms, specified for your use."
+  },
+  {
+    "id": "fennel-seeds",
+    "category": "whole",
+    "name": "Fennel seeds",
+    "brief": "Fennel enquiries connect the required seed appearance and flavour direction with end use, quantity, packing and market requirements.",
+    "facts": [
+      [
+        "Sourcing form",
+        "Whole dried fennel seed; powder would be separately scoped."
+      ],
+      [
+        "Physical brief",
+        "Seed colour and size direction, purity, cleanliness and moisture."
+      ],
+      [
+        "Application",
+        "Blends, pickles, bakery, beverages or after-meal preparations."
+      ],
+      [
+        "Identity note",
+        "Fennel must remain visually and commercially distinct from cumin."
+      ],
+      [
+        "Pack brief",
+        "Quantity, protective pack, handling and destination."
+      ]
+    ],
+    "alt": "Fennel seeds in a ceramic bowl with a wooden spoon",
+    "image": "images/fennel-seeds-real-v2.jpg",
+    "credit": {
+      "id": "fennel-seeds",
+      "title": "Seeds in Bowl and Wooden Spoon near",
+      "url": "https://images.pexels.com/photos/16858849/pexels-photo-16858849.jpeg?cs=srgb&fm=jpg&w=1280",
+      "source": "https://www.pexels.com/photo/seeds-in-bowl-and-wooden-spoon-near-16858849/",
+      "author": "Kader D. Kahraman",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "description": "Fennel seeds in a ceramic bowl and wooden spoon.",
+      "provider": "Pexels",
+      "path": "images/fennel-seeds-real-v2.jpg"
+    },
+    "imageNote": "Real ingredient photograph; sample and specification confirmed on enquiry",
+    "cardSummary": "Whole fennel for cooking, blends and retail packs."
+  },
+  {
+    "id": "fenugreek-seeds",
+    "category": "whole",
+    "name": "Fenugreek seeds",
+    "brief": "A fenugreek brief defines the whole-seed form, intended processing or application, physical expectations and order requirements.",
+    "facts": [
+      [
+        "Product identity",
+        "Dried whole seed, distinct from fenugreek leaf products."
+      ],
+      [
+        "Physical brief",
+        "Seed colour and size direction, purity, cleanliness and moisture."
+      ],
+      [
+        "Application",
+        "Curries, pickles, blends or seasoning preparations."
+      ],
+      [
+        "Processing",
+        "Intended roasting, grinding or other buyer use helps shape the brief."
+      ],
+      [
+        "Pack brief",
+        "Quantity, outer format, inner protection and destination."
+      ]
+    ],
+    "alt": "Whole fenugreek seeds in a glass jar against a dark background",
+    "image": "images/fenugreek-seeds-real-v2.jpg",
+    "credit": {
+      "id": "fenugreek-seeds",
+      "title": "Top View Fenugreek Seeds in Glass Jar",
+      "url": "https://images.pexels.com/photos/35156984/pexels-photo-35156984.jpeg?cs=srgb&fm=jpg&w=1280",
+      "source": "https://www.pexels.com/photo/top-view-fenugreek-seeds-in-glass-jar-35156984/",
+      "author": "Marek Ruczaj",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "description": "Fenugreek seeds in a glass jar.",
+      "provider": "Pexels",
+      "path": "images/fenugreek-seeds-real-v2.jpg"
+    },
+    "imageNote": "Real ingredient photograph; sample and specification confirmed on enquiry",
+    "cardSummary": "Whole fenugreek for seasoning and spice blends."
+  },
+  {
+    "id": "mustard-seeds",
+    "category": "whole",
+    "name": "Mustard seeds",
+    "brief": "Mustard sourcing starts by identifying the required species or seed colour and application before physical and commercial parameters are aligned.",
+    "facts": [
+      [
+        "Seed direction",
+        "Yellow, brown or black direction must be identified rather than inferred."
+      ],
+      [
+        "Physical brief",
+        "Seed size, purity, cleanliness and moisture."
+      ],
+      [
+        "Application",
+        "Tempering, pickles, condiments, marinades or blends."
+      ],
+      [
+        "Sourcing form",
+        "Whole, cracked and powder formats require separate handling briefs."
+      ],
+      [
+        "Pack brief",
+        "Quantity, protection, pack format and destination requirements."
+      ]
+    ],
+    "alt": "Brown mustard seeds photographed in a white bowl",
+    "image": "images/mustard-seeds-photo-v2.jpg",
+    "credit": {
+      "id": "mustard-seeds",
+      "title": "File:BrownMustardSeed.JPG",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/BrownMustardSeed.JPG/1280px-BrownMustardSeed.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:BrownMustardSeed.JPG",
+      "author": "Jonathunder",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "description": "Bowl of Canadian brown mustard seed for use in cooking",
+      "path": "images/mustard-seeds-photo-v2.jpg",
+      "provider": "Wikimedia Commons"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Mustard seed varieties selected to your requirements."
+  },
+  {
+    "id": "turmeric-powder",
+    "category": "ground",
+    "name": "Turmeric powder",
+    "brief": "A turmeric powder programme connects colour and sensory direction with grind, processing, pack and market-specific controls.",
+    "facts": [
+      [
+        "Product brief",
+        "Single-spice turmeric powder."
+      ],
+      [
+        "Buyer inputs",
+        "Colour and sensory direction, grind and application."
+      ],
+      [
+        "Controls",
+        "Analytical, residue and microbiological requirements as specified."
+      ],
+      [
+        "Process records",
+        "Requested treatment or process declarations where relevant."
+      ],
+      [
+        "Pack brief",
+        "Barrier, pack size, volume, destination and label inputs."
+      ]
+    ],
+    "alt": "Turmeric powder in small bowls on a wooden surface",
+    "image": "images/turmeric-powder.webp",
+    "credit": {
+      "path": "assets/images/turmeric-powder.webp",
+      "source": "https://www.pexels.com/photo/close-up-of-tumeric-powder-6220707/",
+      "author": "Karl Solano",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Ground turmeric for culinary use and spice blends."
+  },
+  {
+    "id": "chilli-powder",
+    "category": "ground",
+    "name": "Chilli powder",
+    "brief": "Chilli powder is scoped against the intended heat, colour and flavour result, not treated as one universal red-powder standard.",
+    "facts": [
+      [
+        "Product brief",
+        "Single-spice chilli powder or clearly defined chilli direction."
+      ],
+      [
+        "Buyer inputs",
+        "Heat, colour, flavour, grind and application."
+      ],
+      [
+        "Controls",
+        "Requested analytical, residue and microbiological parameters."
+      ],
+      [
+        "Cross-contact",
+        "Any buyer allergen or cross-contact declaration brief."
+      ],
+      [
+        "Pack brief",
+        "Barrier, format, volume and destination labelling."
+      ]
+    ],
+    "alt": "Red chilli powder in a bowl surrounded by whole dried chillies",
+    "image": "images/chilli-powder.webp",
+    "credit": {
+      "path": "assets/images/chilli-powder.webp",
+      "source": "https://www.pexels.com/photo/spicy-red-chili-powder-in-marble-bowl-33440709/",
+      "author": "Bonaventure Fernandez",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Ground chilli, with colour and heat discussed together."
+  },
+  {
+    "id": "coriander-powder",
+    "category": "ground",
+    "name": "Coriander powder",
+    "brief": "Coriander powder sourcing begins with the required sensory, colour and grind direction plus the buyer’s processing and market controls.",
+    "facts": [
+      [
+        "Product brief",
+        "Single-spice coriander powder."
+      ],
+      [
+        "Buyer inputs",
+        "Colour, aroma, grind, intended use and benchmark if available."
+      ],
+      [
+        "Controls",
+        "Purity, moisture and buyer-requested analytical or microbiological needs."
+      ],
+      [
+        "Process brief",
+        "Treatment and milling declarations where required."
+      ],
+      [
+        "Pack brief",
+        "Barrier, format, order volume and destination."
+      ]
+    ],
+    "alt": "Homemade coriander powder",
+    "image": "images/coriander-powder-reference.jpg",
+    "credit": {
+      "id": "coriander-powder",
+      "title": "Coriander powder.JPG",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Coriander_powder.JPG/960px-Coriander_powder.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Coriander_powder.JPG",
+      "author": "Nithyasrm",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description": "Homemade coriander powder",
+      "provider": "Wikimedia Commons",
+      "path": "images/coriander-powder-reference.jpg"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Ground coriander for cooking and seasoning."
+  },
+  {
+    "id": "cumin-powder",
+    "category": "ground",
+    "name": "Cumin powder",
+    "brief": "A cumin powder brief translates the buyer’s aroma, grind and application needs into processing, verification and protective-packing requirements.",
+    "facts": [
+      [
+        "Product brief",
+        "Single-spice ground cumin."
+      ],
+      [
+        "Buyer inputs",
+        "Aroma direction, grind, colour and intended application."
+      ],
+      [
+        "Controls",
+        "Purity, moisture and requested analytical or microbiological parameters."
+      ],
+      [
+        "Process brief",
+        "Milling and treatment declarations where applicable."
+      ],
+      [
+        "Pack brief",
+        "Barrier, pack size, quantity and destination."
+      ]
+    ],
+    "alt": "Ground cumin powder displayed on a stainless-steel spoon",
+    "image": "images/cumin-powder.webp",
+    "credit": {
+      "path": "assets/images/cumin-powder.webp",
+      "source": "https://www.pexels.com/photo/brown-powder-on-stainless-steel-spoon-4871244/",
+      "author": "Kaboompics.com",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Ground cumin for cooking and food-service use."
+  },
+  {
+    "id": "black-pepper-powder",
+    "category": "ground",
+    "name": "Black pepper powder",
+    "brief": "Ground pepper requires an explicit grind, sensory and processing brief because it follows a different handling and verification path from whole peppercorns.",
+    "facts": [
+      [
+        "Product brief",
+        "Ground black pepper, separately scoped from cracked or whole pepper."
+      ],
+      [
+        "Buyer inputs",
+        "Grind, pungency and sensory direction, application and benchmark."
+      ],
+      [
+        "Controls",
+        "Moisture and requested analytical or microbiological requirements."
+      ],
+      [
+        "Process brief",
+        "Treatment and milling declarations where relevant."
+      ],
+      [
+        "Pack brief",
+        "Aroma-protective barrier, size, volume and destination."
+      ]
+    ],
+    "alt": "homemade pepper powder",
+    "image": "images/black-pepper-powder-reference.jpg",
+    "credit": {
+      "id": "black-pepper-powder",
+      "title": "Homemade Pepper powder.JPG",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Homemade_Pepper_powder.JPG/960px-Homemade_Pepper_powder.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Homemade_Pepper_powder.JPG",
+      "author": "Nithyasrm",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description": "homemade pepper powder",
+      "provider": "Wikimedia Commons",
+      "path": "images/black-pepper-powder-reference.jpg"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Ground black pepper in your preferred grind."
+  },
+  {
+    "id": "garam-masala",
+    "category": "blends",
+    "name": "Garam masala",
+    "brief": "Garam masala is approached through an agreed sensory direction, ingredient brief and market format rather than an assumed universal recipe.",
+    "facts": [
+      [
+        "Starting point",
+        "Buyer benchmark, ingredient direction or target sensory profile."
+      ],
+      [
+        "Application",
+        "Retail, food service or food manufacturing."
+      ],
+      [
+        "Composition",
+        "Ingredient, allergen and additive brief as applicable."
+      ],
+      [
+        "Approval path",
+        "Reference alignment and sample review where feasible."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail format subject to programme fit."
+      ]
+    ],
+    "alt": "Homemade garam masala",
+    "image": "images/garam-masala-reference.jpg",
+    "credit": {
+      "id": "garam-masala",
+      "title": "Garammasalaphoto.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Garammasalaphoto.jpg/960px-Garammasalaphoto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Garammasalaphoto.jpg",
+      "author": "Badagnani",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "description": "Homemade garam masala. Photo taken in Kent, Ohio with a Panasonic Lumix digital camera (model DMC-LS75).",
+      "provider": "Wikimedia Commons",
+      "path": "images/garam-masala-reference.jpg"
+    },
+    "imageNote": "Blend reference; formulation agreed per enquiry",
+    "cardSummary": "Aromatic spice blends, matched to your recipe direction."
+  },
+  {
+    "id": "biryani-masala",
+    "category": "blends",
+    "name": "Biryani masala",
+    "brief": "A biryani masala brief anchors the blend to the intended dish profile, benchmark, ingredient expectations and buyer format.",
+    "facts": [
+      [
+        "Starting point",
+        "Target style, benchmark or sensory direction."
+      ],
+      [
+        "Application",
+        "Retail, food service or manufacturing preparation."
+      ],
+      [
+        "Composition",
+        "Ingredient, chilli, salt, allergen and additive direction."
+      ],
+      [
+        "Reference",
+        "Sample or benchmark alignment where appropriate."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail size, volume and labels."
+      ]
+    ],
+    "alt": "Indian whole and ground spices arranged on a dark surface",
+    "image": "images/garam-masala.webp",
+    "credit": {
+      "path": "assets/images/garam-masala.webp",
+      "source": "https://www.pexels.com/photo/assorted-cooking-spices-2802527/",
+      "author": "Shantanu Pal",
+      "provider": "Pexels"
+    },
+    "imageNote": "Whole-spice blending reference",
+    "cardSummary": "Whole-spice or ground blends for biryani."
+  },
+  {
+    "id": "curry-seasoning",
+    "category": "blends",
+    "name": "Curry / seasoning blends",
+    "brief": "Curry and seasoning programmes are defined by application and market expectations, with composition and sensory direction made explicit.",
+    "facts": [
+      [
+        "Starting point",
+        "Application, benchmark or target flavour direction."
+      ],
+      [
+        "Use context",
+        "Sauce, snack, ready meal, food service or retail."
+      ],
+      [
+        "Composition",
+        "Ingredient, allergen, additive and salt brief."
+      ],
+      [
+        "Controls",
+        "Sensory, analytical and microbiological needs where requested."
+      ],
+      [
+        "Pack brief",
+        "Format, volume, barrier and label inputs."
+      ]
+    ],
+    "alt": "Assorted ground Indian spices arranged in metal bowls on a dark background",
+    "image": "images/curry-seasoning.webp",
+    "credit": {
+      "path": "assets/images/curry-seasoning.webp",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-bowls-of-powder-condiments-7208238/",
+      "author": "Pranjall Kumar",
+      "provider": "Pexels"
+    },
+    "imageNote": "Blend reference; formulation agreed per enquiry",
+    "cardSummary": "Seasoning blends for your product or menu."
+  },
+  {
+    "id": "sambar-style-blend",
+    "category": "blends",
+    "name": "Sambar-style blend",
+    "brief": "A sambar-style brief captures the buyer’s flavour benchmark, chilli and pulse-component direction, application and target format.",
+    "facts": [
+      [
+        "Starting point",
+        "Benchmark, regional style direction or target sensory profile."
+      ],
+      [
+        "Composition",
+        "Spice, chilli, pulse component, salt and ingredient expectations."
+      ],
+      [
+        "Application",
+        "Food service, retail or manufacturing."
+      ],
+      [
+        "Approval path",
+        "Reference and sample alignment where feasible."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail format and volume."
+      ]
+    ],
+    "alt": "Sambar powder is a main ingredient while making sambar,it is made by roasting coriander,dried chilli, Fenugreek, asafoetida,curry leaves,urad dal",
+    "image": "images/sambar-style-blend-reference.jpg",
+    "credit": {
+      "id": "sambar-style-blend",
+      "title": "Sambar powder.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Sambar_powder.jpg/960px-Sambar_powder.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Sambar_powder.jpg",
+      "author": "Keerthinellikkalaya",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description": "Sambar powder is a main ingredient while making sambar,it is made by roasting coriander,dried chilli, Fenugreek, asafoetida,curry leaves,urad dal",
+      "provider": "Wikimedia Commons",
+      "path": "images/sambar-style-blend-reference.jpg"
+    },
+    "imageNote": "Blend reference; formulation agreed per enquiry",
+    "cardSummary": "Sambar spice blends, with recipe and packing agreed."
+  },
+  {
+    "id": "buyer-specified-blend",
+    "category": "blends",
+    "name": "Buyer-specified formulation",
+    "brief": "For a buyer-specified formulation, Vayam first clarifies ownership of the brief, benchmark, permitted ingredients and approval path before feasibility is represented.",
+    "facts": [
+      [
+        "Starting point",
+        "Recipe direction, benchmark, restricted brief or target outcome."
+      ],
+      [
+        "Governance",
+        "Formula ownership, confidentiality and change control need agreement."
+      ],
+      [
+        "Composition",
+        "Ingredient, allergen, additive and market restrictions."
+      ],
+      [
+        "Approval path",
+        "Development samples, feedback rounds and final reference where feasible."
+      ],
+      [
+        "Commercial fit",
+        "MOQ, format, supplier capability and timing remain subject to confirmation."
+      ]
+    ],
+    "alt": "Measured ground ingredients arranged for formulation work",
+    "image": "images/buyer-specified-blend.webp",
+    "credit": {
+      "path": "assets/images/buyer-specified-blend.webp",
+      "source": "https://www.pexels.com/photo/assorted-spices-in-white-metal-bowl-4198929/",
+      "author": "Kaboompics",
+      "provider": "Pexels"
+    },
+    "imageNote": "Blend reference; formulation agreed per enquiry",
+    "cardSummary": "A spice blend developed around your recipe brief."
+  },
+  {
+    "id": "basmati-rice",
+    "category": "staples",
+    "name": "Basmati rice",
+    "brief": "A basmati enquiry identifies the required variety or reference, processing direction, end market, order size, pack and evidence before options are assessed.",
+    "facts": [
+      [
+        "Category",
+        "Aromatic long-grain rice; ‘basmati’ alone is not a complete specification."
+      ],
+      [
+        "Buyer inputs",
+        "Variety or reference and raw, parboiled or other processing direction."
+      ],
+      [
+        "Quality brief",
+        "Grain, sensory, age or other parameters supplied by the buyer."
+      ],
+      [
+        "Market inputs",
+        "Destination and requested testing or records."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail format, volume and labels."
+      ]
+    ],
+    "alt": "Uncooked long-grain basmati rice spread on brown paper",
+    "image": "images/basmati-rice.webp",
+    "credit": {
+      "path": "assets/images/basmati-rice.webp",
+      "source": "https://www.pexels.com/photo/rice-grains-on-a-brown-paper-7421207/",
+      "author": "Vie Studio",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Basmati rice for retail, wholesale and food service."
+  },
+  {
+    "id": "sona-masoori-rice",
+    "category": "staples",
+    "name": "Sona Masoori rice",
+    "brief": "Sona Masoori is treated as a distinct Indian medium-grain rice direction—not generic basmati copy—with its own cooking use, processing, market and packing brief.",
+    "facts": [
+      [
+        "Category",
+        "Indian medium-grain, non-basmati rice direction; the photograph is a category reference, not a confirmed lot."
+      ],
+      [
+        "Buyer inputs",
+        "Required product reference and raw, steamed, parboiled or other processing direction."
+      ],
+      [
+        "Use context",
+        "Everyday retail, food-service or wholesale application and expected cooking result."
+      ],
+      [
+        "Market inputs",
+        "Order volume, destination and requested quality or transaction records."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail format and label inputs."
+      ]
+    ],
+    "alt": "Detailed close view of uncooked white rice grains",
+    "image": "images/sona-masoori-rice.webp",
+    "credit": {
+      "path": "assets/images/sona-masoori-rice.webp",
+      "source": "https://www.pexels.com/photo/grains-of-rice-18328392/",
+      "author": "Petr Ganaj",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Sona Masoori rice, with processing and pack size agreed."
+  },
+  {
+    "id": "pulses",
+    "category": "staples",
+    "name": "Pulses",
+    "brief": "Pulse sourcing starts with the exact crop and form—such as lentils, chickpeas, whole pulses or dals/split pulses—then aligns quality, pack and market needs without implying fixed inventory.",
+    "facts": [
+      [
+        "Product identity",
+        "Exact pulse, variety or trade reference and whole, split, polished or unpolished form."
+      ],
+      [
+        "Physical brief",
+        "Size, colour, uniformity, defects, foreign matter and moisture direction."
+      ],
+      [
+        "Application",
+        "Retail, food service, wholesale or ingredient processing."
+      ],
+      [
+        "Controls",
+        "Requested testing, treatment declarations and destination records."
+      ],
+      [
+        "Pack brief",
+        "Bulk or retail direction, size, liner and labels."
+      ]
+    ],
+    "alt": "Red lentils in a ceramic bowl, with other dry pulses on the counter",
+    "image": "images/pulses-real-v2.jpg",
+    "credit": {
+      "path": "images/pulses-real-v2.jpg",
+      "source": "https://www.pexels.com/photo/red-lentils-in-white-ceramic-bowl-8108209/",
+      "author": "MART PRODUCTION",
+      "provider": "Pexels"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Lentils, dals and other pulses for your product list."
+  },
+  {
+    "id": "millets-grains",
+    "category": "staples",
+    "name": "Millets & other grains",
+    "brief": "Millet and grain enquiries are kept product-specific: pearl millet is shown as one category reference, while the exact crop, form, end use, quantity and destination determine the sourcing path.",
+    "facts": [
+      [
+        "Product identity",
+        "Name the exact millet or grain; pearl millet is one possible direction, not implied stock."
+      ],
+      [
+        "Physical brief",
+        "Size, colour, purity, foreign matter, moisture and processing direction."
+      ],
+      [
+        "Application",
+        "Ingredient, food service, wholesale or retail."
+      ],
+      [
+        "Controls",
+        "Buyer-requested testing and destination documentation."
+      ],
+      [
+        "Pack brief",
+        "Bulk, food-service or retail format subject to product fit."
+      ]
+    ],
+    "alt": "Millet grains.",
+    "image": "images/millets-grains-reference.jpg",
+    "credit": {
+      "id": "millets-grains",
+      "title": "Millet grains.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Millet_grains.jpg/960px-Millet_grains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "https://commons.wikimedia.org/wiki/File:Millet_grains.jpg",
+      "author": "Tiia Monto",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "description": "Millet grains.",
+      "provider": "Wikimedia Commons",
+      "path": "images/millets-grains-reference.jpg"
+    },
+    "imageNote": "Ingredient reference",
+    "cardSummary": "Millets and grain varieties for retail or food service."
+  },
+  {
+    "id": "packaged-spices-masalas",
+    "category": "packaged",
+    "name": "Packaged spices & masalas",
+    "brief": "Packaged spice sourcing can begin from an existing supplier range or a buyer format brief, with product, label, pack and market requirements reviewed together.",
+    "facts": [
+      [
+        "Range direction",
+        "Single spices, masalas or seasonings."
+      ],
+      [
+        "Commercial path",
+        "Existing supplier range or buyer-specific format exploration."
+      ],
+      [
+        "Pack inputs",
+        "Material direction, size, closure, case pack and shelf presentation."
+      ],
+      [
+        "Label inputs",
+        "Destination language, declarations and buyer artwork responsibilities."
+      ],
+      [
+        "Confirmation",
+        "Supplier, range, MOQ and market fit remain enquiry-specific."
+      ]
+    ],
+    "alt": "A coordinated collection of spices presented in clear food jars",
+    "image": "images/packaged-spices-masalas.webp",
+    "credit": {
+      "path": "assets/images/packaged-spices-masalas.webp",
+      "source": "https://www.pexels.com/photo/clear-glass-jar-lot-458796/",
+      "author": "monicore",
+      "provider": "Pexels"
+    },
+    "imageNote": "Product / packaging reference",
+    "cardSummary": "Retail-ready spice and masala sourcing."
+  },
+  {
+    "id": "packaged-rice-staples",
+    "category": "packaged",
+    "name": "Packaged rice & staples",
+    "brief": "Packaged rice and staples require the underlying product specification and consumer pack to be assessed as one programme.",
+    "facts": [
+      [
+        "Range direction",
+        "Rice, pulses, millets or other agreed staple products."
+      ],
+      [
+        "Product brief",
+        "Exact commodity and processing or quality direction."
+      ],
+      [
+        "Pack inputs",
+        "Consumer size, material, closure, case pack and pallet considerations."
+      ],
+      [
+        "Label inputs",
+        "Market declarations, languages, artwork and coding needs."
+      ],
+      [
+        "Confirmation",
+        "Format, supplier capability and MOQ are confirmed per enquiry."
+      ]
+    ],
+    "alt": "Rice, pulses and grains portioned into separate reusable food bags",
+    "image": "images/packaged-rice-staples.webp",
+    "credit": {
+      "path": "assets/images/packaged-rice-staples.webp",
+      "source": "https://www.pexels.com/photo/white-rice-on-reusable-bag-3737694/",
+      "author": "cottonbro studio",
+      "provider": "Pexels"
+    },
+    "imageNote": "Product / packaging reference",
+    "cardSummary": "Rice and pantry staples in suitable pack formats."
+  },
+  {
+    "id": "indian-grocery-foodservice",
+    "category": "packaged",
+    "name": "Indian grocery / food-service",
+    "brief": "A grocery or food-service enquiry is structured as a defined range, destination and operating format—not an open-ended promise to supply every item.",
+    "facts": [
+      [
+        "Range brief",
+        "Named products, brands or functional categories."
+      ],
+      [
+        "Buyer context",
+        "Retail, wholesale, cash-and-carry or food service."
+      ],
+      [
+        "Consolidation",
+        "SKU count, quantities, case packs and shipment logic."
+      ],
+      [
+        "Market inputs",
+        "Destination, shelf-life expectations and label review needs."
+      ],
+      [
+        "Confirmation",
+        "Brand permissions, availability and commercial fit remain item-specific."
+      ]
+    ],
+    "alt": "Packaged pantry staples and canned foods arranged as grocery-range context",
+    "image": "images/indian-grocery-foodservice.webp",
+    "credit": {
+      "path": "assets/images/indian-grocery-foodservice.webp",
+      "source": "https://www.pexels.com/photo/bags-of-uncooked-macaroni-pasta-beside-canned-foods-and-slices-of-bread-6994943/",
+      "author": "Julia M Cameron",
+      "provider": "Pexels"
+    },
+    "imageNote": "Product / packaging reference",
+    "cardSummary": "Build an Indian grocery or food-service product list."
+  },
+  {
+    "id": "buyer-specified-packaged-foods",
+    "category": "packaged",
+    "name": "Buyer-specified packaged foods",
+    "brief": "For a buyer-specified packaged food, the product, benchmark, pack, label responsibilities and supplier feasibility must be clarified before development is represented.",
+    "facts": [
+      [
+        "Starting point",
+        "Named product, benchmark or functional brief."
+      ],
+      [
+        "Product inputs",
+        "Ingredients, sensory direction, allergens and permitted claims."
+      ],
+      [
+        "Pack inputs",
+        "Format, size, material, case pack and target presentation."
+      ],
+      [
+        "Approval path",
+        "Samples, artwork, label review and final reference where feasible."
+      ],
+      [
+        "Commercial fit",
+        "Capability, MOQ, timing and destination remain subject to confirmation."
+      ]
+    ],
+    "alt": "Packaged pantry foods photographed in a grocery setting",
+    "image": "images/indian-grocery-foodservice.webp",
+    "credit": {
+      "path": "assets/images/indian-grocery-foodservice.webp",
+      "source": "https://www.pexels.com/photo/bags-of-uncooked-macaroni-pasta-beside-canned-foods-and-slices-of-bread-6994943/",
+      "author": "Julia M Cameron",
+      "provider": "Pexels"
+    },
+    "imageNote": "Packaged-food photograph for format discussion; no pictured product is represented as Vayam stock",
+    "cardSummary": "Tell us which packaged foods your customers need."
+  },
+  {
+    "id": "retail-private-label-packs",
+    "category": "private",
+    "name": "Retail private-label packs",
+    "brief": "Retail private label begins with the product and target shelf proposition, then tests pack, artwork, supplier and order-volume feasibility.",
+    "facts": [
+      [
+        "Product scope",
+        "Named spice, blend, staple or packaged-food direction."
+      ],
+      [
+        "Retail brief",
+        "Target consumer, pack size, shelf context and destination."
+      ],
+      [
+        "Artwork roles",
+        "Brand assets, label copy, regulatory review and approvals must be assigned."
+      ],
+      [
+        "Approval path",
+        "Product reference, packaging sample and artwork proof where feasible."
+      ],
+      [
+        "Commercial fit",
+        "Supplier capability, MOQ and timing are confirmed programme by programme."
+      ]
+    ],
+    "alt": "Food spices photographed in clear retail jars",
+    "image": "images/packaged-spices-masalas.webp",
+    "credit": {
+      "path": "assets/images/packaged-spices-masalas.webp",
+      "source": "https://www.pexels.com/photo/clear-glass-jar-lot-458796/",
+      "author": "monicore",
+      "provider": "Pexels"
+    },
+    "imageNote": "Retail pack photograph for format discussion; pictured products are not represented as Vayam stock",
+    "cardSummary": "Products and packaging for your own retail brand."
+  },
+  {
+    "id": "food-service-packs",
+    "category": "private",
+    "name": "Food-service packs",
+    "brief": "Food-service programmes prioritize product consistency, working pack size, handling and case configuration around the buyer’s operation.",
+    "facts": [
+      [
+        "Product scope",
+        "Named spice, blend, rice, staple or other defined product."
+      ],
+      [
+        "Use context",
+        "Kitchen, catering, ingredient station or distribution workflow."
+      ],
+      [
+        "Pack brief",
+        "Working size, closure, barrier, case count and handling."
+      ],
+      [
+        "Controls",
+        "Product reference and requested transaction-specific evidence."
+      ],
+      [
+        "Commercial fit",
+        "Volume, format and supplier capability require confirmation."
+      ]
+    ],
+    "alt": "Rice, pulses and grains portioned into separate reusable food bags",
+    "image": "images/packaged-rice-staples.webp",
+    "credit": {
+      "path": "assets/images/packaged-rice-staples.webp",
+      "source": "https://www.pexels.com/photo/white-rice-on-reusable-bag-3737694/",
+      "author": "cottonbro studio",
+      "provider": "Pexels"
+    },
+    "imageNote": "Bulk ingredient packing reference",
+    "cardSummary": "Working pack sizes for professional kitchens."
+  },
+  {
+    "id": "buyer-specific-pack-formats",
+    "category": "private",
+    "name": "Buyer-specific pack formats",
+    "brief": "A buyer-specific pack format is explored against product protection, filling capability, material direction, destination and practical order volume.",
+    "facts": [
+      [
+        "Starting point",
+        "Existing pack reference, dimension brief or target use."
+      ],
+      [
+        "Product fit",
+        "Barrier, closure, fill weight and handling requirements."
+      ],
+      [
+        "Supplier fit",
+        "Available machinery, materials and trial capability."
+      ],
+      [
+        "Approval path",
+        "Blank sample, artwork proof and filled reference where feasible."
+      ],
+      [
+        "Commercial fit",
+        "Tooling, MOQ, lead time and cost remain subject to confirmation."
+      ]
+    ],
+    "alt": "A hand holding an unbranded resealable pouch",
+    "image": "images/packaging-hand-photo.jpg",
+    "credit": {
+      "path": "images/packaging-hand-photo.jpg",
+      "source": "https://www.pexels.com/photo/minimalist-design-of-packaging-16100293/",
+      "author": "Vitalii Abakumov",
+      "provider": "Pexels"
+    },
+    "imageNote": "Physical packaging photograph for format discussion; filling and supply are confirmed per enquiry",
+    "cardSummary": "Pack materials, sizes and labels built around your brief."
+  },
+  {
+    "id": "consolidated-multi-product",
+    "category": "private",
+    "name": "Consolidated / multi-product sourcing",
+    "brief": "A consolidated programme starts with a controlled SKU and supplier map so compatibility, quantities, timing and documentation can be assessed before shipment planning.",
+    "facts": [
+      [
+        "Range brief",
+        "Named SKUs, required quantities and acceptable alternatives."
+      ],
+      [
+        "Supplier map",
+        "Single- or multi-supplier feasibility and responsibility boundaries."
+      ],
+      [
+        "Compatibility",
+        "Food safety, odour, pack, handling and shelf-life considerations."
+      ],
+      [
+        "Consolidation plan",
+        "Case data, readiness dates, labels and transaction records."
+      ],
+      [
+        "Commercial fit",
+        "Consolidation and shipment structure are confirmed only after feasibility review."
+      ]
+    ],
+    "alt": "Organised warehouse aisle with stacked cartons prepared for coordinated handling",
+    "image": "images/consolidated-multi-product.webp",
+    "credit": {
+      "path": "assets/images/consolidated-multi-product.webp",
+      "source": "https://www.pexels.com/photo/stacks-of-cardboard-boxes-5775099/",
+      "author": "Handi Boyz LLC",
+      "provider": "Pexels"
+    },
+    "imageNote": "Packing / sourcing reference",
+    "cardSummary": "Coordinate several products within one sourcing enquiry."
+  }
+]

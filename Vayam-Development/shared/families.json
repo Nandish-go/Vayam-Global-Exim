@@ -1,0 +1,26 @@
+[
+  {
+    "id": "whole",
+    "name": "Whole spices"
+  },
+  {
+    "id": "ground",
+    "name": "Ground spices & powders"
+  },
+  {
+    "id": "blends",
+    "name": "Spice blends & masalas"
+  },
+  {
+    "id": "staples",
+    "name": "Rice, pulses, millets & grains"
+  },
+  {
+    "id": "packaged",
+    "name": "Packaged Indian foods"
+  },
+  {
+    "id": "private",
+    "name": "Private label & buyer-specific"
+  }
+]

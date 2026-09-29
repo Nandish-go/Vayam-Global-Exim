@@ -1,0 +1,26 @@
+[
+  {
+    "name": "spices",
+    "source": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=85",
+    "provider": "Unsplash",
+    "provenance": "Photograph retained from the deployed main HTML; original source URL preserved."
+  },
+  {
+    "name": "rice",
+    "source": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1000&q=85",
+    "provider": "Unsplash",
+    "provenance": "Photograph retained from the deployed main HTML; original source URL preserved."
+  },
+  {
+    "name": "grocery",
+    "source": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1000&q=85",
+    "provider": "Unsplash",
+    "provenance": "Photograph retained from the deployed main HTML; original source URL preserved."
+  },
+  {
+    "name": "warehouse",
+    "source": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1000&q=85",
+    "provider": "Unsplash",
+    "provenance": "Photograph retained from the deployed main HTML; original source URL preserved."
+  }
+]

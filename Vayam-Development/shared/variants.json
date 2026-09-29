@@ -1,0 +1,26 @@
+{
+  "classic": {
+    "name": "Classic",
+    "kind": "Evolution 01",
+    "description": "The live Vayam, carefully improved.",
+    "detail": "Original forest-green hero, familiar spice photograph and complete business story. Better mobile navigation, searchable products and a reviewed enquiry draft."
+  },
+  "refined": {
+    "name": "Refined",
+    "kind": "Evolution 02",
+    "description": "A clearer route from product to enquiry.",
+    "detail": "The same green, ivory and copper identity with a lighter composition, photographic category shortcuts, product comparison and a direct enquiry path."
+  },
+  "signature": {
+    "name": "Signature",
+    "kind": "New direction 01",
+    "description": "An editorial expression of Vayam.",
+    "detail": "Large-scale spice photography, generous typography and an editorial category layout, supported by the same factual sourcing and documentation content."
+  },
+  "trade": {
+    "name": "Trade",
+    "kind": "New direction 02",
+    "description": "Indian flavour. Global ambition.",
+    "detail": "A rich forest-green opening, four photographic category tiles, warm saffron accents and a simpler product-to-enquiry journey."
+  }
+}
