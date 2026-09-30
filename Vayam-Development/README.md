@@ -13,6 +13,8 @@ Run `node preview.cjs` in this folder, then open http://127.0.0.1:8770/. The rev
 
 The separate [analytics dashboard](../Vayam-Analytics-Dashboard/README.md) is available at http://127.0.0.1:8770/dashboard/ while this preview server runs. Its figures are explicitly fictional until a verified report is imported.
 
+For friends, use the public [review gallery](https://vayam-four-design-review.nandish072.chatgpt.site) or [comparison page](https://vayam-four-design-review.nandish072.chatgpt.site/responsive.html). This is a hosted snapshot of these same four designs; local changes require republishing. [SHARING.md](SHARING.md) records the links, feedback controls and publishing source.
+
 All four share the complete 32-entry catalogue, business information, product search, comparison, shortlist, quantity/sample/destination fields, reviewed email/WhatsApp handoffs and consent-aware analytics. Phone and WhatsApp have separate labelled contact links. The Google map displays the registered office complex, with a separate directions link to the existing business listing. Messages are only prepared; visitors send them from their chosen app.
 
 Edit the sources listed in SOURCE-MAP.md. Run `node tools/build.cjs` and `node tests/verify.cjs` afterwards. No package installation or framework service is required. The builder is self-contained within this folder and does not rebuild the live baseline or historical designs.
