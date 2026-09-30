@@ -1,6 +1,6 @@
 # Vayam development — four active designs
 
-Only **Classic**, **Refined**, **Signature** and **Trade** are in this review collection as of 30 September 2026. The deployed main site is unchanged. Earlier Origin, Atlas, Pulse, Astra and Edition work remains recoverable from Git history or the untouched older checkout.
+Only **Classic**, **Refined**, **Signature** and **Trade** are in this review collection as of 30 September 2026. The deployed main site is unchanged. Earlier Origin, Atlas, Pulse, Astra and Edition work remains recoverable from local Git history, the named pre-consolidation stash and the archive tags described in the repository README.
 
 | Candidate | Direction |
 |---|---|
