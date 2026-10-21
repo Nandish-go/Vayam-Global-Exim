@@ -1,6 +1,6 @@
 # Share the four Vayam designs
 
-Published on 30 September 2026 through Sites hosting. Access is public: anyone with the link can open the review, without an account or a running local computer. Development pages carry `noindex,nofollow` and the published review's robots.txt disallows crawling; those directives request search exclusion rather than providing access control.
+First published on 30 September 2026; updated successfully to version 2 on **21 October 2026** through Sites hosting. Access is public: anyone with the link can open the review, without an account or a running local computer. Development pages carry `noindex,nofollow`. The current robots.txt permits crawlers to read that directive; search exclusion is not access control.
 
 - Review gallery: https://vayam-four-design-review.nandish072.chatgpt.site
 - Desktop / phone comparison: https://vayam-four-design-review.nandish072.chatgpt.site/responsive.html
@@ -27,3 +27,5 @@ node tools/export-review.cjs 'C:\Users\NANDISH\.codex\site-cache\vayam-design-re
 Reuse Site project ID `appgprj_6abc9cb73d4c8191acf4c268cbb581a3`, persisted in the publishing cache's `.openai/hosting.json`. Do not register another Site for later updates. Use a fresh native source credential when needed; credentials stay in session memory and the workflow's hidden stdin, never in this repository. Follow the Sites hosting workflow to push the publishing source, package it, save a version and deploy it. Windows packaging uses the bundled Git Bash executable through the local `C:\Users\NANDISH\.codex\site-cache\vayam-packager-bin` alias, with the bundled Git `usr\bin` directory on the process PATH.
 
 Initial published Site version: 1. Published source commit: `c87090a69e7588cf05117ad2db98652828f0368f`. This source commit belongs to the generated publishing cache; the editable website source stays in the original Vayam repository.
+
+Latest successful publication: **version 2**, source commit `40c7ad0ca7f3c996f1fd50d3791aaf04ef4a7832`, generated from working-repository checkpoint `794e150b75c7e600c590ac31397e0f757b2d5f16`. Deployment ID: `appgdep_6ad925084dbc8191866e67b103e7dcf8`. The update includes shortlist quantity restoration, category-search reset, keyboard focus improvements, and stricter dashboard report validation. It contains the same four designs and no live analytics credentials or visitor records. Main-site technical preparation remains in the GitHub working branch and the local `/current/` preview, separate from this public design-review snapshot.
