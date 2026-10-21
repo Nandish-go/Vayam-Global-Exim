@@ -2,6 +2,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..');const core=require('../shared/core.js'),{sanitize}=require('../shared/analytics.js');
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'shared/catalogue.js'),'utf8'),context);const products=context.window.VAYAM_DATA.products,ids=products.map(p=>p.id);let passed=0;
 const test=(name,fn)=>{fn();passed++;console.log('PASS '+name);};
+test('Shortlists restore valid quantities, migrate old lists and discard unexpected fields',()=>{
+ const state=core.shortlist({selected:['black-pepper','unknown','black-pepper'],quantities:{'black-pepper':'500 kg','unknown':'secret'},email:'private@example.test'},products);
+ assert.deepEqual(state,{selected:['black-pepper'],quantities:{'black-pepper':'500 kg'}});
+ assert.deepEqual(core.shortlist(['black-pepper'],products),{selected:['black-pepper'],quantities:{}});
+ assert.deepEqual(core.shortlist(null,products),{selected:[],quantities:{}});
+ assert.equal(core.shortlist({selected:['black-pepper'],quantities:{'black-pepper':'x'.repeat(200)}},products).quantities['black-pepper'].length,60);
+});
 test('Catalogue keeps every original ID, unique IDs and six families',()=>{const expected=JSON.parse(fs.readFileSync(path.join(root,'tests/catalogue-ids.json'),'utf8'));const source=JSON.parse(fs.readFileSync(path.join(root,'shared/catalogue-source.json'),'utf8'));assert.deepEqual([...ids],[...expected]);assert.deepEqual(source.map(p=>p.id),expected);assert.equal(new Set(ids).size,32);assert.equal(context.window.VAYAM_DATA.families.length,6);});
 test('Unknown and repeated product identifiers cannot enter a brief',()=>assert.deepEqual(core.items(['green-cardamom','unknown','green-cardamom','basmati-rice'],products),['green-cardamom','basmati-rice']));
 test('An empty or destinationless enquiry cannot be prepared',()=>{assert.throws(()=>core.brief({destination:'Germany'},[],products,'refined'));assert.throws(()=>core.brief({requirements:'Spices'},[],products,'classic'));});

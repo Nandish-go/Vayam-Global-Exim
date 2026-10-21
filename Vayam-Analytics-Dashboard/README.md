@@ -1,6 +1,8 @@
 # Vayam analytics dashboard
 
-This is a separate, private-facing design prototype for the public website's future reports. It lives beside `Vayam-Development`, not inside any of the four website variants or the deployed main page. Its small logo asset is local to this folder. No service credentials or live visitor data are stored here.
+This folder contains the analytics dashboard prototype and the current business website's prepared measurement integration. It lives beside `Vayam-Development`, in the same working branch. No service credentials or live visitor data are stored here. The user confirmed on 21 October 2026 that no analytics account is known; the earlier Umami selection was a mistake.
+
+Read [SETUP.md](SETUP.md) for account activation, event definitions, worldwide discovery and Search Console steps. `integration/` contains the disabled scripts used by the root homepage; `tests/` verifies provider gates, report validation and browser flows. `tools/prepare-main-images.cjs` compresses the original main photographs without generative edits. [CHECKPOINT-2026-10-21.md](CHECKPOINT-2026-10-21.md) records what was verified. The local `/current/` preview serves the root homepage; it is not a fifth design.
 
 Open a terminal in `Vayam-Development`, run `node preview.cjs`, and visit http://127.0.0.1:8770/dashboard/. The preview server serves this folder only at `/dashboard/`. The dashboard is responsive and remains `noindex,nofollow`. Do not publish it through GitHub Pages or a public static host with real data; the dashboard has no authentication.
 

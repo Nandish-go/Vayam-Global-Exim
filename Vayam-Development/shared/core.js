@@ -5,6 +5,12 @@
     const seen=new Set();
     return (Array.isArray(input)?input:[]).filter(id=>products.some(p=>p.id===id)&&!seen.has(id)&&seen.add(id)).slice(0,32);
   }
+  function shortlist(input,products){
+    const selected=items(Array.isArray(input)?input:input?.selected,products);
+    const quantities={};
+    for(const id of selected){const value=input?.quantities?.[id];if(typeof value==='string'&&clean(value,60))quantities[id]=clean(value,60);}
+    return {selected,quantities};
+  }
   function brief(form,selected,products,variant){
     const ids=items(selected,products);
     if(!ids.length&&!clean(form.requirements))throw Error('Choose a product or describe your sourcing requirement.');
@@ -21,6 +27,6 @@
     return lines.join('\n');
   }
   function links(text,config){return {whatsapp:`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(text)}`,email:`mailto:${config.email}?subject=${encodeURIComponent('Sourcing enquiry | Vayam Global Exim')}&body=${encodeURIComponent(text)}`};}
-  root.VayamCore={clean,items,brief,links};
+  root.VayamCore={clean,items,shortlist,brief,links};
   if(typeof module!=='undefined')module.exports=root.VayamCore;
 })(typeof window!=='undefined'?window:globalThis);

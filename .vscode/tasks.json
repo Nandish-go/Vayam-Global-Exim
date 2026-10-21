@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label":"Vayam: preview websites","type":"shell","command":"node","args":["preview.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"isBackground":true,"problemMatcher":[]},
+    {"label":"Vayam: build four designs","type":"shell","command":"node","args":["tools/build.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"problemMatcher":[]},
+    {"label":"Vayam: verify four designs","type":"shell","command":"node","args":["tests/verify.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"problemMatcher":[]},
+    {"label":"Vayam: verify analytics gates","type":"shell","command":"node","args":["Vayam-Analytics-Dashboard/tests/analytics-gates.cjs"],"problemMatcher":[]},
+    {"label":"Vayam: verify business site and reports","type":"shell","command":"node","args":["Vayam-Analytics-Dashboard/tests/site-readiness.cjs"],"problemMatcher":[]},
+    {"label":"Vayam: build and verify everything","dependsOrder":"sequence","dependsOn":["Vayam: build four designs","Vayam: verify four designs","Vayam: verify analytics gates","Vayam: verify business site and reports"],"problemMatcher":[]}
+  ]
+}

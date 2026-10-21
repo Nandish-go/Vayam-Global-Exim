@@ -29,11 +29,11 @@ fs.mkdirSync(publicRoot, {recursive: true});
 for (const name of ['index.html','responsive.html','privacy.html','credits.html','image-review.html',
   'classic','refined','signature','trade','baseline','shared']) copy(path.join(source,name),path.join(publicRoot,name));
 const dashboard = path.join(repository,'Vayam-Analytics-Dashboard');
-for (const name of ['index.html','style.css','dashboard.js','sample-data.js','assets'])
+for (const name of ['index.html','style.css','dashboard.js','report-schema.js','sample-data.js','assets'])
   copy(path.join(dashboard,name),path.join(publicRoot,'dashboard',name));
 const studio = path.join(publicRoot,'index.html');
 fs.writeFileSync(studio,fs.readFileSync(studio,'utf8').replace('Local development collection','Shared design review'),'utf8');
-fs.writeFileSync(path.join(publicRoot,'robots.txt'),'User-agent: *\nDisallow: /\n','utf8');
+fs.writeFileSync(path.join(publicRoot,'robots.txt'),'User-agent: *\nAllow: /\n# HTML pages carry noindex; crawlers must read that directive.\n','utf8');
 fs.mkdirSync(path.join(destination,'.openai'), {recursive: true});
 const manifestFile = path.join(destination,'.openai','hosting.json');
 const manifest = fs.existsSync(manifestFile) ? JSON.parse(fs.readFileSync(manifestFile,'utf8')) : {};

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Development HTML carries noindex. Keep it crawlable so that directive is seen.
+Sitemap: https://vayam-global.com/sitemap.xml

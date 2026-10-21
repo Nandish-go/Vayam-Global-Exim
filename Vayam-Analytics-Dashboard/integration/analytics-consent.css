@@ -1,0 +1,12 @@
+.vayam-analytics-settings{appearance:none;border:0;background:none;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.vayam-analytics-settings:focus-visible,.vayam-consent button:focus-visible,.vayam-consent a:focus-visible{outline:3px solid #e9a66b;outline-offset:3px}
+.vayam-consent[hidden]{display:none}
+.vayam-consent{position:fixed;z-index:1000;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));width:min(420px,calc(100vw - 32px));padding:20px 22px;border:1px solid rgba(255,255,255,.2);border-radius:18px;background:#12392b;color:#fffaf0;box-shadow:0 20px 50px rgba(8,39,29,.27);font:15px/1.5 Arial,Helvetica,sans-serif}
+.vayam-consent h2{margin:0 0 6px;font:700 18px/1.25 Arial,Helvetica,sans-serif;color:#fff}
+.vayam-consent p{margin:0 0 13px;color:#f5ead6}
+.vayam-consent a{color:#fff4ca;text-decoration:underline;text-underline-offset:3px}
+.vayam-consent-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.vayam-consent button{min-height:44px;padding:10px 14px;border:1px solid #fffaf0;border-radius:9px;background:transparent;color:#fffaf0;font:700 14px Arial,Helvetica,sans-serif;cursor:pointer}
+.vayam-consent button[data-choice="accepted"]{background:#fffaf0;color:#12392b}
+.vayam-consent button:hover{box-shadow:inset 0 0 0 1px currentColor}
+@media(max-width:480px){.vayam-consent{right:16px;width:auto;padding:17px}.vayam-consent-actions button{flex:1 1 145px}}

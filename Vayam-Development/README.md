@@ -19,6 +19,6 @@ All four share the complete 32-entry catalogue, business information, product se
 
 Edit the sources listed in SOURCE-MAP.md. Run `node tools/build.cjs` and `node tests/verify.cjs` afterwards. No package installation or framework service is required. The builder is self-contained within this folder and does not rebuild the live baseline or historical designs.
 
-Analytics remains disabled with no measurement ID. The local inspector is for verification, not a visitor dashboard. See MEASUREMENT-AND-DISCOVERY.md for account activation and worldwide discovery work. Development pages intentionally use noindex; the local server binds only to 127.0.0.1.
+The main-site preparation now lives alongside the dashboard in `../Vayam-Analytics-Dashboard/integration/`; review its setup guide for activation and Search Console work. Analytics remains disabled with no measurement ID. The local inspector is for verification, not a visitor dashboard. See MEASUREMENT-AND-DISCOVERY.md for account activation and worldwide discovery work. Development pages intentionally use noindex; the local server binds only to 127.0.0.1.
 
 See QA-RESULTS.md for verified behaviour and limitations. Image credits are available at credits.html; image-review.html shows all 32 catalogue images together for review. These photographs illustrate a sourcing direction; they are not Vayam inventory or proof of a particular supplier lot. The current revision uses no AI-generated imagery.

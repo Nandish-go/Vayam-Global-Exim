@@ -7,11 +7,11 @@
  const key='vayam.shortlist.'+variant;
  let selected=[],compare=[],filter='all',limit=6,search='',draftText='',started=false,market='middle-east';
  const quantities={};
- try{selected=core.items(JSON.parse(sessionStorage.getItem(key)||'[]'),products);}catch{}
+ try{const stored=core.shortlist(JSON.parse(sessionStorage.getItem(key)||'[]'),products);selected=stored.selected;Object.assign(quantities,stored.quantities);}catch{}
  let toastTimer;
  function toast(text){$('#toast').textContent=text;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2600);}
  function invalidate(){draftText='';$('#draft').hidden=true;$('#send-whatsapp').removeAttribute('href');$('#send-email').removeAttribute('href');}
- function save(){try{sessionStorage.setItem(key,JSON.stringify(selected));}catch{}}
+ function save(){try{sessionStorage.setItem(key,JSON.stringify(core.shortlist({selected,quantities},products)));}catch{}}
  function renderShortlist(){
    $$('.count').forEach(n=>n.textContent=selected.length);
    $$('[data-add]').forEach(b=>{const active=selected.includes(b.dataset.add);b.setAttribute('aria-pressed',active);b.innerHTML=active?'In your brief <span aria-hidden="true">✓</span>':'Add to brief <span aria-hidden="true">+</span>';b.setAttribute('aria-label',(active?'Remove ':'Add ')+products.find(p=>p.id===b.dataset.add).name+(active?' from brief':' to brief'));});
@@ -48,7 +48,7 @@
    if(b.dataset.remove)toggle(b.dataset.remove);
    if(b.dataset.view)openProduct(b.dataset.view);
    if(b.dataset.filter)setFilter(b.dataset.filter);
-   if(b.dataset.filterLink){setFilter(b.dataset.filterLink);scrollTo($('#range'));}
+   if(b.dataset.filterLink){search='';$('#search').value='';setFilter(b.dataset.filterLink);scrollTo($('#range'));}
    if(b.dataset.compare){const id=b.dataset.compare;const exists=compare.includes(id);if(exists)compare=compare.filter(x=>x!==id);else if(compare.length<3)compare.push(id);else{toast('Compare up to three products. Remove one to add another.');return;}analytics.track('compare_change',{action:exists?'remove':'add',product_id:id,item_count:compare.length});renderCompare();}
    if(b.dataset.market){
      market=b.dataset.market;const m=VAYAM_MARKETS.find(m=>m.id===market);$$('[data-market]').forEach(n=>n.setAttribute('aria-pressed',n===b));
@@ -72,14 +72,14 @@
  });
  $$('.close-dialog').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
  $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
- $('#show-more').addEventListener('click',()=>{limit+=6;renderRange();});
+ $('#show-more').addEventListener('click',()=>{const visible=new Set($$('.product-card:not([hidden])'));limit+=6;renderRange();const first=$$('.product-card:not([hidden])').find(card=>!visible.has(card));first?.querySelector('button')?.focus({preventScroll:true});if(first)scrollTo(first,{block:'nearest'});});
  $('#clear-filters').addEventListener('click',()=>{search='';$('#search').value='';setFilter('all');});
  let searchTimer;$('#search').addEventListener('input',e=>{search=e.target.value.trim().toLowerCase();limit=6;const count=renderRange();clearTimeout(searchTimer);searchTimer=setTimeout(()=>analytics.track('search_results',{category:filter,result_count:count}),500);});
  $('#compare-open')?.addEventListener('click',openCompare);
  $('.menu-toggle').addEventListener('click',()=>{const open=$('.menu-toggle').getAttribute('aria-expanded')==='true';$('.menu-toggle').setAttribute('aria-expanded',!open);$('#mobile-nav').hidden=open;});
  $$('#mobile-nav a').forEach(a=>a.addEventListener('click',()=>{$('#mobile-nav').hidden=true;$('.menu-toggle').setAttribute('aria-expanded','false');}));
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#mobile-nav').hidden){$('#mobile-nav').hidden=true;$('.menu-toggle').setAttribute('aria-expanded','false');$('.menu-toggle').focus();}});
- $('#selected-products').addEventListener('input',e=>{if(e.target.dataset.quantity){quantities[e.target.dataset.quantity]=e.target.value;invalidate();}});
+ $('#selected-products').addEventListener('input',e=>{if(e.target.dataset.quantity){quantities[e.target.dataset.quantity]=e.target.value;save();invalidate();}});
  $('#brief-form').addEventListener('input',()=>{invalidate();if(!started){started=true;analytics.track('brief_start',{item_count:selected.length});}});
  $('#brief-form').addEventListener('change',e=>{invalidate();if(e.target.name==='packing')analytics.track('packing_select',{packing:e.target.value});if(e.target.name==='market')analytics.track('market_select',{market:e.target.value});if(e.target.name==='sample')analytics.track('sample_interest',{interest:'sample',status:e.target.checked?'complete':'empty'});});
  document.addEventListener('focusout',e=>{if(e.target.dataset.quantity)analytics.track('brief_field_completed',{field:'quantity',product_id:e.target.dataset.quantity,status:e.target.value.trim()?'complete':'empty'});if(e.target.closest('#brief-form')&&['destination','timing','contact','company','requirements'].includes(e.target.name))analytics.track('brief_field_completed',{field:e.target.name,status:e.target.value.trim()?'complete':'empty'});});

@@ -7,6 +7,7 @@
   <title>Vayam | Analytics Studio</title>
   <link rel="stylesheet" href="style.css">
   <script src="sample-data.js" defer></script>
+  <script src="report-schema.js" defer></script>
   <script src="dashboard.js" defer></script>
 </head>
 <body>
@@ -30,6 +31,7 @@
         <div class="top-actions"><span class="local-tag">LOCAL ONLY</span><button id="import-button" type="button">Import report JSON ↗</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
       </header>
       <div id="mode-banner" class="mode-banner" role="status"><strong>DESIGN PREVIEW · ILLUSTRATIVE DATA</strong><span>Figures below are synthetic examples for layout review. They are not Vayam visitor statistics.</span><button id="reset-demo" type="button">Restore sample</button></div>
+      <p id="import-status" class="fine" role="status" hidden></p>
       <section class="intro" id="overview">
         <div><p class="eyebrow">01 / THE SIGNAL</p><h1>What buyers explored.<br><em>Where enquiries began.</em></h1><p>One place for the public website's reach, product interest and enquiry handoffs. Each measure keeps its own meaning; a click is never counted as a received lead.</p></div>
         <div class="intro-mark" aria-hidden="true"><span>V</span><i></i><b></b></div>

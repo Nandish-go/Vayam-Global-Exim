@@ -20,20 +20,7 @@
     return element;
   }
 
-  function validReport(input) {
-    if (!input || input.schemaVersion !== 1 || typeof input.label !== 'string') throw new Error('This is not a Vayam dashboard report.');
-    const summary = input.summary;
-    if (!summary || ['visitors', 'visits', 'productInterest', 'handoffs'].some(key => !Number.isFinite(Number(summary[key])))) {
-      throw new Error('The report is missing one or more overview measures.');
-    }
-    for (const [key, limit] of Object.entries({trend: 366, countries: 80, sources: 20, cities: 80, products: 50, sections: 30, funnel: 20})) {
-      if (!Array.isArray(input[key]) || input[key].length > limit) throw new Error('The ' + key + ' report is missing or too large.');
-    }
-    if (input.trend.some(row => !Array.isArray(row) || row.length !== 3 || row.some(value => !Number.isFinite(Number(value))))) {
-      throw new Error('Daily trend rows must contain a day number, visitors and handoffs.');
-    }
-    return input;
-  }
+  const validReport = window.VayamReport.validate;
 
   function renderTrend(rows) {
     const chart = byId('trend-chart');
@@ -165,6 +152,7 @@
 
   function render(data, importedName = '') {
     current = validReport(data);
+    byId('import-status').hidden = true;
     byId('period-label').textContent = String(current.label).slice(0, 100);
     byId('metric-visitors').textContent = format(current.summary.visitors);
     byId('metric-visits').textContent = format(current.summary.visits);
@@ -193,9 +181,9 @@
       if (file.size > 2_000_000) throw new Error('Choose a report smaller than 2 MB.');
       render(JSON.parse(await file.text()), file.name.slice(0, 100));
     } catch (error) {
-      const banner = byId('mode-banner');
-      banner.querySelector('strong').textContent = 'REPORT NOT LOADED';
-      banner.querySelector('span').textContent = error.message;
+      const status = byId('import-status');
+      status.hidden = false;
+      status.textContent = 'Report not loaded. ' + error.message + ' The previous display is unchanged.';
     }
     event.target.value = '';
   });

@@ -1,6 +1,6 @@
 # Sources and editing guide
 
-This folder contains exactly four active website candidates, a shared source set, and the tools needed to rebuild and verify them. The root `../index.html` is the unchanged live baseline. `baseline/index.html` and `templates/live-main.txt` are frozen comparison/build references; they are not alternate development designs.
+This folder contains exactly four active website candidates, a shared source set, and the tools needed to rebuild and verify them. The root `../index.html` is the proposed technical update for the original business website on the development branch. `baseline/index.html` and `templates/live-main.txt` are frozen comparison/build references; they are not alternate development designs.
 
 | Purpose | Edit here |
 |---|---|

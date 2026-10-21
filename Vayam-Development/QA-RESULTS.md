@@ -1,4 +1,10 @@
-# Verification — 30 September 2026
+# Verification
+
+## Current checkpoint — 21 October 2026
+
+The four-design build and 16 verification groups passed. Edge browser checks covered all four designs at 320, 390, 768 and 1440 px, quantity restoration, category navigation after search, prepared enquiry messages and dashboard import failures. The main-site technical preparation and disabled analytics were also checked. See [the full checkpoint](../Vayam-Analytics-Dashboard/CHECKPOINT-2026-10-21.md). Production `main` remains unchanged; the working branch is now published on GitHub. The root homepage is the proposed technical update, while `baseline/` remains the frozen live-site reference.
+
+## Historical verification — 30 September 2026
 
 Active review set: Classic, Refined, Signature and Trade. The public main branch and personal site are unchanged.
 

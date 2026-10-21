@@ -1,0 +1,8 @@
+# Account credentials and private report exports stay outside Git.
+.env
+.env.*
+!.env.example
+node_modules/
+Vayam-Analytics-Dashboard/private-reports/
+Vayam-Analytics-Dashboard/.local/
+*.log
