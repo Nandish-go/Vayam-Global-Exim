@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Vayam | Analytics Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="sample-data.js" defer></script>
+  <script src="report-schema.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to insights</a>
+  <div class="shell">
+    <aside class="rail" aria-label="Dashboard navigation">
+      <a class="brand" href="../"><img src="assets/logo.png" alt=""><span>VAYAM<br><small>GLOBAL EXIM</small></span></a>
+      <p class="rail-label">MEASUREMENT STUDIO</p>
+      <nav>
+        <a href="#overview" class="active"><span>01</span> Overview</a>
+        <a href="#reach"><span>02</span> Reach</a>
+        <a href="#interest"><span>03</span> Product interest</a>
+        <a href="#journey"><span>04</span> Enquiry journey</a>
+      </nav>
+      <div class="rail-note"><span class="pulse"></span> Local review tool<p>Imported reports stay in this browser tab. No analytics key belongs in this folder.</p></div>
+      <a class="back" href="https://vayam-global.com/">← Business website</a>
+    </aside>
+    <main id="main">
+      <header class="topline">
+        <div><span class="eyebrow">VAYAM / INSIGHTS</span><span class="slash">/</span><span id="period-label">Illustrative 28-day period</span></div>
+        <div class="top-actions"><span class="local-tag">LOCAL ONLY</span><button id="import-button" type="button">Import report JSON ↗</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+      </header>
+      <section class="live-access panel" aria-label="Private live reports"><p class="eyebrow">YOUR LIVE REPORTS</p><h2>Open your private Google dashboards.</h2><p>Use Google Analytics for website visits and interactions, and Search Console for discovery in Google Search. Google sign-in protects the reports. The custom charts below use reports you import into this tab.</p><div class="report-links"><a href="https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome" target="_blank" rel="noopener">Website analytics ↗</a><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com" target="_blank" rel="noopener">Google search performance ↗</a></div><p class="fine">GA4 property: Vayam — Live Website. Search Console: vayam-global.com. The four trial designs are excluded. New GA4 data starts after the website tag is published and a visitor allows analytics; past visits cannot be recovered.</p></section>
+      <div id="mode-banner" class="mode-banner" role="status"><strong>NO REPORT LOADED</strong><span>Import a report to view the custom charts, or explicitly load the illustrative sample.</span><button id="reset-demo" type="button">Show sample design</button></div>
+      <div class="comparison-controls"><button id="compare-button" type="button">Compare another report</button><input id="compare-file" type="file" accept=".json,application/json" hidden><button id="clear-comparison" type="button" hidden>Clear comparison</button><p id="comparison-status" role="status">Compare matching periods and the same data source. Files stay in this tab.</p></div>
+      <p id="import-status" class="fine" role="status" hidden></p>
+      <section class="intro" id="overview">
+        <div><p class="eyebrow">01 / THE SIGNAL</p><h1>What buyers explored.<br><em>Where enquiries began.</em></h1><p>One place for the public website's reach, product interest and enquiry handoffs. Each measure keeps its own meaning; a click is never counted as a received lead.</p></div>
+        <div class="intro-mark" aria-hidden="true"><span>V</span><i></i><b></b></div>
+      </section>
+      <section class="metrics" aria-label="Overview metrics">
+        <article class="metric"><span>Measured visitors</span><strong id="metric-visitors">—</strong><small>Anonymous audience estimate</small><div class="metric-line"></div></article>
+        <article class="metric"><span>Site visits</span><strong id="metric-visits">—</strong><small>Visits in selected period</small><div class="metric-line"></div></article>
+        <article class="metric"><span>Product interest</span><strong id="metric-products">—</strong><small>Product-group interactions</small><div class="metric-line"></div></article>
+        <article class="metric accent"><span>Enquiry handoffs</span><strong id="metric-handoffs">—</strong><small>Intent to use email or WhatsApp</small><div class="metric-line"></div></article>
+      </section>
+      <section class="panel trend-panel" aria-labelledby="trend-title">
+        <div id="comparison-results" class="comparison-results" hidden></div>
+        <div class="panel-head"><div><p class="eyebrow">AUDIENCE THROUGH TIME</p><h2 id="trend-title">Measured visits, day by day</h2></div><span class="legend"><i></i> Visitors <i></i> Enquiry handoffs</span></div>
+        <svg id="trend-chart" viewBox="0 0 900 265" role="img" aria-label="Visitors and enquiry handoffs over time"></svg>
+        <div id="trend-axis" class="chart-axis"></div>
+      </section>
+      <div class="section-heading" id="reach"><p class="eyebrow">02 / WORLDWIDE REACH</p><h2>Where interest is arriving.</h2><span>City and country are approximate, based on the analytics provider's location estimate.</span></div>
+      <div class="two-up reach-grid">
+        <section class="panel countries" aria-labelledby="countries-title"><div class="panel-head"><div><p class="eyebrow">TOP MARKETS</p><h3 id="countries-title">Countries</h3></div><span class="tiny">Visitors</span></div><div id="country-bars" class="bar-list"></div></section>
+        <section class="panel sources" aria-labelledby="sources-title"><div class="panel-head"><div><p class="eyebrow">DISCOVERY PATHS</p><h3 id="sources-title">How people arrived</h3></div></div><div class="source-layout"><div id="source-donut" class="donut" role="img"><span id="source-total">—<small>visits</small></span></div><div id="source-list" class="source-list"></div></div><p class="fine">Direct and unknown traffic can include privacy tools and untagged links.</p></section>
+      </div>
+      <section class="panel city-panel" aria-labelledby="cities-title"><div class="panel-head"><div><p class="eyebrow">LOCAL DETAIL</p><h3 id="cities-title">Leading cities</h3></div><span class="tiny">Approximate location, not a person's address</span></div><div id="city-list" class="city-list"></div></section>
+      <div class="section-heading" id="interest"><p class="eyebrow">03 / PRODUCT DISCOVERY</p><h2>What the audience explored.</h2><span>Interactions show interest in a category. They do not confirm a stock item, quotation or order.</span></div>
+      <div class="two-up interest-grid">
+        <section class="panel" aria-labelledby="products-title"><div class="panel-head"><div><p class="eyebrow">BUYER INTEREST</p><h3 id="products-title">Product groups</h3></div><span class="tiny">Interactions</span></div><div id="product-bars" class="bar-list product-bars"></div></section>
+        <section class="panel" aria-labelledby="sections-title"><div class="panel-head"><div><p class="eyebrow">ON-PAGE ATTENTION</p><h3 id="sections-title">Sections reached</h3></div><span class="tiny">Visible-section events</span></div><div id="section-bars" class="section-bars"></div><p class="fine">A section entering the screen is a visibility signal, not proof it was read.</p></section>
+      </div>
+      <div class="section-heading" id="journey"><p class="eyebrow">04 / ENQUIRY JOURNEY</p><h2>From interest to conversation.</h2><span>The website opens the visitor's email or WhatsApp app. Only the received message confirms a lead.</span></div>
+      <section class="panel funnel" aria-labelledby="funnel-title"><div class="panel-head"><div><p class="eyebrow">THE BUYER PATH</p><h3 id="funnel-title">Intent stages</h3></div><span class="tiny">Event counts, not unique people</span></div><div id="funnel-steps" class="funnel-steps"></div></section>
+      <section class="definitions"><div><p class="eyebrow">READING THE NUMBERS</p><h2>Signals and outcomes<br><em>stay separate.</em></h2></div><div class="definition-grid"><p><strong>Visitor</strong>An anonymous estimate. Ad blockers, consent choices and provider methods affect totals.</p><p><strong>Handoff</strong>A click or prepared enquiry that opens another application. Delivery cannot be proved from the website.</p><p><strong>Received lead</strong>A real email or WhatsApp conversation recorded privately by Vayam; it is not inferred from site events.</p><p><strong>Location</strong>Country and city estimates can be imprecise. This dashboard contains no raw IP list or named visitor profiles.</p></div></section>
+      <footer>Vayam Global Exim · Analytics workspace · <a href="https://vayam-global.com/">Business website</a></footer>
+    </main>
+  </div>
+</body>
+</html>

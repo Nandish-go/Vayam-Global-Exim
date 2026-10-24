@@ -1,0 +1,97 @@
+[
+  {
+    "name": "spices",
+    "source": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1400&q=88",
+    "description": "Same photograph as the existing live site, resized and compressed without generative editing.",
+    "files": [
+      {
+        "file": "spices-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 65136
+      },
+      {
+        "file": "spices-1280.webp",
+        "width": 1280,
+        "height": 853,
+        "bytes": 209098
+      }
+    ]
+  },
+  {
+    "name": "rice",
+    "source": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1400&q=88",
+    "description": "Same photograph as the existing live site, resized and compressed without generative editing.",
+    "files": [
+      {
+        "file": "rice-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 69630
+      },
+      {
+        "file": "rice-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 111834
+      }
+    ]
+  },
+  {
+    "name": "grocery",
+    "source": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1400&q=88",
+    "description": "Same photograph as the existing live site, resized and compressed without generative editing.",
+    "files": [
+      {
+        "file": "grocery-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 94390
+      },
+      {
+        "file": "grocery-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 183272
+      }
+    ]
+  },
+  {
+    "name": "warehouse",
+    "source": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=88",
+    "description": "Same photograph as the existing live site, resized and compressed without generative editing.",
+    "files": [
+      {
+        "file": "warehouse-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 123144
+      },
+      {
+        "file": "warehouse-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 224510
+      }
+    ]
+  },
+  {
+    "name": "packing",
+    "source": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=88",
+    "description": "Same photograph as the existing live site, resized and compressed without generative editing.",
+    "files": [
+      {
+        "file": "packing-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 91510
+      },
+      {
+        "file": "packing-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 175740
+      }
+    ]
+  }
+]
