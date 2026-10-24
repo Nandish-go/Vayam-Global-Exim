@@ -24,7 +24,7 @@ For the complete business site including its new category pages, run `node Vayam
 
 ## Analytics and search
 
-The production integration is configured for GA4 property **Vayam — Live Website**, measurement ID **G-SB6RL77QJ4**. It activates only on the approved HTTPS business domains after the visitor allows analytics. Local previews, four-design review hosts, development paths and dashboard paths do not send production analytics. Microsoft Clarity is prepared but disabled until its project exists.
+The production integration is configured for GA4 property **Vayam — Live Website**, measurement ID **G-SB6RL77QJ4**. It activates only on the approved HTTPS business domains after the visitor allows analytics. Local previews, four-design review hosts, development paths and dashboard paths do not send production analytics. Microsoft Clarity project `z2xvqfy55k` is configured through the same analytics choice, with enquiry forms masked.
 
 Open [the analytics workspace guide](Vayam-Analytics-Dashboard/README.md) for direct report access, account status and remaining setup. The static dashboard starts empty; illustrative figures require an explicit click. Imported JSON reports and comparisons remain in the current browser tab. No public static page contains your real visitor data.
 
