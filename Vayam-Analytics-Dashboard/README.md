@@ -1,13 +1,25 @@
-# Vayam analytics dashboard
+# Vayam analytics workspace
 
-This folder contains the analytics dashboard prototype and the current business website's prepared measurement integration. It lives beside `Vayam-Development`, in the same working branch. No service credentials or live visitor data are stored here. The user confirmed on 21 October 2026 that no analytics account is known; the earlier Umami selection was a mistake.
+This folder contains the public website's measurement integration and the editable dashboard interface. It belongs beside `Vayam-Development/` in the same working repository; production releases include this folder without the trial designs.
 
-Read [SETUP.md](SETUP.md) for account activation, event definitions, worldwide discovery and Search Console steps. `integration/` contains the disabled scripts used by the root homepage; `tests/` verifies provider gates, report validation and browser flows. `tools/prepare-main-images.cjs` compresses the original main photographs without generative edits. [CHECKPOINT-2026-10-21.md](CHECKPOINT-2026-10-21.md) records what was verified. The local `/current/` preview serves the root homepage; it is not a fifth design.
+## Open your reports
 
-Open a terminal in `Vayam-Development`, run `node preview.cjs`, and visit http://127.0.0.1:8770/dashboard/. The preview server serves this folder only at `/dashboard/`. The dashboard is responsive and remains `noindex,nofollow`. Do not publish it through GitHub Pages or a public static host with real data; the dashboard has no authentication.
+- [Google Analytics — Vayam Live Website](https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome): business-account sign-in. Property **560596894**, stream **16192169327**, measurement ID **G-SB6RL77QJ4**.
+- [Google Search Console — domain performance](https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com): use the Google account that owns the verified domain property.
+- Custom interface: run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs` from the repository root, then open http://127.0.0.1:8771/Vayam-Analytics-Dashboard/.
 
-All default figures in `sample-data.js` are fictional. The page prominently labels them **DESIGN PREVIEW · ILLUSTRATIVE DATA**. The Import report JSON button accepts a local JSON file, displays its contents only in the current browser tab, and labels its source **unverified**. Importing does not upload the file or persist it in browser storage. An imported file is still only as reliable as the data and definitions used to create it.
+Google sign-in protects live reports. The custom interface provides links to those reports plus local JSON imports and period comparisons; it does **not yet automatically download Google data**. It starts with no report loaded. **Show sample design** loads explicitly labelled fictional figures. Importing does not upload a file, save it in browser storage or put it in Git. A report's source and date range must be checked before interpreting comparisons.
 
-The expected JSON shape is `schemaVersion: 1`, a `label`, `summary` with `visitors`, `visits`, `productInterest` and `handoffs`, and arrays named `trend`, `countries`, `sources`, `cities`, `products`, `sections` and `funnel`. Use `sample-data.js` as a structural example. The trend rows are `[dayNumber, dailyVisitors, handoffs]`; bar-chart rows have `name` and `value`; country rows can also have `code`; city rows can have `country`; funnel rows have `name`, `count` and `detail`. Data is shown with text nodes, not interpreted as HTML. The importer checks the schema and size but does not prove its provenance.
+## Files
 
-The production data connection remains pending. A business-owned analytics account and website ID must first be configured on the public site, with tracking verified against real browser requests. A local, authenticated export process can then aggregate provider reports into this schema; it should keep API keys outside this repository and avoid raw visitor records. Until that happens, the dashboard is a reviewable visual and reporting specification, not a live analytics system. Website click events are enquiry **handoffs**, not confirmed received leads. Keep confirmed email/WhatsApp outcomes in a separate private lead register.
+- `integration/`: production consent, GA4 configuration, sanitized events and optional disabled Clarity adapter.
+- `index.html`, `dashboard.js`, `style.css`: editable custom reporting interface.
+- `report-schema.js`, `sample-data.js`: validated import format and illustrative sample.
+- `tools/build-discovery.cjs`: rebuild the five public category pages and sitemap from existing business facts and real photographs.
+- `tools/preview-main.cjs`: serve only allowed public files locally on port 8771.
+- `tests/`: provider gates, site metadata, dashboard import validation and browser checks.
+- `SETUP.md`: free-service setup, KPI definitions, limitations and remaining account tasks.
+
+Expected imports: `schemaVersion: 1`, `label`, `summary` with `visitors`, `visits`, `productInterest`, `handoffs`, plus arrays `trend`, `countries`, `sources`, `cities`, `products`, `sections`, `funnel`. Trend rows are `[dayNumber,dailyVisitors,handoffs]`; bar rows have `name,value`; city rows can have `country`; funnel rows have `name,count,detail`. Use the sample only as a structural example. There is no general GA4/CSV converter in this release.
+
+All reporting code is safe to keep in Git, but private report exports and access credentials must remain outside public hosting. `.local/`, `private-reports/`, `.env` and dependencies are ignored. Clicks to email, phone or WhatsApp measure **contact intent**, not delivered enquiries or orders. Record confirmed leads separately in your private business records.

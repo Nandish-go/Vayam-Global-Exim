@@ -1,6 +1,8 @@
 {
   "version": "2.0.0",
   "tasks": [
+    {"label":"Vayam: preview business website","type":"shell","command":"node","args":["Vayam-Analytics-Dashboard/tools/preview-main.cjs"],"isBackground":true,"problemMatcher":[]},
+    {"label":"Vayam: build search pages","type":"shell","command":"node","args":["Vayam-Analytics-Dashboard/tools/build-discovery.cjs"],"problemMatcher":[]},
     {"label":"Vayam: preview websites","type":"shell","command":"node","args":["preview.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"isBackground":true,"problemMatcher":[]},
     {"label":"Vayam: build four designs","type":"shell","command":"node","args":["tools/build.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"problemMatcher":[]},
     {"label":"Vayam: verify four designs","type":"shell","command":"node","args":["tests/verify.cjs"],"options":{"cwd":"${workspaceFolder}/Vayam-Development"},"problemMatcher":[]},

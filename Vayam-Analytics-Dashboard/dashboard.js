@@ -6,6 +6,8 @@
   const format = value => new Intl.NumberFormat('en').format(integer(value));
   const svgNS = 'http://www.w3.org/2000/svg';
   let current = sample;
+  let previous = null;
+  let hasReport = false;
 
   function svg(tag, attrs = {}) {
     const element = document.createElementNS(svgNS, tag);
@@ -171,6 +173,19 @@
     banner.querySelector('span').textContent = importedName ?
       'Showing ' + importedName + ' in this tab only. Verify report provenance before decisions.' :
       'Figures below are synthetic examples for layout review. They are not Vayam visitor statistics.';
+    hasReport = true;
+    renderComparison();
+  }
+
+  function renderComparison() {
+    const target=byId('comparison-results'); target.replaceChildren();
+    target.hidden=!previous||!hasReport;
+    if(target.hidden)return;
+    for(const [key,label] of [['visitors','Visitors'],['visits','Visits'],['productInterest','Product interest'],['handoffs','Contact handoffs']]){
+      const before=previous.summary[key],now=current.summary[key],delta=now-before;
+      const change=before?((delta/before)*100).toFixed(1)+'%':(now?'no prior baseline':'no change');
+      const card=text('p','');card.appendChild(text('strong',label));card.appendChild(text('span',(delta>0?'+':'')+format(Math.abs(delta))+(delta<0?' fewer':'')+' · '+change));target.appendChild(card);
+    }
   }
 
   byId('import-button').addEventListener('click', () => byId('import-file').click());
@@ -188,5 +203,17 @@
     event.target.value = '';
   });
   byId('reset-demo').addEventListener('click', () => render(sample));
-  render(sample);
+  byId('compare-button').addEventListener('click',()=>byId('compare-file').click());
+  byId('compare-file').addEventListener('change',async event=>{
+    const file=event.target.files?.[0];if(!file)return;
+    try{
+      if(file.size>2_000_000)throw new Error('Choose a report smaller than 2 MB.');
+      previous=validReport(JSON.parse(await file.text()));
+      byId('comparison-status').textContent='Comparing with '+previous.label+'. Confirm equivalent periods and sources before interpreting differences.';
+      byId('clear-comparison').hidden=false;renderComparison();
+    }catch(error){byId('comparison-status').textContent='Comparison not loaded. '+error.message;}
+    event.target.value='';
+  });
+  byId('clear-comparison').addEventListener('click',()=>{previous=null;renderComparison();byId('clear-comparison').hidden=true;byId('comparison-status').textContent='Comparison cleared.';});
+  byId('period-label').textContent='Choose a report';
 })();

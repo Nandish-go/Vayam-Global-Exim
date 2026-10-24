@@ -8,7 +8,7 @@ const schema = fs.readFileSync(path.join(__dirname, '..', 'integration', 'measur
 const goodWebsiteId = '94db1cb1-74f4-4a40-ad6c-962362670409';
 
 function run({host = 'vayam-global.com', protocol = 'https:', enabled = false,
-  ga4Enabled = false, choice = 'unset', search = '', doNotTrack = '0', gpc = false} = {}) {
+  ga4Enabled = false, clarityEnabled = false, pathname = '/', choice = 'unset', search = '', doNotTrack = '0', gpc = false} = {}) {
   const scripts = [];
   const document = {
     referrer: 'https://example.org/private?email=buyer@example.org',
@@ -23,7 +23,7 @@ function run({host = 'vayam-global.com', protocol = 'https:', enabled = false,
   };
   const context = {
     document,
-    location: {protocol, hostname: host, origin: protocol + '//' + host, pathname: '/', search},
+    location: {protocol, hostname: host, origin: protocol + '//' + host, pathname, search},
     navigator: {doNotTrack, globalPrivacyControl: gpc},
     localStorage: {getItem() { return choice; }},
     URL,
@@ -38,7 +38,7 @@ function run({host = 'vayam-global.com', protocol = 'https:', enabled = false,
   context.window = context;
   context.window.VAYAM_ANALYTICS_CONFIG = {
     enabled, websiteId: goodWebsiteId, ga4Enabled, ga4MeasurementId: 'G-ABC12345',
-    allowedHosts: ['vayam-global.com', 'www.vayam-global.com']
+    clarityEnabled, clarityProjectId: 'test12345', allowedHosts: ['vayam-global.com', 'www.vayam-global.com']
   };
   vm.runInNewContext(schema, context, {filename: 'measurement-schema.js'});
   vm.runInNewContext(source, context, {filename: 'analytics.js'});
@@ -87,3 +87,12 @@ const local = run({host: '127.0.0.1', protocol:'http:', search:'?analytics_previ
 assert.equal(local.scripts.length, 0);
 assert.ok(local.context.VayamAnalyticsPreview.events().every(event => !JSON.stringify(event).includes('buyer@')));
 console.log('Analytics provider gates and payload boundaries passed.');
+for(const pathname of ['/Vayam-Development/trade/','/Vayam-Analytics-Dashboard/']){
+ assert.equal(run({ga4Enabled:true,clarityEnabled:true,choice:'accepted',pathname}).scripts.length,0);
+}
+assert.equal(run({clarityEnabled:true,choice:'unset'}).scripts.length,0);
+assert.equal(run({clarityEnabled:true,choice:'rejected'}).scripts.length,0);
+assert.equal(run({clarityEnabled:true,choice:'accepted',search:'?email=private@example.org'}).scripts.length,0);
+assert.equal(run({clarityEnabled:true,choice:'accepted',search:'?utm_source=private@example.org'}).scripts.length,0);
+assert.equal(run({clarityEnabled:true,choice:'accepted'}).scripts[0].src,'https://www.clarity.ms/tag/test12345');
+console.log('Dormant designs/dashboard and optional replay consent gates passed.');

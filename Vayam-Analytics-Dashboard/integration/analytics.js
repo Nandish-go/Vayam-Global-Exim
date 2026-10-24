@@ -14,10 +14,14 @@
     Array.isArray(config.allowedHosts) && config.allowedHosts.includes(location.hostname);
   const umamiActive = approvedHost && config.enabled === true && validId;
   const ga4Active = approvedHost && config.ga4Enabled === true && /^G-[A-Z0-9]{6,20}$/.test(ga4Id);
-  const preview = !umamiActive && !ga4Active && /^(localhost|127\.0\.0\.1)$/.test(location.hostname) &&
+  const clarityId = typeof config.clarityProjectId === 'string' ? config.clarityProjectId.trim() : '';
+  const clarityActive = approvedHost && config.clarityEnabled === true && /^[a-z0-9]{5,24}$/i.test(clarityId);
+  const trialPath = /^\/(?:Vayam-Development|Vayam-Analytics-Dashboard)(?:\/|$)/i.test(location.pathname);
+  if (trialPath) return;
+  const preview = !umamiActive && !ga4Active && !clarityActive && /^(localhost|127\.0\.0\.1)$/.test(location.hostname) &&
     new URLSearchParams(location.search).get('analytics_preview') === '1';
   const consentPreview = preview && new URLSearchParams(location.search).get('consent_preview') === '1';
-  if (!umamiActive && !ga4Active && !preview) return;
+  if (!umamiActive && !ga4Active && !clarityActive && !preview) return;
   if (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
 
   const trace = [];
@@ -37,7 +41,9 @@
   let formStarted = false;
   let ga4Choice = 'unset';
   let ga4Loaded = false;
-  const choiceKey = 'vayam.ga4.choice.v1';
+  let clarityLoaded = false;
+  let interactionsStarted = false;
+  const choiceKey = 'vayam.analytics.choice.v2';
   try { ga4Choice = localStorage.getItem(choiceKey) || 'unset'; } catch { /* Storage may be blocked. */ }
   if (ga4Choice !== 'accepted' && ga4Choice !== 'rejected') ga4Choice = 'unset';
 
@@ -81,6 +87,34 @@
     }
     if (ga4Active && ga4Choice === 'accepted' && ga4Loaded) {
       window.gtag('event', name, {page_location: location.origin + location.pathname, page_referrer: safeReferrer(), ...data});
+    }
+    if (clarityLoaded && ga4Choice === 'accepted') window.clarity('event', name);
+  }
+
+  function loadClarity() {
+    if (!clarityActive || clarityLoaded || ga4Choice !== 'accepted') return;
+    // Query strings may contain enquiry details. Do not expose them to replay.
+    const keys = [...new URLSearchParams(location.search).keys()];
+    if (keys.some(key => !['utm_source','utm_medium','utm_campaign'].includes(key))) return;
+    if (keys.length && !campaign()) return;
+    const safeCampaign = campaign();
+    if (safeCampaign && Object.values(safeCampaign).includes('other')) return;
+    clarityLoaded = true;
+    window.clarity = window.clarity || function () {(window.clarity.q = window.clarity.q || []).push(arguments);};
+    window.clarity('consentv2', {analytics_Storage:'granted', ad_Storage:'denied'});
+    document.querySelectorAll('form').forEach(form => form.setAttribute('data-clarity-mask', 'true'));
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.clarity.ms/tag/' + clarityId;
+    document.head.appendChild(tag);
+  }
+
+  function startMeasurement() {
+    loadGa4();
+    loadClarity();
+    if (!interactionsStarted && (preview || umamiActive || ga4Choice === 'accepted')) {
+      interactionsStarted = true;
+      installInteractions();
     }
   }
 
@@ -238,7 +272,7 @@
   function createControls() {
     const footer = document.querySelector('footer .copyright');
     if (!footer) return;
-    if (!ga4Active && !consentPreview) return;
+    if (!ga4Active && !clarityActive && !consentPreview) return;
 
     const open = document.createElement('button');
     open.type = 'button';
@@ -248,11 +282,11 @@
     const panel = document.createElement('aside');
     panel.className = 'vayam-consent';
     panel.hidden = ga4Choice !== 'unset';
-    panel.setAttribute('aria-label', 'Optional Google Analytics');
+    panel.setAttribute('aria-label', 'Optional visitor analytics');
     panel.innerHTML = '<h2>Optional visitor analytics</h2>' +
-      '<p>Allow Google Analytics to help us understand pages, product interest and approximate location trends. Your enquiry text and contact details are not sent as custom analytics events.</p>' +
-      '<a href="privacy.html">How measurement works</a>' +
-      '<div class="vayam-consent-actions"><button type="button" data-choice="accepted">Allow Google Analytics</button>' +
+      '<p>Allow Google Analytics and, when connected, Microsoft Clarity to measure visits, product interest and page interactions. Enquiry fields are masked in recordings. These services help us improve the website.</p>' +
+      '<a href="/privacy.html">How measurement works</a>' +
+      '<div class="vayam-consent-actions"><button type="button" data-choice="accepted">Allow analytics</button>' +
       '<button type="button" data-choice="rejected">No thanks</button></div>';
     document.body.appendChild(panel);
     open.addEventListener('click', () => { panel.hidden = false; panel.querySelector('button')?.focus(); });
@@ -263,17 +297,27 @@
       try { localStorage.setItem(choiceKey, ga4Choice); } catch { /* No persistence in private mode. */ }
       panel.hidden = true;
       open.focus();
-      if (ga4Choice === 'accepted') loadGa4();
-      else if (ga4Loaded) {
-        window['ga-disable-' + ga4Id] = true;
-        window.gtag('consent', 'update', {analytics_storage: 'denied'});
+      if (ga4Choice === 'accepted') startMeasurement();
+      else if (ga4Loaded || clarityLoaded) {
+        if (ga4Loaded) {
+          window['ga-disable-' + ga4Id] = true;
+          window.gtag('consent', 'update', {analytics_storage: 'denied'});
+        }
+        if (clarityLoaded) window.clarity('consentv2', {analytics_Storage:'denied', ad_Storage:'denied'});
+        for (const cookie of document.cookie.split(';')) {
+          const name = cookie.split('=')[0].trim();
+          if (!/^(_ga|_clck|_clsk)/.test(name)) continue;
+          for (const domain of ['', location.hostname, '.' + location.hostname.replace(/^www\./,'')]) {
+            document.cookie = name + '=; Max-Age=0; Path=/; SameSite=Lax' + (domain ? '; Domain=' + domain : '');
+          }
+        }
         location.reload();
       }
     });
   }
 
   createControls();
-  installInteractions();
+  startMeasurement();
   window.addEventListener('error', event => emit('technical_error', {kind: event.target === window ? 'script' : 'resource'}), true);
   window.addEventListener('unhandledrejection', () => emit('technical_error', {kind: 'promise'}));
   if (preview) {

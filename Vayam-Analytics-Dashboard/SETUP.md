@@ -1,54 +1,59 @@
-# Visitor measurement and search discovery
+# Free analytics and worldwide search setup
 
-Checkpoint: 21 October 2026. There is no confirmed Vayam analytics account or measurement ID. The owner corrected the earlier Umami selection; do not treat it as an existing account. Google Business Profile is the known service. Its account access and Search Console ownership still need verification.
+Updated 24 October 2026. GA4 and a verified Search Console domain property now exist. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
 
-## What is ready in this branch
+## Account and website configuration
 
-The original business homepage now loads the integration from this folder. Its visual design, contact information, map and enquiry workflow are retained. All providers are off in `integration/analytics-config.js`. No banner or tracking request appears in that default state. `privacy.html` at the repository root describes this disabled status and the optional services.
+- GA4 account: Vayam Global Exim, property Vayam — Live Website, property ID 560596894.
+- Stream: https://vayam-global.com/, measurement ID G-SB6RL77QJ4.
+- India reporting time zone, INR. Detailed event retention set to 14 months; user retention 14 months. Retention-setting changes may take 24 hours.
+- Enhanced measurement disabled so the site's explicit events avoid duplicate interactions and sending complete email/WhatsApp URLs. Standard page views are sent explicitly once per document after consent.
+- Registered event dimensions: product group (`group`), contact channel (`channel`), page section (`section`). Further dimensions can be registered for `placement`, `field`, `percent`, `seconds`, `question`, `state`, `kind` as needed.
+- Search Console: existing verified Domain property `sc-domain:vayam-global.com`. Do not create another property or change DNS unnecessarily.
+- Microsoft Clarity: code prepared, project not connected; disabled. It will need a free project and owner approval of Microsoft terms before activation.
 
-| Signal | Events or reporting source | Interpretation |
+## What the website measures
+
+| KPI | Source/event | Meaning |
 |---|---|---|
-| Visits, countries, approximate cities, devices and sources | Connected analytics provider | Measured audience, subject to the provider's location accuracy and missing/blocked visits |
-| Product interest | `product_interest` with five fixed category codes | Which product-group enquiry links were selected |
-| Sections and navigation | `section_view`, `navigation` | Sections reached and navigation choices, not proof that copy was read |
-| Engagement | `scroll_depth`, `visible_time` | Depth and visible-time milestones |
-| Enquiry friction | `rfq_start`, `rfq_field`, `rfq_validation` | Form started, filled/empty flags, field validation failures |
-| Enquiry intent | `rfq_prepared`, `contact_handoff` | WhatsApp/email preparation and contact-link clicks; not received leads |
-| Buyer questions and directions | `faq_open`, `map_open` | Use of FAQ and directions links |
-| Campaigns | `campaign` | Allowlisted source/medium/campaign labels; unknown values grouped as `other` |
-| Reliability | `technical_error` | Script, resource or promise failure category; no stack trace or page contents |
+| Users, sessions, page views, country, city, device, browser, acquisition source | GA4 | Measured consenting audience; locations are approximate |
+| Product category interest | `product_interest`, `group` | Product enquiry links clicked |
+| Sections reached and navigation | `section_view`, `navigation` | Visibility and navigation choices, not proof of reading |
+| Scroll and visible time | `scroll_depth`, `visible_time` | 25/50/75/100 percent and 30/60/120/300 second milestones |
+| Enquiry start and friction | `rfq_start`, `rfq_field`, `rfq_validation` | Field names and filled/empty state only |
+| Contact intent | `rfq_prepared`, `contact_handoff` | Email, WhatsApp or phone handoff; not a confirmed lead |
+| FAQs and directions | `faq_open`, `map_open` | Questions opened and map-link clicks |
+| Campaign attribution | `campaign` and GA4 campaign fields | Allowlisted source, medium and campaign labels |
+| Basic reliability | `technical_error` | Script/resource/promise failure category |
+| Google discovery | Search Console | Impressions, clicks, CTR, position, queries, pages, countries, devices and indexing |
+| Heatmaps and replays | Clarity, pending | Requires connection; form content masked and consent required |
 
-`integration/measurement-schema.js` limits event fields to these enumerations and counts. Form values, email, phone, message contents, raw query strings and detailed referrers are excluded. It never identifies a visitor by name. The provider may derive approximate geography from a connection; this does not reveal who a visitor is.
+GA4 does not expose a raw visitor IP list or identify people by name. Ad blockers, consent choices, privacy controls and provider thresholds mean this cannot measure every visit. The website does not send enquiry contents as analytics. No backfill of earlier untracked visits is possible.
 
-## Connect a real account
+## Open and customize reporting
 
-Use a business-owned account. There are two prepared choices; neither has been provisioned or purchased in this work.
+1. Open Google Analytics from README.md using the business Google account. Realtime confirms new traffic; standard reports may take 24–48 hours after collection starts.
+2. Use Reports for acquisition, engagement, pages, technology and geography. Use Explore for funnels and registered custom dimensions. Mark `contact_handoff` as a key event when events arrive; label it contact intent, not a sale.
+3. Use the native free Google Data Studio connectors for GA4 and Search Console. A private report copy has been started; verify the two data sources and all charts before relying on it. The source template covers Google organic traffic only. Add a separate all-traffic page for sessions, users, engagement, pages, devices, countries and contact intent.
+4. The two services currently use different Google accounts. Combining them requires one account to have read access to both properties. Grant only the necessary read access, with the owner's approval. Keep report sharing Restricted.
+5. The repository dashboard supports local JSON reports and comparisons today. It does not contain an API key or authenticated backend. A future private data connector can populate its validated schema; do not publish actual report JSON beside public assets.
 
-1. **Google Analytics 4:** create or locate the Vayam property and its web stream for `https://vayam-global.com`. Copy the public `G-...` measurement ID into `ga4MeasurementId`, then enable `ga4Enabled` in a reviewed release. The tag loads only after the visitor accepts the optional analytics panel. Declining keeps it unloaded. Turn off automatic enhanced measurement for forms, outbound links and search to avoid duplicate/custom text collection. Keep Google Signals and advertising features off for this setup. Register required custom dimensions from the event table. Validate actual requests and Realtime/DebugView before treating data as live.
-2. **Umami:** an optional alternative requiring a separate website/account. The prepared adapter expects an Umami Cloud website UUID. Set `websiteId` and `enabled` only after confirming ownership, service terms and the deployment's measurement requirements. No `identify()` or persistent custom visitor ID is used. A self-hosted script address needs a reviewed code change; do not paste an arbitrary script URL into the site.
+## SEO release and indexing
 
-Both options require an enabled flag, a valid public ID, HTTPS and an exact approved production hostname. Development and shared review hosts never activate this integration. Browser Do Not Track and Global Privacy Control disable it. GA4 has a choice control only when enabled. Cookieless measurement is not a blanket exemption from all requirements; confirm the chosen service's deployment requirements before activation.
+The production bundle contains the original homepage, five useful category pages, privacy page, real local responsive photographs, canonical and social metadata, Organization/WebSite/Breadcrumb structured data, robots.txt and a seven-URL sitemap. English content is available worldwide without a country gate. No invented country offices, stock guarantees, reviews or certifications are included.
 
-No passwords, API tokens, OAuth credentials or visitor-level exports belong in Git. `.env` and `private-reports/` are ignored. The dashboard is a public-code prototype with sample data and an in-tab JSON importer; it is not an authenticated analytics backend. Its validation rejects malformed or negative counts. Real report access needs a private provider dashboard or an authenticated export/backend. Do not make a private API key part of a static dashboard.
+After the production URLs return 200:
 
-## Test without collecting visitors
+1. In the existing Search Console domain property, submit `https://vayam-global.com/sitemap.xml`.
+2. Inspect the homepage and category URLs. Request indexing when offered; review coverage after Google recrawls. A sitemap does not guarantee indexing or ranking.
+3. In Business Profile, use the website campaign link `https://vayam-global.com/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`. This listing change has not been made automatically.
+4. Connect Bing Webmaster Tools and submit the same sitemap. Its optional Google import requires the owner's account permission. This remains an account task until verified.
+5. Review queries, pages and countries monthly. Improve content using actual buyer questions and documented product specifications; translation should be genuine, not keyword-stuffed duplicate destination pages.
 
-From the repository root, run the VS Code task **Vayam: preview websites**. Open `http://127.0.0.1:8770/current/?analytics_preview=1`. Interactions appear in the browser console using `VayamAnalyticsPreview.events()`. Adding `&consent_preview=1` previews the optional panel without loading Google. Reloading clears the event trace.
+## Verification
 
-Run **Vayam: build and verify everything** for the dependency-free checks. `tests/browser-smoke.cjs` adds browser QA when Playwright and Microsoft Edge are available, with the preview server running. It intercepts external requests and tests only local pages; it does not send an actual enquiry or prove provider ingestion. The image preparation helper requires Sharp only when regenerating image assets; normal preview/build uses the committed files.
+Run `node Vayam-Analytics-Dashboard/tests/analytics-gates.cjs` and `node Vayam-Analytics-Dashboard/tests/site-readiness.cjs`. Browser checks require Playwright and Microsoft Edge. `tests/production-browser.cjs` intercepts provider requests and checks consent, single page views, field-data boundaries, category photos and responsive layouts without sending test enquiries. `tests/browser-smoke.cjs` uses the development preview on port 8770 and tests all four candidates plus dashboard imports. Local tests do not prove Google received production events.
 
-## Search Console and worldwide visibility
+## Sources
 
-The public homepage returned HTTP 200 on 21 October 2026. Its `robots.txt` and `sitemap.xml` returned 404. This branch prepares both files for a future production release. The sitemap contains only the canonical homepage and privacy notice; the four design previews and dashboard stay `noindex`.
-
-After releasing the selected production files:
-
-1. Verify ownership of `vayam-global.com` in [Google Search Console](https://search.google.com/search-console). A Domain property uses a DNS verification record; confirm the correct DNS account before any record change. Do not invent verification tokens.
-2. Submit `https://vayam-global.com/sitemap.xml`. Use URL Inspection for the homepage, then review indexing reasons. A valid sitemap helps discovery but does not guarantee inclusion or rankings.
-3. Use Search Console Performance to inspect queries, country, device, impressions, clicks and click-through rate. Read these separately from on-site visits and Business Profile interactions.
-4. Verify the existing Business Profile's website link. A suitable campaign link is `https://vayam-global.com/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`; this is prepared guidance, not a change made to the listing.
-5. For other engines, verify the site in [Bing Webmaster Tools](https://www.bing.com/webmasters/) and submit the same sitemap. No submissions or verification records have been made in this work.
-
-The current content already describes international sourcing. Real product/category pages with useful specifications can later expand that content. Avoid fabricated destination pages, keyword stuffing, invented stock, prices, ratings or certifications. Worldwide reach is not a guarantee of ranking in every market.
-
-Sources checked for this implementation: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [Google noindex guidance](https://developers.google.com/search/docs/crawling-indexing/block-indexing), [GA4 events](https://developers.google.com/analytics/devguides/collection/ga4/events), [Umami tracker settings](https://docs.umami.is/docs/tracker-configuration). GA4 provides approximate location reporting, not a raw IP register; see [Google location/data guidance](https://support.google.com/analytics/answer/12017362).
+[Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [GA4 events](https://developers.google.com/analytics/devguides/collection/ga4/events), [GA4 retention](https://support.google.com/analytics/answer/7667196), [Search Console and Analytics](https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console), [Clarity consent](https://learn.microsoft.com/en-gb/clarity/setup-and-installation/clarity-consent-api-v2).

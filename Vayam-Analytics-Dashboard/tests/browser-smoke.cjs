@@ -67,6 +67,9 @@ const base='http://127.0.0.1:'+(process.env.PORT||8770);
      if(variant==='trade')await page.screenshot({path:path.join(snapshots,'trade-desktop.png')});
    }
    await page.goto(base+'/dashboard/');
+   assert.ok((await page.locator('#mode-banner').innerText()).includes('NO REPORT LOADED'));
+   assert.equal(await page.locator('#metric-visitors').innerText(),'—');
+   await page.locator('#reset-demo').click();
    assert.ok((await page.locator('#mode-banner').innerText()).includes('ILLUSTRATIVE DATA'));
    assert.notEqual(await page.locator('#metric-visitors').innerText(),'—');
    await page.locator('#import-file').setInputFiles({name:'invalid.json',mimeType:'application/json',buffer:Buffer.from('{"schemaVersion":1}')});

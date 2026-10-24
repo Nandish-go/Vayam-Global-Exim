@@ -23,14 +23,16 @@
         <a href="#journey"><span>04</span> Enquiry journey</a>
       </nav>
       <div class="rail-note"><span class="pulse"></span> Local review tool<p>Imported reports stay in this browser tab. No analytics key belongs in this folder.</p></div>
-      <a class="back" href="../">← Four-version review studio</a>
+      <a class="back" href="https://vayam-global.com/">← Business website</a>
     </aside>
     <main id="main">
       <header class="topline">
         <div><span class="eyebrow">VAYAM / INSIGHTS</span><span class="slash">/</span><span id="period-label">Illustrative 28-day period</span></div>
         <div class="top-actions"><span class="local-tag">LOCAL ONLY</span><button id="import-button" type="button">Import report JSON ↗</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
       </header>
-      <div id="mode-banner" class="mode-banner" role="status"><strong>DESIGN PREVIEW · ILLUSTRATIVE DATA</strong><span>Figures below are synthetic examples for layout review. They are not Vayam visitor statistics.</span><button id="reset-demo" type="button">Restore sample</button></div>
+      <section class="live-access panel" aria-label="Private live reports"><p class="eyebrow">YOUR LIVE REPORTS</p><h2>Open your private Google dashboards.</h2><p>Use Google Analytics for website visits and interactions, and Search Console for discovery in Google Search. Google sign-in protects the reports. The custom charts below use reports you import into this tab.</p><div class="report-links"><a href="https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome" target="_blank" rel="noopener">Website analytics ↗</a><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com" target="_blank" rel="noopener">Google search performance ↗</a></div><p class="fine">GA4 property: Vayam — Live Website. Search Console: vayam-global.com. The four trial designs are excluded. New GA4 data starts after the website tag is published and a visitor allows analytics; past visits cannot be recovered.</p></section>
+      <div id="mode-banner" class="mode-banner" role="status"><strong>NO REPORT LOADED</strong><span>Import a report to view the custom charts, or explicitly load the illustrative sample.</span><button id="reset-demo" type="button">Show sample design</button></div>
+      <div class="comparison-controls"><button id="compare-button" type="button">Compare another report</button><input id="compare-file" type="file" accept=".json,application/json" hidden><button id="clear-comparison" type="button" hidden>Clear comparison</button><p id="comparison-status" role="status">Compare matching periods and the same data source. Files stay in this tab.</p></div>
       <p id="import-status" class="fine" role="status" hidden></p>
       <section class="intro" id="overview">
         <div><p class="eyebrow">01 / THE SIGNAL</p><h1>What buyers explored.<br><em>Where enquiries began.</em></h1><p>One place for the public website's reach, product interest and enquiry handoffs. Each measure keeps its own meaning; a click is never counted as a received lead.</p></div>
@@ -43,6 +45,7 @@
         <article class="metric accent"><span>Enquiry handoffs</span><strong id="metric-handoffs">—</strong><small>Intent to use email or WhatsApp</small><div class="metric-line"></div></article>
       </section>
       <section class="panel trend-panel" aria-labelledby="trend-title">
+        <div id="comparison-results" class="comparison-results" hidden></div>
         <div class="panel-head"><div><p class="eyebrow">AUDIENCE THROUGH TIME</p><h2 id="trend-title">Measured visits, day by day</h2></div><span class="legend"><i></i> Visitors <i></i> Enquiry handoffs</span></div>
         <svg id="trend-chart" viewBox="0 0 900 265" role="img" aria-label="Visitors and enquiry handoffs over time"></svg>
         <div id="trend-axis" class="chart-axis"></div>
@@ -61,7 +64,7 @@
       <div class="section-heading" id="journey"><p class="eyebrow">04 / ENQUIRY JOURNEY</p><h2>From interest to conversation.</h2><span>The website opens the visitor's email or WhatsApp app. Only the received message confirms a lead.</span></div>
       <section class="panel funnel" aria-labelledby="funnel-title"><div class="panel-head"><div><p class="eyebrow">THE BUYER PATH</p><h3 id="funnel-title">Intent stages</h3></div><span class="tiny">Event counts, not unique people</span></div><div id="funnel-steps" class="funnel-steps"></div></section>
       <section class="definitions"><div><p class="eyebrow">READING THE NUMBERS</p><h2>Signals and outcomes<br><em>stay separate.</em></h2></div><div class="definition-grid"><p><strong>Visitor</strong>An anonymous estimate. Ad blockers, consent choices and provider methods affect totals.</p><p><strong>Handoff</strong>A click or prepared enquiry that opens another application. Delivery cannot be proved from the website.</p><p><strong>Received lead</strong>A real email or WhatsApp conversation recorded privately by Vayam; it is not inferred from site events.</p><p><strong>Location</strong>Country and city estimates can be imprecise. This dashboard contains no raw IP list or named visitor profiles.</p></div></section>
-      <footer>Vayam Global Exim · Private analytics design preview · <a href="../">Return to development studio</a></footer>
+      <footer>Vayam Global Exim · Analytics workspace · <a href="https://vayam-global.com/">Business website</a></footer>
     </main>
   </div>
 </body>

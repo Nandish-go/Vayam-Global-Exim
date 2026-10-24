@@ -1,20 +1,41 @@
-# Vayam Global Exim — development review
+# Vayam Global Exim — one repository
 
-Open **`C:\Github Repos\Vayam-Global-Exim`** as the one working folder in VS Code. The active **`vayam-dev-four-candidates`** branch keeps development and analytics in two folders in this same repository and is now published to GitHub. **`main`** remains the live business-site branch at `f868a21`; **`backup-live-v4-5`** is the existing remote backup.
+Open `C:\Github Repos\Vayam-Global-Exim` in VS Code and GitHub Desktop.
 
-The working branch's root `index.html` now contains the proposed technical update for the original business website: the same design and photographs, responsive local images, search/social metadata, a privacy link and a disabled analytics integration. `robots.txt` and `sitemap.xml` are prepared for release. These changes are **not deployed to vayam-global.com**. The frozen baseline remains in `Vayam-Development/baseline/`; `CNAME` is unchanged.
-
-| Folder | Purpose |
+| Location | Purpose |
 |---|---|
-| [`Vayam-Development/`](Vayam-Development/README.md) | The only four active design candidates: Classic, Refined, Signature and Trade; shared catalogue and assets; comparison studio; local preview server. |
-| [`Vayam-Analytics-Dashboard/`](Vayam-Analytics-Dashboard/README.md) | Dashboard prototype, main-site integration, validation and account/discovery setup guide. Figures remain fictional until a real provider is connected. |
+| `main` branch | The deployed business website at https://vayam-global.com/. Only business-site and analytics files belong in its release. |
+| `vayam-dev-four-candidates` branch | Everyday working branch: the business-site source plus the four trial designs and analytics workspace. Pushing this branch does not deploy the business website. |
+| Root `index.html`, `assets/`, `products/` | Original homepage, real photographs and five crawlable product-category pages. |
+| `Vayam-Development/` | Exactly four active design candidates: Classic, Refined, Signature and Trade, with comparison tools and shared assets. |
+| `Vayam-Analytics-Dashboard/` | Website measurement, dashboard interface, setup instructions and validation tools. No credentials or private reports in Git. |
+| `backup-live-v4-5` | Existing remote backup. Earlier local experiments remain in archive refs/stashes. |
 
-The public [four-design review](https://vayam-four-design-review.nandish072.chatgpt.site) and [desktop/phone comparison](https://vayam-four-design-review.nandish072.chatgpt.site/responsive.html) are hosted snapshots for sharing with friends. They work without a running local server. See [sharing and publishing notes](Vayam-Development/SHARING.md); changes in this repository appear online only after republishing that review.
+## Open the websites
 
-In VS Code use **Terminal → Run Task → Vayam: preview websites**, or run `node Vayam-Development/preview.cjs` from the repository root. Open the four-design studio at http://127.0.0.1:8770/, the original-site technical preview at http://127.0.0.1:8770/current/, or the dashboard at http://127.0.0.1:8770/dashboard/. `/current/` serves the root files directly; it is not an extra design folder. Stop the preview server with Ctrl+C. Ordinary preview/build/checks require Node.js and no dependency installation.
+- Live business website: https://vayam-global.com/
+- Four-design public review: https://vayam-four-design-review.nandish072.chatgpt.site/
+- Phone/desktop comparison: https://vayam-four-design-review.nandish072.chatgpt.site/responsive.html
+- The review site is a hosted snapshot; pushing GitHub does not update that snapshot.
 
-Use **Vayam: build and verify everything** before committing. Then inspect changes in GitHub Desktop, commit on `vayam-dev-four-candidates`, and **Push origin**. Desktop is configured to this same folder. Pushing this branch does not deploy the business website. Release selected main-site changes to `main` only after review; keep the four experiments out of that release. The review link is a separate hosted snapshot, so it needs republishing when its code changes.
+From this repository run `node Vayam-Development/preview.cjs`: development studio http://127.0.0.1:8770/, original-site preview http://127.0.0.1:8770/current/, dashboard http://127.0.0.1:8770/dashboard/.
 
-Earlier Astra, Origin, Atlas, Pulse and Edition experiments, one-time migration scripts and unused image candidates are absent from the active branch. The named local stash `Pre-consolidation Vayam-Global-Exim staged designs and local files 2026-09-30` and the `archive/vayam-original-before-consolidation-20260930` tag preserve the former working files for later review or removal. An earlier cleaned development snapshot is also preserved by `archive/vayam-dev-before-clean`. These local recovery refs are not part of the branch for publication. The old `redesign-v1` branch and existing live backup branch remain available.
+For the complete business site including its new category pages, run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs` and open http://127.0.0.1:8771/. This second preview reads the same source files; it is not another repository or design version.
 
-Development pages and the dashboard are marked `noindex`; no real analytics service is enabled. The earlier `analytics-main-prep` draft remains recoverable in local Git history; its updated implementation is now consolidated in `Vayam-Analytics-Dashboard/integration/` on this working branch. Read [SETUP.md](Vayam-Analytics-Dashboard/SETUP.md) for the account connection and Search Console steps, and [the technical checkpoint](Vayam-Analytics-Dashboard/CHECKPOINT-2026-10-21.md) for validation. The static dashboard has no authentication; keep real visitor data and API secrets outside public hosting and Git.
+## Analytics and search
+
+The production integration is configured for GA4 property **Vayam — Live Website**, measurement ID **G-SB6RL77QJ4**. It activates only on the approved HTTPS business domains after the visitor allows analytics. Local previews, four-design review hosts, development paths and dashboard paths do not send production analytics. Microsoft Clarity is prepared but disabled until its project exists.
+
+Open [the analytics workspace guide](Vayam-Analytics-Dashboard/README.md) for direct report access, account status and remaining setup. The static dashboard starts empty; illustrative figures require an explicit click. Imported JSON reports and comparisons remain in the current browser tab. No public static page contains your real visitor data.
+
+The website includes canonical/social metadata, structured data, responsive local photographs, `robots.txt`, a seven-page `sitemap.xml`, a privacy page and a custom 404. Search Console already has the verified domain property `sc-domain:vayam-global.com`. Submission and deployment status are recorded in the analytics checkpoint; prepared files alone do not prove indexing.
+
+## Everyday GitHub Desktop workflow
+
+1. Open this repository and choose `vayam-dev-four-candidates`.
+2. Edit in VS Code, preview and run **Vayam: build and verify everything**.
+3. Review changed files in GitHub Desktop, commit, then **Push origin**.
+4. Release selected business-site changes to `main` when ready. Keep `Vayam-Development/` out of production.
+5. Republish the separate review snapshot only when the four designs change.
+
+Keep the frozen original in `Vayam-Development/baseline/`. Previous experiments remain recoverable through the local stash `Pre-consolidation Vayam-Global-Exim staged designs and local files 2026-09-30`, tag `archive/vayam-original-before-consolidation-20260930`, branch `archive/vayam-dev-before-clean` and old `redesign-v1`. They are not additional active designs.
