@@ -284,7 +284,7 @@
     panel.hidden = ga4Choice !== 'unset';
     panel.setAttribute('aria-label', 'Optional visitor analytics');
     panel.innerHTML = '<h2>Optional visitor analytics</h2>' +
-      '<p>Allow Google Analytics and, when connected, Microsoft Clarity to measure visits, product interest and page interactions. Enquiry fields are masked in recordings. These services help us improve the website.</p>' +
+      '<p>Allow Google Analytics and Microsoft Clarity to measure visits, product interest and page interactions. Clarity provides heatmaps and session replays; enquiry fields are masked. These services help us improve the website.</p>' +
       '<a href="/privacy.html">How measurement works</a>' +
       '<div class="vayam-consent-actions"><button type="button" data-choice="accepted">Allow analytics</button>' +
       '<button type="button" data-choice="rejected">No thanks</button></div>';

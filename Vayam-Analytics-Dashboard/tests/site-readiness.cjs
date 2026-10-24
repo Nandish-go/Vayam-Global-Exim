@@ -40,5 +40,6 @@ const config={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,
 assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.enabled,false);
 assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.ga4Enabled,true);
 assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.ga4MeasurementId,'G-SB6RL77QJ4');
-assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.clarityEnabled,false);
+assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.clarityEnabled,true);
+assert.equal(config.window.VAYAM_ANALYTICS_CONFIG.clarityProjectId,'z2xvqfy55k');
 console.log('Seven canonical pages, structured data, local assets, GA4 configuration and dashboard report validation passed.');

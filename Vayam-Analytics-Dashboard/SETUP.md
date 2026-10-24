@@ -10,7 +10,7 @@ Updated 25 October 2026. GA4 is deployed and production events have been verifie
 - Enhanced measurement disabled so the site's explicit events avoid duplicate interactions and sending complete email/WhatsApp URLs. Standard page views are sent explicitly once per document after consent.
 - Registered event dimensions: product group (`group`), contact channel (`channel`), page section (`section`), click placement (`placement`). Further dimensions can be registered for `field`, `percent`, `seconds`, `question`, `state`, `kind` as needed.
 - Search Console: existing verified Domain property `sc-domain:vayam-global.com`. Do not create another property or change DNS unnecessarily.
-- Microsoft Clarity: code prepared, project not connected; disabled. It will need a free project and owner approval of Microsoft terms before activation.
+- Microsoft Clarity: project Vayam — Live Website, ID `z2xvqfy55k`, created after owner acceptance of terms. Configured for consent-based heatmaps and replays with form masking; production ingestion must be verified after deployment.
 
 ## What the website measures
 
@@ -26,7 +26,7 @@ Updated 25 October 2026. GA4 is deployed and production events have been verifie
 | Campaign attribution | `campaign` and GA4 campaign fields | Allowlisted source, medium and campaign labels |
 | Basic reliability | `technical_error` | Script/resource/promise failure category |
 | Google discovery | Search Console | Impressions, clicks, CTR, position, queries, pages, countries, devices and indexing |
-| Heatmaps and replays | Clarity, pending | Requires connection; form content masked and consent required |
+| Heatmaps and replays | Clarity | Form content masked; consent required; reports appear after processing |
 
 GA4 does not expose a raw visitor IP list or identify people by name. Ad blockers, consent choices, privacy controls and provider thresholds mean this cannot measure every visit. The website does not send enquiry contents as analytics. No backfill of earlier untracked visits is possible.
 
@@ -35,7 +35,7 @@ GA4 does not expose a raw visitor IP list or identify people by name. Ad blocker
 1. Open Google Analytics from README.md using the business Google account. Realtime confirms new traffic; standard reports may take 24–48 hours after collection starts.
 2. Use Reports for acquisition, engagement, pages, technology and geography. Use Explore for funnels and registered custom dimensions. Mark `contact_handoff` as a key event when events arrive; label it contact intent, not a sale.
 3. Use the native free Google Data Studio connectors for GA4 and Search Console. A private report copy has been started; verify the two data sources and all charts before relying on it. The source template covers Google organic traffic only. Add a separate all-traffic page for sessions, users, engagement, pages, devices, countries and contact intent.
-4. The approved report-owner account now has Viewer access to the GA4 property as well as ownership of Search Console. Data Studio's separate Google Analytics connector still needs authorisation and chart configuration. Keep report sharing Restricted; verify its sharing dialog before handing out the report link.
+4. The approved report-owner account now has Viewer access to the GA4 property as well as ownership of Search Console. Data Studio's separate Google Analytics connector is authorised and the Vayam property is connected. Chart configuration is still in progress. Keep report sharing Restricted; verify its sharing dialog before handing out the report link.
 5. The repository dashboard supports local JSON reports and comparisons today. It does not contain an API key or authenticated backend. A future private data connector can populate its validated schema; do not publish actual report JSON beside public assets.
 
 ## SEO release and indexing

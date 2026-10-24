@@ -14,10 +14,10 @@
 ## Dashboard status — not yet a finished combined report
 
 - Google Analytics and Search Console are usable directly through the links in README.md.
-- The saved Data Studio report is still named **Copy of Organic Google search traffic dashboard**. Its real Search Console URL-impression source is connected, and the landing-page table returns real clicks and impressions.
-- The report still has unconfigured template charts. Its separate Google Analytics connector is at Authorise. Do not use the unfinished report as a complete KPI dashboard yet.
-- Before handoff: authorise the Analytics connector, choose property 560596894, repair every chart and filter, add an all-traffic page, rename the report and verify Restricted sharing.
-- Clarity is signed in with the business Google account and waiting at **Confirm your email / Clarity Terms of Use**. No project ID is configured; heatmaps and session recording remain disabled.
+- The saved Data Studio report is named **Vayam — Website & Search Insights**. Its real Search Console URL-impression source is connected, and the landing-page table returns real clicks and impressions.
+- The report still has unconfigured template charts. Its Google Analytics connector is authorised and the live property appears as Working in data-source management. Do not use the unfinished report as a complete KPI dashboard yet.
+- Before handoff: repair every chart and filter using the connected property 560596894, add an all-traffic page, rename the report and verify Restricted sharing.
+- Clarity terms were accepted by the owner, and project **Vayam — Live Website** (`z2xvqfy55k`) was created. Its consent-based integration is configured and local provider/masking checks passed. Confirm production data receipt after the release; an installed script alone is not proof of recorded sessions.
 - The custom repository dashboard starts empty. It supports validated local JSON imports and period comparisons, but does not automatically retrieve Google data. Its sample mode is explicitly fictional.
 
 ## Repository and access
