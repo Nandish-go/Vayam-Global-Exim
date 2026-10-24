@@ -8,13 +8,14 @@ See [the 25 October release checkpoint](CHECKPOINT-2026-10-25.md) for verified d
 
 - [Google Analytics — Vayam Live Website](https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome): business-account sign-in. Property **560596894**, stream **16192169327**, measurement ID **G-SB6RL77QJ4**.
 - [Google Search Console — domain performance](https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com): use the Google account that owns the verified domain property.
+- [Microsoft Clarity — Vayam Live Website](https://clarity.microsoft.com/projects/view/z2xvqfy55k/dashboard): business-account sign-in; heatmaps and session recordings appear after data is received and processed.
 - Custom interface: run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs` from the repository root, then open http://127.0.0.1:8771/Vayam-Analytics-Dashboard/.
 
 Google sign-in protects live reports. The custom interface provides links to those reports plus local JSON imports and period comparisons; it does **not yet automatically download Google data**. It starts with no report loaded. **Show sample design** loads explicitly labelled fictional figures. Importing does not upload a file, save it in browser storage or put it in Git. A report's source and date range must be checked before interpreting comparisons.
 
 ## Files
 
-- `integration/`: production consent, GA4 configuration, sanitized events and optional disabled Clarity adapter.
+- `integration/`: production consent, GA4 configuration, sanitized events and consent-based Clarity adapter.
 - `index.html`, `dashboard.js`, `style.css`: editable custom reporting interface.
 - `report-schema.js`, `sample-data.js`: validated import format and illustrative sample.
 - `tools/build-discovery.cjs`: rebuild the five public category pages and sitemap from existing business facts and real photographs.

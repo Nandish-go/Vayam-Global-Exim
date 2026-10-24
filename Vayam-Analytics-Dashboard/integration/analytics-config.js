@@ -5,7 +5,7 @@ window.VAYAM_ANALYTICS_CONFIG = Object.freeze({
   websiteId: '',
   ga4Enabled: true,
   ga4MeasurementId: 'G-SB6RL77QJ4',
-  clarityEnabled: false,
-  clarityProjectId: '',
+  clarityEnabled: true,
+  clarityProjectId: 'z2xvqfy55k',
   allowedHosts: ['vayam-global.com', 'www.vayam-global.com']
 });

@@ -24,6 +24,11 @@ const mime={'.html':'text/html','.css':'text/css','.js':'application/javascript'
   await page.getByRole('button',{name:'Analytics choices',exact:true}).click();
   await page.getByRole('button',{name:'Allow analytics',exact:true}).click();
   await page.waitForFunction(()=>!!window.gtag);
+  await page.waitForFunction(()=>!!window.clarity);
+  assert.equal(await page.locator('script[src="https://www.clarity.ms/tag/z2xvqfy55k"]').count(),1);
+  assert.ok(await page.locator('form').evaluateAll(forms=>forms.every(form=>form.getAttribute('data-clarity-mask')==='true')));
+  const clarityCalls=await page.evaluate(()=>window.clarity.q);
+  assert.ok(clarityCalls.some(call=>call[0]==='consentv2'&&call[1].analytics_Storage==='granted'&&call[1].ad_Storage==='denied'));
   await page.locator('[data-product]').first().click();
   await page.locator('#email').fill('privacy-test@example.test');
   await page.locator('#quantity').fill('private-quantity');
@@ -38,6 +43,7 @@ const mime={'.html':'text/html','.css':'text/css','.js':'application/javascript'
   await page.waitForLoadState('load');
   await page.reload();
   assert.equal(await page.locator('script[src*="googletagmanager"]').count(),0);
+  assert.equal(await page.locator('script[src*="clarity.ms"]').count(),0);
   const urls=['/',...fs.readdirSync(path.join(root,'products')).map(s=>'/products/'+s+'/')];
   for(const url of urls){
    await page.goto('https://vayam-global.com'+url);
