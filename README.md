@@ -19,7 +19,7 @@ Run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs`, then visit http://1
 
 Run `node Vayam-Analytics-Dashboard/tests/analytics-gates.cjs` and `node Vayam-Analytics-Dashboard/tests/site-readiness.cjs`. The production-browser test requires Playwright and Microsoft Edge.
 
-Read [analytics setup](Vayam-Analytics-Dashboard/SETUP.md) and [report access](Vayam-Analytics-Dashboard/README.md). GA4 measurement ID: **G-SB6RL77QJ4**. Tracking starts only after visitor consent on the production domain. The dashboard starts empty; sample figures are explicitly optional. Clarity is prepared but not connected.
+Read [analytics setup](Vayam-Analytics-Dashboard/SETUP.md) and [report access](Vayam-Analytics-Dashboard/README.md). GA4 measurement ID: **G-SB6RL77QJ4**. Tracking starts only after visitor consent on the production domain. The dashboard starts empty; sample figures are explicitly optional. Clarity project **z2xvqfy55k** is configured through the same consent choice, with enquiry forms masked.
 
 The four-design review at https://vayam-four-design-review.nandish072.chatgpt.site/ is a separate hosted snapshot, not the deployed business website.
 
