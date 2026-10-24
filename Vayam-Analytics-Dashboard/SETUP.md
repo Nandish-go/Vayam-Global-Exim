@@ -1,6 +1,6 @@
 # Free analytics and worldwide search setup
 
-Updated 24 October 2026. GA4 and a verified Search Console domain property now exist. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
+Updated 25 October 2026. GA4 is deployed and production events have been verified in Realtime. Search Console accepted the seven-page sitemap. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
 
 ## Account and website configuration
 
@@ -8,7 +8,7 @@ Updated 24 October 2026. GA4 and a verified Search Console domain property now e
 - Stream: https://vayam-global.com/, measurement ID G-SB6RL77QJ4.
 - India reporting time zone, INR. Detailed event retention set to 14 months; user retention 14 months. Retention-setting changes may take 24 hours.
 - Enhanced measurement disabled so the site's explicit events avoid duplicate interactions and sending complete email/WhatsApp URLs. Standard page views are sent explicitly once per document after consent.
-- Registered event dimensions: product group (`group`), contact channel (`channel`), page section (`section`). Further dimensions can be registered for `placement`, `field`, `percent`, `seconds`, `question`, `state`, `kind` as needed.
+- Registered event dimensions: product group (`group`), contact channel (`channel`), page section (`section`), click placement (`placement`). Further dimensions can be registered for `field`, `percent`, `seconds`, `question`, `state`, `kind` as needed.
 - Search Console: existing verified Domain property `sc-domain:vayam-global.com`. Do not create another property or change DNS unnecessarily.
 - Microsoft Clarity: code prepared, project not connected; disabled. It will need a free project and owner approval of Microsoft terms before activation.
 
@@ -35,16 +35,16 @@ GA4 does not expose a raw visitor IP list or identify people by name. Ad blocker
 1. Open Google Analytics from README.md using the business Google account. Realtime confirms new traffic; standard reports may take 24–48 hours after collection starts.
 2. Use Reports for acquisition, engagement, pages, technology and geography. Use Explore for funnels and registered custom dimensions. Mark `contact_handoff` as a key event when events arrive; label it contact intent, not a sale.
 3. Use the native free Google Data Studio connectors for GA4 and Search Console. A private report copy has been started; verify the two data sources and all charts before relying on it. The source template covers Google organic traffic only. Add a separate all-traffic page for sessions, users, engagement, pages, devices, countries and contact intent.
-4. The two services currently use different Google accounts. Combining them requires one account to have read access to both properties. Grant only the necessary read access, with the owner's approval. Keep report sharing Restricted.
+4. The approved report-owner account now has Viewer access to the GA4 property as well as ownership of Search Console. Data Studio's separate Google Analytics connector still needs authorisation and chart configuration. Keep report sharing Restricted; verify its sharing dialog before handing out the report link.
 5. The repository dashboard supports local JSON reports and comparisons today. It does not contain an API key or authenticated backend. A future private data connector can populate its validated schema; do not publish actual report JSON beside public assets.
 
 ## SEO release and indexing
 
 The production bundle contains the original homepage, five useful category pages, privacy page, real local responsive photographs, canonical and social metadata, Organization/WebSite/Breadcrumb structured data, robots.txt and a seven-URL sitemap. English content is available worldwide without a country gate. No invented country offices, stock guarantees, reviews or certifications are included.
 
-After the production URLs return 200:
+The production URLs return 200. Current account tasks:
 
-1. In the existing Search Console domain property, submit `https://vayam-global.com/sitemap.xml`.
+1. Completed: submitted `https://vayam-global.com/sitemap.xml` in the existing domain property on 24 October. Search Console shows **Success**, **7 discovered pages**, 0 videos. Discovery is not proof that every page is indexed.
 2. Inspect the homepage and category URLs. Request indexing when offered; review coverage after Google recrawls. A sitemap does not guarantee indexing or ranking.
 3. In Business Profile, use the website campaign link `https://vayam-global.com/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`. This listing change has not been made automatically.
 4. Connect Bing Webmaster Tools and submit the same sitemap. Its optional Google import requires the owner's account permission. This remains an account task until verified.
@@ -52,7 +52,9 @@ After the production URLs return 200:
 
 ## Verification
 
-Run `node Vayam-Analytics-Dashboard/tests/analytics-gates.cjs` and `node Vayam-Analytics-Dashboard/tests/site-readiness.cjs`. Browser checks require Playwright and Microsoft Edge. `tests/production-browser.cjs` intercepts provider requests and checks consent, single page views, field-data boundaries, category photos and responsive layouts without sending test enquiries. `tests/browser-smoke.cjs` uses the development preview on port 8770 and tests all four candidates plus dashboard imports. Local tests do not prove Google received production events.
+Run `node Vayam-Analytics-Dashboard/tests/analytics-gates.cjs` and `node Vayam-Analytics-Dashboard/tests/site-readiness.cjs`. Browser checks require Playwright and Microsoft Edge. `tests/production-browser.cjs` intercepts provider requests and checks consent, single page views, field-data boundaries, category photos and responsive layouts without sending test enquiries. `tests/browser-smoke.cjs` uses the development preview on port 8770 and tests all four candidates plus dashboard imports and comparisons. Local tests do not prove Google received production events.
+
+A separate, consented visit to the deployed website was visible in GA4 Realtime on 24 October: page_view, session_start, first_visit, section_view, scroll_depth and visible_time. That Germany visit was a verification visit, not a new buyer. No enquiry was submitted. Standard reports need processing time and will not recover visits from before installation.
 
 ## Sources
 

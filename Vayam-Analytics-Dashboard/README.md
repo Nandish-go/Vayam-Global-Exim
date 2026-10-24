@@ -2,6 +2,8 @@
 
 This folder contains the public website's measurement integration and the editable dashboard interface. It belongs beside `Vayam-Development/` in the same working repository; production releases include this folder without the trial designs.
 
+See [the 25 October release checkpoint](CHECKPOINT-2026-10-25.md) for verified deployment, real data collection, sitemap acceptance and unfinished dashboard/account steps.
+
 ## Open your reports
 
 - [Google Analytics — Vayam Live Website](https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome): business-account sign-in. Property **560596894**, stream **16192169327**, measurement ID **G-SB6RL77QJ4**.
