@@ -212,7 +212,7 @@
       white-space:nowrap;
     }
     .btn:hover{transform:translateY(-2px)}
-    .primary{background:var(--copper);color:white}
+    .primary{background:var(--copper-dark);color:white}
     .primary:hover{background:var(--copper-dark);box-shadow:0 10px 24px rgba(200,102,41,.2)}
     .outline{border-color:var(--line);background:rgba(255,255,255,.22);color:var(--forest)}
     .outline:hover{border-color:rgba(18,57,43,.32);background:white}
@@ -400,12 +400,13 @@
     }
     .snapshot-grid div:hover{background:rgba(255,255,255,.045)}
     .snapshot span,.kicker{
-      color:var(--copper);
+      color:var(--copper-dark);
       font-size:.65rem;
       font-weight:900;
       letter-spacing:.12em;
       text-transform:uppercase;
     }
+    .snapshot span{color:#dda66d}
     .snapshot strong{
       margin-top:4px;
       font-size:.86rem;
@@ -417,7 +418,7 @@
       font-size:clamp(2.45rem,4.25vw,4.25rem);
       line-height:1.02;
     }
-    .section-heading em{color:var(--copper)}
+    .section-heading em{color:var(--copper-dark)}
     .intro{
       max-width:720px;
       margin-top:16px;
@@ -869,6 +870,8 @@
 
     /* ---------- contact ---------- */
     .contact{background:#dfcbaa}
+    .contact .kicker{color:#803a14}
+    .contact .intro{color:#465048}
     .contact-grid{
       display:grid;
       grid-template-columns:.72fr 1.28fr;

@@ -1,6 +1,6 @@
 # Free analytics and worldwide search setup
 
-Updated 25 October 2026. GA4 is deployed and production events have been verified in Realtime. Search Console accepted the seven-page sitemap. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
+Updated 28 October 2026. GA4 is deployed and production events have been verified in Realtime. The five-page live combined report now includes audience, product attention and contact-intent breakdowns; see README.md for links and instructions. Search Console accepted the seven-page sitemap. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
 
 ## Account and website configuration
 
@@ -10,7 +10,7 @@ Updated 25 October 2026. GA4 is deployed and production events have been verifie
 - Enhanced measurement disabled so the site's explicit events avoid duplicate interactions and sending complete email/WhatsApp URLs. Standard page views are sent explicitly once per document after consent.
 - Registered event dimensions: product group (`group`), contact channel (`channel`), page section (`section`), click placement (`placement`). Further dimensions can be registered for `field`, `percent`, `seconds`, `question`, `state`, `kind` as needed.
 - Search Console: existing verified Domain property `sc-domain:vayam-global.com`. Do not create another property or change DNS unnecessarily.
-- Microsoft Clarity: project Vayam — Live Website, ID `z2xvqfy55k`, created after owner acceptance of terms. Configured for consent-based heatmaps and replays with form masking; production ingestion must be verified after deployment.
+- Microsoft Clarity: project Vayam — Live Website, ID `z2xvqfy55k`, created after owner acceptance of terms. Consent-based heatmaps and replays use form masking. Production receipt was verified on 25 October: two sessions and two available recordings, with scroll depth, active time and custom events. Early Germany visits include verification traffic, not confirmed buyer enquiries.
 
 ## What the website measures
 
