@@ -1,41 +1,55 @@
-# Vayam analytics workspace
+# Vayam Analytics Studio
 
-This folder contains the public website's measurement integration and the editable dashboard interface. It belongs beside `Vayam-Development/` in the same working repository; production releases include this folder without the trial designs.
+Open [Vayam Analytics Studio](https://vayam-global.com/Vayam-Analytics-Dashboard/) in your browser. No desktop app is needed. This folder holds the dashboard, the existing production measurement integration, setup instructions and checks. It stays beside `Vayam-Development/` in the working repository; production releases include the analytics folder without the trial designs.
 
-See [the 28 October checkpoint](CHECKPOINT-2026-10-28.md) for the completed five-page live report, access instructions and remaining search tasks. The [25 October checkpoint](CHECKPOINT-2026-10-25.md) preserves the earlier release history.
+## Start with the connected report
 
-## Open your reports
+Choose **Live connected report**, then **Open full screen**. Sign in with the authorised Google account; the existing report owner is `nandish072@gmail.com`. The [combined Website & Search Insights report](https://datastudio.google.com/u/0/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp) reads its existing Google Analytics and Search Console connections automatically. Its five pages cover Home, Website interactions, Products & page attention, Contact & enquiry intent, and Audience & devices.
 
-- [Website & Search Insights — combined live report](https://datastudio.google.com/u/0/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp): sign in as the report owner or the authorised business account. Overview combines GA4 visits and Search Console performance; Website interactions lists measured events. This Google-hosted report reads connected data automatically. It is separate from the local-import interface in this folder.
-- [Google Analytics — Vayam Live Website](https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome): business-account sign-in. Property **560596894**, stream **16192169327**, measurement ID **G-SB6RL77QJ4**.
-- [Google Search Console — domain performance](https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com): use the Google account that owns the verified domain property.
-- [Microsoft Clarity — Vayam Live Website](https://clarity.microsoft.com/projects/view/z2xvqfy55k/dashboard): business-account sign-in; production sessions and recordings were verified on 25 October. Early verification visits are not confirmed buyer activity.
-- Custom interface: run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs` from the repository root, then open http://127.0.0.1:8771/Vayam-Analytics-Dashboard/.
+The optional **Show the live report inside this page** viewer depends on Google embedding and the browser's sign-in/cookie restrictions. If it is blank or asks for sign-in, use **Open full screen**. The report remains private; hosting this access page does not publish its data.
 
-Google sign-in protects live reports. The custom interface provides links to those reports plus local JSON imports and period comparisons; it does **not yet automatically download Google data**. It starts with no report loaded. **Show sample design** loads explicitly labelled fictional figures. Importing does not upload a file, save it in browser storage or put it in Git. A report's source and date range must be checked before interpreting comparisons.
+Use the report's own date selector. Home defaults to 30 complete days and the detail pages to 28, so align their dates before comparing figures. Early verification traffic is included. A missing comparison can mean collection had not started in the earlier period.
 
-## Pages in the live combined report
+## Use the custom analysis tools
 
-| Page | What to inspect |
-|---|---|
-| Home | Sessions, engagement, views, search clicks/impressions, trends, acquisition channels, search queries, landing pages and countries |
-| Website interactions | Recorded event totals, sorted by count |
-| Products & page attention | Product-group interest and sections reached, filtered to the relevant events |
-| Contact & enquiry intent | Form starts, validation, prepared enquiries and contact handoffs by channel and placement |
-| Audience & devices | Approximate city/country, device, browser and session source/medium |
+Choose **Custom analysis tools** for the editable Vayam interface. These tools work with a saved report, a clearly labelled fictional demo, or a separately authorised direct GA4 connection. They do not silently copy data from the embedded Google report.
 
-Use each page's date selector before comparing figures: Home defaults to the last 30 complete days; detail pages default to the last 28 complete days. Table headers allow sorting. Home includes previous-period comparisons; a missing comparison is expected where collection had not started. No data on the contact page means no matching recorded events for that period, not proof that nobody contacted the business. Early verification traffic is included. The report remains editable through its **Edit** button for authorised editors.
+1. **Load data:** choose **Import saved report** for a Vayam JSON file, or **Paste report** for the same JSON text. The report is validated before replacing the display. Imported reports appear in **Reports loaded in this tab**, allowing you to switch between them during that session. A generic CSV or a Google export in another format is not automatically converted.
+2. **Inspect a period:** select the full loaded period, a 7/14/28-day preset, or custom dates and press **Apply dates**. Imported date subsets recalculate only complete, available additive daily figures. Unique users and full-period breakdown tables become unavailable for a subset because they cannot be recalculated correctly from those aggregates. **Reset** restores the loaded period.
+3. **Choose a measurement:** click a metric card to change the trend. Select **Line** or **Bars** and open **View exact daily values** for the numerical table. Missing values appear as a dash; a recorded zero remains zero.
+4. **Explore details:** choose countries, cities, traffic sources, devices, product interest, sections reached, website actions, Google search terms or landing pages. Availability depends on the loaded source. Search rows, sort them, choose Top 5/10/25 or all available rows, and show a chart, a table or both. The measure column identifies whether a value counts sessions, users, events or search activity. Available top rows need not add up to the site total.
+5. **Compare:** use **Load comparison**, or select Comparison report in **Paste report**. Changes are calculated only for the same source/property/time zone and equal-length, non-overlapping periods. A missing baseline is explained rather than shown as an infinite percentage. Fictional and real data cannot be compared.
+6. **Customise and keep evidence:** **Customise** selects metric cards, comfortable/compact spacing, and whether unavailable cards are hidden. Available cards are shown by default after loading a report. **Export table CSV** saves the currently displayed table rows; **Save report JSON** saves the selected report; **Print / PDF** uses the browser's print dialog. Exported files are private local copies and must stay outside public Git assets.
 
-## Files
+The **Insights & actions** area explains available signals and suggests a next check. It flags small samples and distinguishes contact intent from received enquiries. Suggestions support investigation; they do not prove what caused a change or recommend a redesign from a handful of visits. The reading guide provides a short weekly review routine.
 
-- `integration/`: production consent, GA4 configuration, sanitized events and consent-based Clarity adapter.
-- `index.html`, `dashboard.js`, `style.css`: editable custom reporting interface.
-- `report-schema.js`, `sample-data.js`: validated import format and illustrative sample.
-- `tools/build-discovery.cjs`: rebuild the five public category pages and sitemap from existing business facts and real photographs.
-- `tools/preview-main.cjs`: serve only allowed public files locally on port 8771.
-- `tests/`: provider gates, site metadata, dashboard import validation and browser checks.
-- `SETUP.md`: free-service setup, KPI definitions, limitations and remaining account tasks.
+Only display preferences are remembered on this device. Imported reports, the report library and Google access tokens stay in tab memory and clear on reload. **Clear data** clears the loaded reports and connection from this tab. **Try fictional demo** is for learning controls; it does not show actual Vayam statistics.
 
-Expected imports: `schemaVersion: 1`, `label`, `summary` with `visitors`, `visits`, `productInterest`, `handoffs`, plus arrays `trend`, `countries`, `sources`, `cities`, `products`, `sections`, `funnel`. Trend rows are `[dayNumber,dailyVisitors,handoffs]`; bar rows have `name,value`; city rows can have `country`; funnel rows have `name,count,detail`. Use the sample only as a structural example. There is no general GA4/CSV converter in this release.
+## Direct Google connection status
 
-All reporting code is safe to keep in Git, but private report exports and access credentials must remain outside public hosting. `.local/`, `private-reports/`, `.env` and dependencies are ignored. Clicks to email, phone or WhatsApp measure **contact intent**, not delivered enquiries or orders. Record confirmed leads separately in your private business records.
+The direct connector is implemented for the free GA4 Analytics Data API, using Google's browser sign-in library and the `analytics.readonly` scope for property **560596894**. It needs a separate Google Cloud web OAuth client, enabled Data API and owner-authorised access before custom charts can fetch real figures. The owner-approved free Cloud project `vayam-analytics`, Data API and web client are configured. The public client identifier is prefilled in the dashboard. Owner sign-in and final read-only authorisation still need verification before the direct connection is called live. Follow [GOOGLE-CONNECTION.md](GOOGLE-CONNECTION.md) for the current setup steps.
+
+Use the public OAuth Client ID only. Never enter or commit a client secret, service-account key, password or access token. The connector holds short-lived access in memory and requests data directly from Google's API. It does not require a paid server, a paid trial or billing activation; Google API quotas apply.
+
+The direct connector retrieves GA4 users, sessions, views, engagement and relevant event/breakdown reports. Search Console data continues to be available in the existing combined Google report; the GA4 connector does not fetch it. Search Console and GA4 have different reporting definitions and day boundaries. Private dated snapshots of either source may be loaded locally, but are not bundled in the public dashboard and do not refresh automatically.
+
+## Individual tools
+
+- [Google Analytics — Vayam Live Website](https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome): property **560596894**, stream **16192169327**, measurement ID **G-SB6RL77QJ4**. Use the authorised business Google account for administration.
+- [Google Search Console — Vayam domain](https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com): discovery, search performance and indexing, using the verified domain owner's account.
+- [Microsoft Clarity](https://clarity.microsoft.com/projects/view/z2xvqfy55k/dashboard): available heatmaps and session recordings, protected by the business account.
+
+Analytics records measured activity after installation and visitor consent; older untracked visits cannot be recovered. Cities and countries are approximate. Email, phone and WhatsApp handoffs measure contact intent, not delivered messages, qualified leads or sales. Keep the count of actual received enquiries in private business records.
+
+## Files and local review
+
+- `index.html`, `dashboard.js`, `style.css`: the two dashboard modes, controls and responsive interface.
+- `report-engine.js`: schema-version-2 validation, date selection, compatible comparisons, insights and CSV export. Older version-1 reports are accepted as undated/unverified imports; their dates are not invented.
+- `google-connector.js`: direct GA4 read-only connector and in-memory access handling.
+- `report-schema.js`, `sample-data.js`: retained legacy validation and explicitly fictional sample source.
+- `integration/`: existing production consent, configuration, sanitized events and Clarity integration. Trial designs and the dashboard remain excluded from production tracking.
+- `tools/preview-main.cjs`: local preview. From the repository root run `node Vayam-Analytics-Dashboard/tools/preview-main.cjs`, then open `http://127.0.0.1:8771/Vayam-Analytics-Dashboard/`.
+- `tests/report-engine.cjs`, `tests/google-connector.cjs`: reporting and connector checks. Provider/production checks remain in `tests/analytics-gates.cjs` and `tests/site-readiness.cjs`; browser checks require their documented environment.
+- `SETUP.md`, `GOOGLE-CONNECTION.md`: account steps and measurement definitions. The [28 October checkpoint](CHECKPOINT-2026-10-28.md) and [25 October checkpoint](CHECKPOINT-2026-10-25.md) preserve earlier release history; their progress statements describe those dates.
+
+Private snapshots, report exports and screenshots belong in ignored `.local/` or `private-reports/` storage, or outside the repository. They must never be pushed as public assets. No private report is embedded in the committed source.

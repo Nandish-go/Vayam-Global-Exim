@@ -1,81 +1,547 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Vayam | Analytics Studio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="sample-data.js" defer></script>
-  <script src="report-schema.js" defer></script>
-  <script src="dashboard.js" defer></script>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to insights</a>
-  <div class="shell">
-    <aside class="rail" aria-label="Dashboard navigation">
-      <a class="brand" href="../"><img src="assets/logo.png" alt=""><span>VAYAM<br><small>GLOBAL EXIM</small></span></a>
-      <p class="rail-label">MEASUREMENT STUDIO</p>
-      <nav>
-        <a href="#overview" class="active"><span>01</span> Overview</a>
-        <a href="#reach"><span>02</span> Reach</a>
-        <a href="#interest"><span>03</span> Product interest</a>
-        <a href="#journey"><span>04</span> Enquiry journey</a>
-      </nav>
-      <div class="rail-note"><span class="pulse"></span> Local review tool<p>Imported reports stay in this browser tab. No analytics key belongs in this folder.</p></div>
-      <a class="back" href="https://vayam-global.com/">← Business website</a>
-    </aside>
-    <main id="main">
-      <header class="topline">
-        <div><span class="eyebrow">VAYAM / INSIGHTS</span><span class="slash">/</span><span id="period-label">Illustrative 28-day period</span></div>
-        <div class="top-actions"><span class="local-tag">LOCAL ONLY</span><button id="import-button" type="button">Import report JSON ↗</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
-      </header>
-      <section class="live-access panel" aria-label="Private live reports">
-        <p class="eyebrow">YOUR LIVE REPORTS</p><h2>Website, search and visitor behaviour.</h2>
-        <p>Open the combined Google report for visits and search performance, or use the provider reports for deeper exploration. Clarity adds heatmaps and session recordings. These reports require an authorised account; this access page does not expose their data.</p>
-        <div class="report-links">
-          <a href="https://datastudio.google.com/u/0/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp" target="_blank" rel="noopener">Website &amp; Search Insights ↗</a>
-          <a href="https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome" target="_blank" rel="noopener">Google Analytics ↗</a>
-          <a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com" target="_blank" rel="noopener">Google Search Console ↗</a>
-          <a href="https://clarity.microsoft.com/projects/view/z2xvqfy55k/dashboard" target="_blank" rel="noopener">Clarity heatmaps &amp; recordings ↗</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#092c23" />
+    <title>Vayam | Analytics Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="sample-data.js" defer></script>
+    <script src="report-engine.js" defer></script>
+    <script src="google-connector.js" defer></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to insights</a>
+    <div class="shell">
+      <aside class="rail" aria-label="Dashboard navigation">
+        <a class="brand" href="../"
+          ><img src="assets/logo.png" alt="" /><span
+            >VAYAM<small>GLOBAL EXIM</small></span
+          ></a
+        >
+        <p class="rail-label">ANALYTICS STUDIO</p>
+        <nav aria-label="Report sections">
+          <a href="#overview" class="active">Overview <span>01</span></a
+          ><a href="#explore">Explore data <span>02</span></a
+          ><a href="#insights">Insights & actions <span>03</span></a
+          ><a href="#guide">Reading your results <span>04</span></a>
+        </nav>
+        <div class="rail-note">
+          <span class="status-dot"></span
+          ><strong id="rail-status">Choose a data source</strong>
+          <p>
+            Live Google reports require your account. Imported data stays in
+            this tab.
+          </p>
         </div>
-        <p class="fine">Open the combined report with its owner account or the authorised business account. Use the business account for GA4 administration and Clarity. The four trial designs are excluded from production tracking. Analytics starts after visitor consent; historical visits before installation cannot be recovered. The custom charts below use files you import and do not automatically fetch these live reports.</p>
-      </section>
-      <div id="mode-banner" class="mode-banner" role="status"><strong>NO REPORT LOADED</strong><span>Import a report to view the custom charts, or explicitly load the illustrative sample.</span><button id="reset-demo" type="button">Show sample design</button></div>
-      <div class="comparison-controls"><button id="compare-button" type="button">Compare another report</button><input id="compare-file" type="file" accept=".json,application/json" hidden><button id="clear-comparison" type="button" hidden>Clear comparison</button><p id="comparison-status" role="status">Compare matching periods and the same data source. Files stay in this tab.</p></div>
-      <p id="import-status" class="fine" role="status" hidden></p>
-      <section class="intro" id="overview">
-        <div><p class="eyebrow">01 / THE SIGNAL</p><h1>What buyers explored.<br><em>Where enquiries began.</em></h1><p>One place for the public website's reach, product interest and enquiry handoffs. Each measure keeps its own meaning; a click is never counted as a received lead.</p></div>
-        <div class="intro-mark" aria-hidden="true"><span>V</span><i></i><b></b></div>
-      </section>
-      <section class="metrics" aria-label="Overview metrics">
-        <article class="metric"><span>Measured visitors</span><strong id="metric-visitors">—</strong><small>Anonymous audience estimate</small><div class="metric-line"></div></article>
-        <article class="metric"><span>Site visits</span><strong id="metric-visits">—</strong><small>Visits in selected period</small><div class="metric-line"></div></article>
-        <article class="metric"><span>Product interest</span><strong id="metric-products">—</strong><small>Product-group interactions</small><div class="metric-line"></div></article>
-        <article class="metric accent"><span>Enquiry handoffs</span><strong id="metric-handoffs">—</strong><small>Intent to use email or WhatsApp</small><div class="metric-line"></div></article>
-      </section>
-      <section class="panel trend-panel" aria-labelledby="trend-title">
-        <div id="comparison-results" class="comparison-results" hidden></div>
-        <div class="panel-head"><div><p class="eyebrow">AUDIENCE THROUGH TIME</p><h2 id="trend-title">Measured visits, day by day</h2></div><span class="legend"><i></i> Visitors <i></i> Enquiry handoffs</span></div>
-        <svg id="trend-chart" viewBox="0 0 900 265" role="img" aria-label="Visitors and enquiry handoffs over time"></svg>
-        <div id="trend-axis" class="chart-axis"></div>
-      </section>
-      <div class="section-heading" id="reach"><p class="eyebrow">02 / WORLDWIDE REACH</p><h2>Where interest is arriving.</h2><span>City and country are approximate, based on the analytics provider's location estimate.</span></div>
-      <div class="two-up reach-grid">
-        <section class="panel countries" aria-labelledby="countries-title"><div class="panel-head"><div><p class="eyebrow">TOP MARKETS</p><h3 id="countries-title">Countries</h3></div><span class="tiny">Visitors</span></div><div id="country-bars" class="bar-list"></div></section>
-        <section class="panel sources" aria-labelledby="sources-title"><div class="panel-head"><div><p class="eyebrow">DISCOVERY PATHS</p><h3 id="sources-title">How people arrived</h3></div></div><div class="source-layout"><div id="source-donut" class="donut" role="img"><span id="source-total">—<small>visits</small></span></div><div id="source-list" class="source-list"></div></div><p class="fine">Direct and unknown traffic can include privacy tools and untagged links.</p></section>
-      </div>
-      <section class="panel city-panel" aria-labelledby="cities-title"><div class="panel-head"><div><p class="eyebrow">LOCAL DETAIL</p><h3 id="cities-title">Leading cities</h3></div><span class="tiny">Approximate location, not a person's address</span></div><div id="city-list" class="city-list"></div></section>
-      <div class="section-heading" id="interest"><p class="eyebrow">03 / PRODUCT DISCOVERY</p><h2>What the audience explored.</h2><span>Interactions show interest in a category. They do not confirm a stock item, quotation or order.</span></div>
-      <div class="two-up interest-grid">
-        <section class="panel" aria-labelledby="products-title"><div class="panel-head"><div><p class="eyebrow">BUYER INTEREST</p><h3 id="products-title">Product groups</h3></div><span class="tiny">Interactions</span></div><div id="product-bars" class="bar-list product-bars"></div></section>
-        <section class="panel" aria-labelledby="sections-title"><div class="panel-head"><div><p class="eyebrow">ON-PAGE ATTENTION</p><h3 id="sections-title">Sections reached</h3></div><span class="tiny">Visible-section events</span></div><div id="section-bars" class="section-bars"></div><p class="fine">A section entering the screen is a visibility signal, not proof it was read.</p></section>
-      </div>
-      <div class="section-heading" id="journey"><p class="eyebrow">04 / ENQUIRY JOURNEY</p><h2>From interest to conversation.</h2><span>The website opens the visitor's email or WhatsApp app. Only the received message confirms a lead.</span></div>
-      <section class="panel funnel" aria-labelledby="funnel-title"><div class="panel-head"><div><p class="eyebrow">THE BUYER PATH</p><h3 id="funnel-title">Intent stages</h3></div><span class="tiny">Event counts, not unique people</span></div><div id="funnel-steps" class="funnel-steps"></div></section>
-      <section class="definitions"><div><p class="eyebrow">READING THE NUMBERS</p><h2>Signals and outcomes<br><em>stay separate.</em></h2></div><div class="definition-grid"><p><strong>Visitor</strong>An anonymous estimate. Ad blockers, consent choices and provider methods affect totals.</p><p><strong>Handoff</strong>A click or prepared enquiry that opens another application. Delivery cannot be proved from the website.</p><p><strong>Received lead</strong>A real email or WhatsApp conversation recorded privately by Vayam; it is not inferred from site events.</p><p><strong>Location</strong>Country and city estimates can be imprecise. This dashboard contains no raw IP list or named visitor profiles.</p></div></section>
-      <footer>Vayam Global Exim · Analytics workspace · <a href="https://vayam-global.com/">Business website</a></footer>
-    </main>
-  </div>
-</body>
+        <a class="back" href="https://vayam-global.com/">↗ Business website</a>
+      </aside>
+      <main id="main">
+        <header class="topline">
+          <span class="eyebrow">VAYAM / BUSINESS INTELLIGENCE</span>
+          <div class="actions">
+            <button id="settings-button">⚙ Customise</button
+            ><button id="print-button">Print / PDF</button>
+          </div>
+        </header>
+        <section class="intro" id="overview">
+          <div>
+            <p class="eyebrow">YOUR WEBSITE, UNDERSTOOD</p>
+            <h1>From visits to better decisions.</h1>
+            <p>
+              See what people find, what interests them, and where contact
+              begins.
+            </p>
+          </div>
+          <a
+            class="button primary"
+            target="_blank"
+            rel="noopener"
+            href="https://datastudio.google.com/u/0/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp"
+            >Open live Google report ↗</a
+          >
+        </section>
+        <div class="mode-switch" role="group" aria-label="Analysis mode">
+          <button id="live-mode" aria-pressed="true">
+            Live connected report</button
+          ><button id="custom-mode" aria-pressed="false">
+            Custom analysis tools
+          </button>
+        </div>
+        <section
+          id="live-workspace"
+          class="panel live-workspace"
+          aria-label="Live connected Google report"
+        >
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">CONNECTED · GOOGLE ACCOUNT REQUIRED</p>
+              <h2>Your live website and search report.</h2>
+            </div>
+            <a
+              class="button"
+              target="_blank"
+              rel="noopener"
+              href="https://datastudio.google.com/u/0/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp"
+              >Open full screen ↗</a
+            >
+          </div>
+          <p class="hint">
+            Sign in with your authorised Google account. Use the report’s own
+            dates and page navigation. If your browser blocks embedded sign-in,
+            use Open full screen. These figures refresh through the existing
+            Google connection.
+          </p>
+          <div class="live-steps">
+            <strong>Start with the live report.</strong
+            ><span
+              >Open full screen, choose your dates, then use its Home,
+              Interactions, Products, Contact and Audience pages.</span
+            >
+          </div>
+          <details class="embedded-viewer">
+            <summary>Show the live report inside this page</summary>
+            <p class="hint">
+              Google may take time to load or require sign-in in a separate tab.
+              If this viewer is blank, use Open full screen above.
+            </p>
+            <iframe
+              loading="lazy"
+              title="Vayam live website and search analytics"
+              src="https://datastudio.google.com/embed/reporting/8e538620-fcc2-482f-91c2-c09dce5f319a/page/Hqrp"
+              allowfullscreen
+              sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            ></iframe>
+          </details>
+        </section>
+        <div id="custom-workspace" hidden>
+          <section class="source-panel" aria-label="Data connection">
+            <div class="source-heading">
+              <div>
+                <span class="badge" id="data-badge">AWAITING DATA</span>
+                <h2 id="source-title">
+                  Connect your figures. Keep the context.
+                </h2>
+                <p id="source-description">
+                  Your live Google report is available above. Connect Google
+                  below or load a saved report to use these custom charts.
+                </p>
+              </div>
+              <button id="connect-button" class="button primary">
+                Connect Google</button
+              ><button id="refresh-button" hidden>Refresh figures</button
+              ><button id="disconnect-button" hidden>Disconnect</button>
+            </div>
+            <div class="source-meta" id="source-meta">
+              No report loaded · Missing figures appear as —, never as invented
+              zeroes.
+            </div>
+            <div class="source-actions">
+              <button id="import-button">Import saved report</button
+              ><button id="paste-button">Paste report</button
+              ><button id="compare-button" disabled>Load comparison</button
+              ><button id="sample-button">Try fictional demo</button
+              ><button id="clear-button" hidden>Clear data</button
+              ><span id="connection-status" role="status"></span>
+            </div>
+            <label id="library-label" class="library-label" hidden
+              >Reports loaded in this tab
+              <select id="report-library"></select
+            ></label>
+            <input
+              id="import-file"
+              type="file"
+              accept=".json,application/json"
+              hidden
+            /><input
+              id="compare-file"
+              type="file"
+              accept=".json,application/json"
+              hidden
+            />
+            <details class="provider-links">
+              <summary>Open individual tools and setup help</summary>
+              <div class="report-links">
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://analytics.google.com/analytics/web/?authuser=info%40vayam-global.com#/a413315442p560596894/reports/intelligenthome"
+                  >Google Analytics ↗</a
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Avayam-global.com"
+                  >Google Search Console ↗</a
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://clarity.microsoft.com/projects/view/z2xvqfy55k/dashboard"
+                  >Clarity heatmaps & recordings ↗</a
+                ><a
+                  href="https://github.com/Nandish-go/Vayam-Global-Exim/blob/main/Vayam-Analytics-Dashboard/GOOGLE-CONNECTION.md"
+                  target="_blank"
+                  rel="noopener"
+                  >Google connection setup ↗</a
+                >
+              </div>
+              <p>
+                Google is connected to the existing private report. A separate
+                read-only Google setup is required for these custom charts.
+                Imports and demo mode need no account setup.
+              </p>
+            </details>
+          </section>
+          <p id="message" class="message" role="status" hidden></p>
+          <form id="date-form" class="toolbar" aria-label="Date selection">
+            <label
+              >Period
+              <select id="period-preset">
+                <option value="full">Full loaded report</option>
+                <option value="7">Last 7 days in report</option>
+                <option value="14">Last 14 days in report</option>
+                <option value="28">Last 28 days in report</option>
+                <option value="custom">Custom dates</option>
+              </select></label
+            ><label>From <input id="date-start" type="date" required /></label
+            ><label>To <input id="date-end" type="date" required /></label
+            ><button type="submit" id="apply-dates">Apply dates</button
+            ><button type="button" id="reset-dates">Reset</button
+            ><span id="period-label">Load a report first</span>
+          </form>
+          <p class="hint" id="scope-note">
+            Select a card to explore its trend. Each card explains exactly what
+            it counts.
+          </p>
+          <section
+            id="metrics"
+            class="metrics"
+            aria-label="Select a metric"
+          ></section>
+          <section
+            class="panel trend-panel"
+            id="trend-panel"
+            aria-labelledby="trend-title"
+          >
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">DAILY PATTERN</p>
+                <h2 id="trend-title">Site visits over time</h2>
+              </div>
+              <label
+                >Chart
+                <select id="chart-style">
+                  <option value="line">Line</option>
+                  <option value="bars">Bars</option>
+                </select></label
+              >
+            </div>
+            <p id="metric-explanation" class="hint"></p>
+            <div id="chart-empty" class="empty">
+              <strong>Your trend will appear here.</strong
+              ><span
+                >Connect Google or import a report with daily figures. The demo
+                lets you try every control.</span
+              >
+            </div>
+            <svg
+              id="trend-chart"
+              viewBox="0 0 960 260"
+              role="img"
+              aria-label="Selected metric by date"
+              hidden
+            ></svg>
+            <details id="daily-details">
+              <summary>View exact daily values</summary>
+              <div class="table-scroll">
+                <table>
+                  <caption>
+                    Daily values for the selected metric
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col" id="daily-metric-name">Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="daily-body"></tbody>
+                </table>
+              </div>
+            </details>
+          </section>
+          <section class="comparison panel" id="comparison-panel" hidden>
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">PERIOD COMPARISON</p>
+                <h2>What changed?</h2>
+              </div>
+              <button id="clear-comparison">Remove comparison</button>
+            </div>
+            <p id="comparison-status"></p>
+            <div id="comparison-results" class="comparison-grid"></div>
+          </section>
+          <section id="explore" class="section">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">LOOK CLOSER</p>
+                <h2>Explore the detail.</h2>
+              </div>
+              <button id="export-table" disabled>Export table CSV ↓</button>
+            </div>
+            <div class="toolbar explore-controls">
+              <label
+                >View
+                <select id="breakdown">
+                  <option value="countries">Countries</option>
+                  <option value="cities">Cities</option>
+                  <option value="sources">Traffic sources</option>
+                  <option value="devices">Devices</option>
+                  <option value="products">Product interest</option>
+                  <option value="sections">Sections reached</option>
+                  <option value="events">Website actions</option>
+                  <option value="queries">Google search terms</option>
+                  <option value="pages">Landing pages</option>
+                </select></label
+              ><label
+                >Find a row
+                <input
+                  id="row-search"
+                  type="search"
+                  placeholder="Search this table" /></label
+              ><label
+                >Sort
+                <select id="row-sort">
+                  <option value="desc">Highest first</option>
+                  <option value="asc">Lowest first</option>
+                  <option value="name">Name A–Z</option>
+                </select></label
+              ><label
+                >Show
+                <select id="row-limit">
+                  <option value="5">Top 5</option>
+                  <option value="10">Top 10</option>
+                  <option value="25">Top 25</option>
+                  <option value="500">All available</option>
+                </select></label
+              ><label
+                >Display
+                <select id="table-style">
+                  <option value="both">Chart + table</option>
+                  <option value="table">Table only</option>
+                  <option value="chart">Chart only</option>
+                </select></label
+              >
+            </div>
+            <div class="panel">
+              <div class="panel-head">
+                <h3 id="breakdown-title">Countries</h3>
+                <span id="row-count" class="badge">NO DATA</span>
+              </div>
+              <p id="breakdown-note" class="hint"></p>
+              <div id="breakdown-bars" class="bar-list"></div>
+              <div id="breakdown-table-wrap" class="table-scroll">
+                <table>
+                  <caption id="breakdown-caption">
+                    Available country rows
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Measure</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdown-body"></tbody>
+                </table>
+              </div>
+              <div id="breakdown-empty" class="empty">
+                <strong>No breakdown loaded.</strong
+                ><span
+                  >Choose a report to explore countries, traffic sources and
+                  product interest.</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="section" id="insights">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">FROM SIGNAL TO ACTION</p>
+                <h2>What to look into next.</h2>
+              </div>
+              <button id="export-report" disabled>Save report JSON ↓</button>
+            </div>
+            <div id="insight-grid" class="insight-grid"></div>
+            <div class="panel quality">
+              <h3>Reporting notes</h3>
+              <ul id="quality-notes">
+                <li>
+                  Load a real report before making decisions. Fictional demo
+                  figures are clearly labelled.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="section" id="guide">
+          <p class="eyebrow">A USEFUL WEEKLY ROUTINE</p>
+          <h2>Ask a question. Find the evidence.</h2>
+          <div class="guide-grid">
+            <details open>
+              <summary>Are more people finding us?</summary>
+              <p>
+                Compare equal-length periods. Look at Google Search impressions,
+                clicks and the queries that generated them. Then check whether
+                visits from those searches are useful.
+              </p>
+            </details>
+            <details>
+              <summary>Which products deserve more attention?</summary>
+              <p>
+                Choose Product interest in Explore data. Compare the leading
+                groups with the enquiries you actually receive before changing
+                your homepage or catalogue.
+              </p>
+            </details>
+            <details>
+              <summary>Where are visitors getting stuck?</summary>
+              <p>
+                Check website actions and sections reached, then inspect Clarity
+                heatmaps and recordings. Reaching a section means it appeared on
+                screen; it does not prove someone read it.
+              </p>
+            </details>
+            <details>
+              <summary>Are visits turning into enquiries?</summary>
+              <p>
+                Contact handoffs count actions opening email, phone or WhatsApp.
+                They can repeat. Track received messages and qualified buyers
+                privately; website events alone cannot confirm delivery or
+                sales.
+              </p>
+            </details>
+            <details>
+              <summary>How do I interpret a small audience?</summary>
+              <p>
+                Use several complete weeks, keep a note of your testing, and
+                avoid conclusions from one or two visits. Approximate city and
+                country can be affected by networks and VPNs.
+              </p>
+            </details>
+            <details>
+              <summary>Why is a figure unavailable?</summary>
+              <p>
+                A dash means the source did not supply a valid measurement. It
+                is different from a recorded zero. Imported daily data cannot be
+                summed to calculate unique users, and aggregate country tables
+                cannot be re-filtered by date.
+              </p>
+            </details>
+          </div>
+        </section>
+        <footer>
+          Vayam Global Exim · Analytics Studio
+          <span
+            >Private figures stay in your session. Only display preferences are
+            remembered on this device.</span
+          >
+        </footer>
+      </main>
+    </div>
+    <dialog id="settings-dialog" aria-labelledby="settings-title">
+      <form method="dialog" class="dialog-top">
+        <h2 id="settings-title">Make this view yours.</h2>
+        <button aria-label="Close customisation">✕</button>
+      </form>
+      <label
+        >Spacing
+        <select id="density">
+          <option value="comfortable">Comfortable</option>
+          <option value="compact">Compact</option>
+        </select></label
+      >
+      <fieldset>
+        <legend>Metric cards to show</legend>
+        <div id="metric-options" class="checkbox-grid"></div>
+      </fieldset>
+      <label class="availability-setting"
+        ><input id="hide-unavailable" type="checkbox" checked /> Hide
+        unavailable cards after loading a report</label
+      >
+      <p class="hint">
+        Settings stay on this device. Imported reports and Google access tokens
+        are never saved in browser storage.
+      </p>
+      <button id="reset-settings">Restore default view</button>
+    </dialog>
+    <dialog id="connect-dialog" aria-labelledby="connect-title">
+      <form method="dialog" class="dialog-top">
+        <h2 id="connect-title">Connect your Google figures.</h2>
+        <button aria-label="Close Google connection">✕</button>
+      </form>
+      <p>
+        Vayam’s free Google connection is configured. Continue with the Google
+        account that can view the website analytics, then review its read-only
+        permission. Your figures load into this tab after approval.
+      </p>
+      <details>
+        <summary>Connection settings</summary>
+        <label
+          >Google OAuth client ID
+          <input
+            id="client-id"
+            type="text"
+            autocomplete="off"
+            value="137186037794-4dlgot3s57mo77o70tff4cgeqe0b9eo0.apps.googleusercontent.com"
+            placeholder="…apps.googleusercontent.com"
+        /></label>
+        <p class="hint">
+          Use the public client ID only. Never enter a password, client secret
+          or service-account key.
+        </p>
+      </details>
+      <button id="google-authorise" class="button primary">
+        Continue to Google
+      </button>
+      <p id="google-status" role="status"></p>
+      <p>
+        <a
+          href="https://github.com/Nandish-go/Vayam-Global-Exim/blob/main/Vayam-Analytics-Dashboard/GOOGLE-CONNECTION.md"
+          target="_blank"
+          rel="noopener"
+          >One-time setup instructions ↗</a
+        >
+      </p>
+    </dialog>
+    <dialog id="paste-dialog" aria-labelledby="paste-title">
+      <form method="dialog" class="dialog-top">
+        <h2 id="paste-title">Load a saved report.</h2>
+        <button aria-label="Close paste report">✕</button>
+      </form>
+      <p>
+        Paste an exported Vayam JSON report. It is validated and stays in this
+        tab. Use the Import button if you prefer choosing a file.
+      </p>
+      <label
+        >Use as
+        <select id="paste-purpose">
+          <option value="current">Current report</option>
+          <option value="comparison">Comparison report</option>
+        </select></label
+      ><label
+        >Report JSON
+        <textarea
+          id="paste-json"
+          rows="8"
+          maxlength="1500000"
+          spellcheck="false"
+          placeholder="Paste the report JSON here"
+        ></textarea></label
+      ><button id="load-pasted" class="button primary">
+        Load pasted report
+      </button>
+      <p id="paste-status" role="status"></p>
+    </dialog>
+  </body>
 </html>

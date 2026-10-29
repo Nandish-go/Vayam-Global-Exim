@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="robots"
+    content="noindex,nofollow"
+  /><title>Vayam responsive check</title
+  ><style>
+    body {
+      font: 14px system-ui;
+      background: #e7ece3;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+    iframe {
+      display: block;
+      height: 900px;
+      border: 2px solid #123d31;
+      background: white;
+      max-width: none;
+    }</style
+  ><label
+    >Preview width
+    <select id="width">
+      <option>320</option>
+      <option selected>390</option>
+      <option>768</option>
+      <option>1280</option>
+    </select></label
+  ><iframe
+    id="responsive-preview"
+    title="Responsive Vayam dashboard preview"
+    src="../"
+  ></iframe>
+  <script>
+    const frame = document.getElementById("responsive-preview"),
+      width = document.getElementById("width");
+    width.onchange = () => (frame.style.width = width.value + "px");
+    width.onchange();
+  </script>
+</html>

@@ -1,0 +1,35 @@
+const assert = require('node:assert/strict');
+const engine = require('../report-engine.js');
+const fixture = () => ({schemaVersion:2,label:'Checked test fixture',source:{name:'GA4',property:'560596894',kind:'import',capturedAt:'2026-10-29T12:00:00Z'},period:{start:'2026-10-24',end:'2026-10-27',timeZone:'Asia/Kolkata'},metrics:{users:6,sessions:10,views:13,engagedSessions:9,productInterest:null,handoffs:0,searchClicks:21,searchImpressions:144},daily:[{date:'2026-10-24',users:2,sessions:2,views:3,handoffs:0},{date:'2026-10-25',users:3,sessions:3,views:4,handoffs:0},{date:'2026-10-26',users:3,sessions:3,views:4,handoffs:0},{date:'2026-10-27',users:2,sessions:2,views:2,handoffs:0}],breakdowns:{countries:[{name:'India',value:4,metric:'sessions'}]},notes:['Contains a small amount of verification traffic.']});
+const valid = engine.validate(fixture());
+assert.equal(valid.metrics.productInterest,null);
+assert.equal(valid.metrics.handoffs,0);
+assert.equal(valid.breakdowns.cities.length,0);
+assert.notEqual(valid,fixture());
+const absent=fixture();delete absent.metrics.users;assert.equal(engine.validate(absent).metrics.users,null);
+for (const mutate of [r=>r.period.start='2026-02-30',r=>r.daily.reverse(),r=>r.daily.push({...r.daily[0]}),r=>r.daily[0].sessions='2',r=>r.metrics.sessions=-1,r=>r.metrics.users=NaN,r=>r.metrics.sessions=Infinity,r=>r.metrics.engagedSessions=11,r=>r.breakdowns.countries[0].metric='visits',r=>r.breakdowns.countries[0].name='192.168.1.1',r=>r.breakdowns.countries[0].name='person@example.com',r=>r.ip='private',r=>r.notes.push({bad:true}),r=>r.source.capturedAt='yesterday',r=>r.period.timeZone='Made/Up']) {const report=fixture();mutate(report);assert.throws(()=>engine.validate(report));}
+const malicious=JSON.parse(JSON.stringify(fixture()).replace('"metrics":{','"__proto__":{"polluted":true},"metrics":{'));assert.throws(()=>engine.validate(malicious));assert.equal({}.polluted,undefined);
+assert.throws(()=>engine.validate({...fixture(),notes:['x'.repeat(1201)]}));
+const selected=engine.selectPeriod(fixture(),'2026-10-25','2026-10-26');
+assert.equal(selected.metrics.sessions,6);assert.equal(selected.metrics.views,8);assert.equal(selected.metrics.users,null);assert.equal(selected.metrics.handoffs,0);assert.equal(selected.metrics.searchClicks,null);assert.equal(selected.breakdowns.countries.length,0);assert.equal(selected.selection.isSubset,true);assert.equal(engine.validate(selected).metrics.sessions,6);
+const gap=fixture();gap.daily.splice(1,1);assert.equal(engine.selectPeriod(gap,'2026-10-24','2026-10-26').metrics.sessions,null);
+assert.throws(()=>engine.selectPeriod(fixture(),'2026-10-20','2026-10-26'));
+const full=engine.selectPeriod(fixture(),'2026-10-24','2026-10-27');assert.equal(full.metrics.users,6);assert.equal(full.breakdowns.countries.length,1);
+const prior=fixture();prior.period={...prior.period,start:'2026-10-20',end:'2026-10-23'};prior.daily=[];prior.metrics.sessions=5;prior.metrics.engagedSessions=4;prior.metrics.handoffs=0;
+const comparison=engine.compare(fixture(),prior);assert.equal(comparison.compatible,true);assert.equal(comparison.metrics.sessions.percent,100);assert.equal(comparison.metrics.handoffs.status,'unchanged-zero');assert.equal(comparison.metrics.productInterest.status,'unavailable');
+const current=fixture();current.metrics.handoffs=2;assert.equal(engine.compare(current,prior).metrics.handoffs.status,'no-baseline');assert.equal(engine.compare(current,prior).metrics.handoffs.percent,null);
+for(const mutate of [r=>r.source.kind='sample',r=>r.source.name='Search Console',r=>r.source.property='other',r=>r.period.timeZone='Europe/Berlin',r=>r.period.end='2026-10-22',r=>r.period={start:'2026-10-22',end:'2026-10-25',timeZone:'Asia/Kolkata'}]) {const p=structuredClone(prior);mutate(p);assert.equal(engine.compare(fixture(),p).compatible,false);}
+assert.equal(engine.compare(fixture(),fixture()).compatible,false);
+const rates=engine.derived(fixture());assert.equal(rates.engagementRate,90);assert.equal(rates.searchCTR,21/144*100);assert.equal(rates.handoffsPer100Sessions,0);
+const zero=fixture();zero.metrics.sessions=0;zero.metrics.engagedSessions=0;assert.equal(engine.derived(zero).engagementRate,null);zero.metrics.searchClicks=null;assert.equal(engine.derived(zero).searchCTR,null);
+const badCTR=fixture();badCTR.metrics.searchClicks=145;assert.throws(()=>engine.validate(badCTR));
+const badCapture=fixture();badCapture.source.capturedAt='2026-02-30T12:00:00Z';assert.throws(()=>engine.validate(badCapture));
+const badSelection=structuredClone(selected);badSelection.selection.start='2026-10-20';assert.throws(()=>engine.validate(badSelection));
+assert.ok(engine.insights(fixture()).some(row=>row.id==='small-sample'));assert.ok(engine.insights(fixture()).some(row=>row.id==='no-handoffs'));
+const sample=fixture();sample.source.kind='sample';assert.ok(engine.insights(sample).some(row=>row.id==='sample'));
+const csv=engine.toCSV(fixture());assert.ok(csv.includes('"productInterest",""'));assert.ok(csv.includes('"handoffs","0"'));
+const formula=fixture();formula.breakdowns.queries=[{name:'=HYPERLINK("fake")',value:1,metric:'searchClicks'}];assert.ok(engine.toCSV(formula,{type:'queries'}).includes('"\'=HYPERLINK(""fake"")"'));
+assert.throws(()=>engine.toCSV(fixture(),{type:'unknown'}));
+const legacy={schemaVersion:1,label:'Legacy example',summary:{visitors:10,visits:20,productInterest:3,handoffs:0},trend:[[1,10,0]],countries:[],sources:[],cities:[],products:[],sections:[],funnel:[]};const converted=engine.validate(legacy);assert.equal(converted.period,null);assert.equal(converted.metrics.sessions,20);assert.equal(converted.source.property,'unverified');assert.throws(()=>engine.selectPeriod(converted,'2026-10-24','2026-10-27'));
+const vm=require('node:vm'),fs=require('node:fs');const browserContext={window:{},Intl,Date};vm.runInNewContext(fs.readFileSync(require.resolve('../report-engine.js'),'utf8'),browserContext);assert.equal(typeof browserContext.window.VayamAnalytics.validate,'function');assert.equal(browserContext.window.VayamAnalytics.days({start:'2026-10-01',end:'2026-10-31'}),31);
+console.log('Report engine passed: missing data, dates, exact periods, unique users, safe comparisons, rates, exports and legacy validation.');
