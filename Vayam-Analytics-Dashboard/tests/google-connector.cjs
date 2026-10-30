@@ -7,6 +7,7 @@ const PERIOD = {start: '2026-10-01', end: '2026-10-28'};
 
 function fixture(options = {}) {
   const calls = [];
+  const timers = [];
   let clock = 1800000000000;
   let identityConfig;
   const host = {
@@ -16,7 +17,8 @@ function fixture(options = {}) {
     google: {accounts: {oauth2: {initTokenClient(config) {
       identityConfig = config;
       return {requestAccessToken() {
-        if (options.oauthError) config.error_callback({type: 'popup_closed'});
+        if (options.pendingAuth) return;
+        if (options.oauthError) config.error_callback(options.oauthError === true ? {type: 'popup_closed'} : options.oauthError);
         else config.callback({access_token: 'PRIVATE_TEST_TOKEN', expires_in: 3600, scope: options.denyScope ? '' : SCOPE});
       }};
     }}}}
@@ -42,8 +44,8 @@ function fixture(options = {}) {
     return {ok: true, status: 200, json: async () => ({metricHeaders: headers, rows, rowCount: options.truncated && dimensions[0] === 'country' ? 200 : rows.length,
       metadata: {timeZone: 'Asia/Kolkata', ...(options.thresholded ? {subjectToThresholding: true, samplingMetadatas: [{}]} : {})}})};
   };
-  const connector = createConnector({root: host, fetch: mock, now: () => clock, setTimeout: () => 1, clearTimeout() {}});
-  return {connector, calls, host, getConfig: () => identityConfig, expire: () => { clock += 3601000; }};
+  const connector = createConnector({root: host, fetch: mock, now: () => clock, setTimeout: callback => {timers.push(callback); return timers.length;}, clearTimeout() {}});
+  return {connector, calls, host, getConfig: () => identityConfig, fireLatestTimer: () => timers.at(-1)(), expire: () => { clock += 3601000; }};
 }
 
 (async () => {
@@ -102,8 +104,41 @@ function fixture(options = {}) {
   await assert.rejects(f.connector.fetchReport(PERIOD), /No Google report/);
 
   f = fixture({oauthError: true});
-  await assert.rejects(f.connector.connect(CLIENT_ID), /closed or blocked/);
+  await assert.rejects(f.connector.connect(CLIENT_ID), /closed before approval.*fresh sign-in/);
   assert.equal(f.connector.isConnected(), false);
+  for (const [type, expected] of [
+    ['popup_failed_to_open', /could not open.*Allow pop-ups/],
+    ['popup_closed', /closed before approval/],
+    ['unknown=https://example.test/?access_token=PRIVATE_AUTH_DATA', /could not finish.*older Google sign-in window/],
+    ['__proto__', /could not finish.*older Google sign-in window/],
+    [undefined, /could not finish.*older Google sign-in window/]
+  ]) {
+    f = fixture({oauthError: {type, error_description: 'PRIVATE_AUTH_DATA', url: 'https://example.test/?access_token=PRIVATE_AUTH_DATA'}});
+    await assert.rejects(f.connector.connect(CLIENT_ID), error => {
+      assert.match(error.message, expected);
+      assert.equal(error.message.includes('PRIVATE_AUTH_DATA'), false, 'raw OAuth details must not reach the user message');
+      assert.equal(error.message.includes('https://'), false);
+      return true;
+    });
+    assert.equal(f.connector.isConnected(), false);
+  }
+
+  f = fixture({pendingAuth: true});
+  const timedOut = f.connector.connect(CLIENT_ID);
+  await Promise.resolve();
+  const oldCallback = f.getConfig().callback;
+  const timeoutCheck = assert.rejects(timedOut, /timed out.*Close the old Google sign-in window.*fresh sign-in/);
+  f.fireLatestTimer();
+  await timeoutCheck;
+  oldCallback({access_token: 'LATE_PRIVATE_TOKEN', expires_in: 3600, scope: SCOPE});
+  assert.equal(f.connector.isConnected(), false, 'a late callback from the expired popup cannot establish a connection');
+  const fresh = f.connector.connect(CLIENT_ID);
+  await Promise.resolve();
+  assert.notEqual(f.getConfig().callback, oldCallback);
+  f.getConfig().callback({access_token: 'FRESH_PRIVATE_TOKEN', expires_in: 3600, scope: SCOPE});
+  await fresh;
+  assert.equal(f.connector.isConnected(), true, 'a fresh attempt after timeout can connect');
+
   f = fixture({denyScope: true});
   await assert.rejects(f.connector.connect(CLIENT_ID), /not granted/);
   f = fixture();
