@@ -1,8 +1,16 @@
 # Free analytics and worldwide search setup
 
-## Dashboard upgrade — 29 October 2026
+## Dashboard connection verified — 30 October 2026
 
-Start at [Vayam Analytics Studio](https://vayam-global.com/Vayam-Analytics-Dashboard/) and choose **Live connected report → Open full screen**. The existing private five-page Google report already reads GA4 and Search Console; its optional embedded viewer depends on the browser's Google sign-in restrictions. No installation is needed. Use the authorised Google account and the report's own dates.
+The deployed custom dashboard's Google sign-in and direct GA4 fetch succeeded on 30 October. A real report for **2–29 October 2026** loaded without errors. To view your figures, open [Vayam Analytics Studio](https://vayam-global.com/Vayam-Analytics-Dashboard/):
+
+1. Choose **Custom analysis tools**.
+2. Click **Connect Google**; the public client identifier is prefilled.
+3. Click **Continue to Google**, select the authorised owner account and approve Google's read-only access when requested.
+
+No report-file import is needed for GA4. Choose dates and **Apply dates** to request another period, or **Refresh figures** to fetch it again. Reconnect after reloading or when access expires. Reports and access tokens remain in tab memory only; display preferences may remain on the device. The Google application is in Testing for the authorised owner. Billing was left untouched; no paid trial or billing activation was used.
+
+For Google Search data, choose **Live connected report → Open full screen**. The existing private five-page report combines GA4 and Search Console. Its optional embedded viewer depends on the browser's Google sign-in restrictions. No desktop installation is needed. Use the authorised account and the report's own dates.
 
 **Custom analysis tools** adds selectable metrics, date presets/custom ranges, line/bar trends with exact-value tables, searchable/sortable country/source/device/product/event and other supplied breakdowns, top-row limits, table/chart display choices, compatible period comparisons, card selection and compact spacing. The Insights & actions area explains signals and suggests what to investigate next. Display preferences alone are remembered locally.
 
@@ -10,9 +18,9 @@ Import a saved Vayam JSON report by file or **Paste report**. The session's repo
 
 Real GA4 and Search Console snapshots remain private local files in ignored storage. They are not public dashboard assets and do not refresh automatically. Demo figures are explicitly fictional. Reloading clears report data and Google tokens; display settings may remain.
 
-The free direct-GA4 connector, dedicated `vayam-analytics` Cloud project, Analytics Data API and OAuth web client are configured. Its public Client ID is prefilled. The owner account is an allowed test user. Final owner sign-in and live data fetching must still be verified; the first sign-in attempt timed out and the approval window was increased to five minutes. See [GOOGLE-CONNECTION.md](GOOGLE-CONNECTION.md). It uses only GA4 read-only access and memory-held short-lived tokens; Search Console continues through the existing combined Google report. No paid trial or billing activation is required for this implementation. [README.md](README.md) is the current practical dashboard guide.
+The free direct-GA4 connector, dedicated `vayam-analytics` Cloud project, Analytics Data API and OAuth web client are configured and the live owner connection is verified. Search Console continues through the existing combined Google report; the custom GA4 connector does not retrieve it. See [the 30 October checkpoint](CHECKPOINT-2026-10-30.md), [GOOGLE-CONNECTION.md](GOOGLE-CONNECTION.md) and the practical [dashboard guide](README.md).
 
-The older setup and verification record below is preserved as historical context. Statements that the combined report's charts are still being built, or that the custom connector is only a future possibility, describe the earlier stage and are superseded by the upgrade status above. They do not establish that the new direct Google authorisation has been completed.
+The older setup and verification record below is preserved as historical context. Statements that the combined report's charts are still being built, or that the custom connector is only a future possibility, describe the earlier stage and are superseded by the verified connection status above.
 
 Updated 28 October 2026. GA4 is deployed and production events have been verified in Realtime. The five-page live combined report now includes audience, product attention and contact-intent breakdowns; see README.md for links and instructions. Search Console accepted the seven-page sitemap. The earlier Umami answer was a mistake; Umami remains disabled. No paid service or billing project has been activated.
 

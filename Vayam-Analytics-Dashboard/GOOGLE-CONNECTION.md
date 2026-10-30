@@ -4,7 +4,13 @@ The combined Google Data Studio report already has its own connection. The custo
 
 The connector uses the free GA4 Analytics Data API and Google's current browser sign-in library. It requests only `analytics.readonly` for the existing Vayam property **560596894**. No paid database, server or billing-dependent export is used. API quotas still apply. It does not retrieve Search Console data: that remains in the separate connected Google report, with its own reporting dates and definitions.
 
-## One-time owner setup
+## Current Vayam connection
+
+The owner setup is complete. On 30 October 2026, the deployed dashboard successfully retrieved real GA4 figures after the owner's read-only approval. The public client ID is already filled in; no credential JSON file is needed.
+
+Open [Vayam Analytics Studio](https://vayam-global.com/Vayam-Analytics-Dashboard/), choose **Custom analysis tools → Connect Google → Continue to Google**, and select the authorised owner account. The application remains in Google's **Testing** configuration. Reconnect after a page reload or when Google access expires. No imports are needed for GA4. The setup reference below is for maintenance; it does not need to be repeated for normal use.
+
+## One-time owner setup reference
 
 1. Open [Google Cloud Console](https://console.cloud.google.com/) in the account you want to manage the connection. Select or create a project dedicated to Vayam analytics. Do not enable billing merely for this connector.
 2. In APIs & Services, enable **Google Analytics Data API**.

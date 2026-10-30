@@ -365,7 +365,7 @@
     chart.replaceChildren();
     $("daily-body").replaceChildren();
     $("chart-empty").hidden = available;
-    chart.hidden = !available;
+    chart.toggleAttribute("hidden", !available);
     $("daily-details").hidden = !available;
     if (!available) {
       $("chart-empty").querySelector("strong").textContent = current
@@ -839,9 +839,11 @@
     else if (value !== "custom") {
       const dt = new Date(full.period.end + "T12:00:00Z");
       dt.setUTCDate(dt.getUTCDate() - Number(value) + 1);
-      $("date-start").value = [full.period.start, dt.toISOString().slice(0, 10)]
-        .sort()
-        .at(-1);
+      const start = dt.toISOString().slice(0, 10);
+      $("date-start").value =
+        loadOrigin === "google"
+          ? start
+          : [full.period.start, start].sort().at(-1);
     }
   };
   $("chart-style").onchange = () => {
@@ -898,6 +900,7 @@
     prefs.hideUnavailable = $("hide-unavailable").checked;
     savePrefs();
     renderMetrics();
+    renderTrend();
   };
   function metricOptions() {
     const target = $("metric-options");
