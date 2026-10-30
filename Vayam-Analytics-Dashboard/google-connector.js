@@ -172,7 +172,7 @@
           const timer = later(
             () =>
               finish(
-                "Google sign-in timed out. Click Connect Google again when ready.",
+                "Google sign-in timed out. Close the old Google sign-in window, then click Continue to Google to start a fresh sign-in.",
               ),
             300000,
           );
@@ -188,10 +188,20 @@
                     : null,
                   response,
                 ),
-              error_callback: () =>
+              error_callback: (error) => {
+                // Known categories are useful; raw OAuth descriptions and URLs may contain private data.
+                const messages = {
+                  popup_failed_to_open:
+                    "Google sign-in window could not open. Allow pop-ups for this Vayam page, then click Continue to Google again.",
+                  popup_closed:
+                    "Google sign-in window was closed before approval. Click Continue to Google to start a fresh sign-in.",
+                };
                 finish(
-                  "Google sign-in was closed or blocked. Allow its sign-in window, then try again.",
-                ),
+                  Object.hasOwn(messages, error?.type)
+                    ? messages[error.type]
+                    : "Google sign-in could not finish. Close any older Google sign-in window, then click Continue to Google to try again.",
+                );
+              },
             });
             client.requestAccessToken({ prompt: "select_account" });
           } catch (_) {
