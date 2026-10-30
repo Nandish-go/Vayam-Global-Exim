@@ -30,6 +30,8 @@ Live verification found that the daily SVG retained its initial `hidden` attribu
 
 The report-engine, Google-connector, analytics-gates and site-readiness checks passed after these corrections. Local browser checks covered actual SVG visibility and both chart styles. The live Google report also successfully refetched a selected seven-day period.
 
+The dashboard stylesheet and scripts carry a release version in their URLs so returning browsers request the corrected files instead of keeping an older cached copy.
+
 ## Repository boundaries
 
 Canonical working folder: `C:\Github Repos\Vayam-Global-Exim`. The working branch remains `vayam-dev-four-candidates`; `main` serves production. The analytics folder remains separate from the four trial designs. This documentation update does not delete, rename or rebuild the website designs, change report sharing, or publish private visitor data.
